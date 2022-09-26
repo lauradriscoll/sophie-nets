@@ -1,0 +1,118 @@
+
+% second_attempt % name of run you're interested in
+%alignStart
+movement_lfrun2
+pm = rc.runs(1).loadPosteriorMeans();
+%%
+X = reshape(pm.factors,40,[]);
+X_musub = X - mean(X,2);
+pcs = pca(X_musub');
+num_pcs = 40;
+pc_project = pcs(:,1:num_pcs)'*X_musub;
+pc_proj_reshape = reshape(pc_project, [num_pcs, size(pm.factors,2), size(pm.factors,3)]);
+
+%%
+%figure;
+for t = 1:500
+subplot(4,1,1)
+imagesc(squeeze(data.spikes(t,:,:)))
+subplot(4,1,2)
+imagesc((squeeze(pm.rates(:,:,t)) - squeeze(mean(pm.rates(:,:,t),2))),[-50 50])
+subplot(4,1,3)
+imagesc(squeeze(pm.factors(:,:,t)) - squeeze(mean(pm.factors(:,:,t),2)),[-1 1])
+subplot(4,1,4)
+imagesc(squeeze(pm.generator_states(:,:,t)) - squeeze(mean(pm.generator_states(:,:,t),2)),[-1 1])
+pause
+end
+%%
+plot_dims = 3:5;%[1 4 5];
+plot_data = pc_proj_reshape;%pm.factors;%
+cond_reduced = pm.conditionIds;%(pm.conditionIds-4)/3;
+cond = mod(cond_reduced,4)+1;%(cond_reduced==1 | cond_reduced==4)+1;%
+cmap = jet(max(cond));
+%%
+figure;
+hold on
+for c1 = unique(cond)'
+trial_set = find(cond==c1);
+plot(squeeze(pc_proj_reshape(3,:,trial_set)),':','color',cmap(c1,:));
+% if size(plot_dims,2)==3
+%     plot3(squeeze(plot_data(plot_dims(1),:,trial_set)),...
+%         squeeze(plot_data(plot_dims(2),:,trial_set)),...
+%         squeeze(plot_data(plot_dims(3),:,trial_set)),'.','color',cmap(c1,:));
+%     
+%     
+%     plot3(squeeze(plot_data(plot_dims(1),:,trial_set(1))),...
+%         squeeze(plot_data(plot_dims(2),:,trial_set(1))),...
+%         squeeze(plot_data(plot_dims(3),:,trial_set(1))),'color',cmap(c1,:),'lineWidth',2);
+% %     
+% %     plot3(squeeze(plot_data(plot_dims(1),end,trial_set)),...
+% %         squeeze(plot_data(plot_dims(2),end,trial_set)),...
+% %         squeeze(plot_data(plot_dims(3),end,trial_set)),'ok','MarkerSize',10)%,'color',cmap(c1,:));
+%     
+%     
+%     plot3(squeeze(plot_data(plot_dims(1),1,trial_set)),...
+%         squeeze(plot_data(plot_dims(2),1,trial_set)),...
+%         squeeze(plot_data(plot_dims(3),1,trial_set)),'.','MarkerSize',20,'color',cmap(c1,:));
+%     
+% else
+%     plot(squeeze(plot_data(plot_dims(1),:,trial_set)),...
+%         squeeze(plot_data(plot_dims(2),:,trial_set)),'.','color',cmap(c1,:));
+%     
+%     plot(squeeze(plot_data(plot_dims(1),:,1)),...
+%         squeeze(plot_data(plot_dims(2),:,1)),'-','color',cmap(c1,:),'lineWidth',2);
+% end
+end
+
+
+%%
+X_cond = [];
+for c1 = unique(cond_reduced)'
+X_cond = cat(2,X_cond,squeeze(mean(pm.factors(:,:,cond_reduced==c1),3)));
+end
+
+%%
+X = X_cond;
+X_musub = X - mean(X,2);
+pcs = pca(X_musub');
+num_pcs = 40;
+
+X = reshape(pm.factors,40,[]);
+X_musub = X - mean(X,2);
+pc_project = pcs(:,1:num_pcs)'*X_musub;
+pc_proj_reshape = reshape(pc_project, [num_pcs, size(pm.factors,2), size(pm.factors,3)]);
+
+figure;plot(squeeze(pc_proj_reshape(1,:,1)))
+%%
+plot_dims = 1:3;%[1 4 5];
+plot_data = pc_proj_reshape;%pm.factors;%
+cond_reduced = (pm.conditionIds-4)/3;
+cond = cond_reduced;%(cond_reduced==1 | cond_reduced==4)+1;%
+cmap = hsv(max(cond));
+%%
+figure;
+hold on
+for c1 = unique(cond)'
+trial_set = find(cond==c1);
+if size(plot_dims,2)==3
+    plot3(squeeze(plot_data(plot_dims(1),:,trial_set)),...
+        squeeze(plot_data(plot_dims(2),:,trial_set)),...
+        squeeze(plot_data(plot_dims(3),:,trial_set)),':','color',cmap(c1,:));
+    
+    plot3(squeeze(plot_data(plot_dims(1),end,trial_set)),...
+        squeeze(plot_data(plot_dims(2),end,trial_set)),...
+        squeeze(plot_data(plot_dims(3),end,trial_set)),'o','MarkerSize',10,'color',cmap(c1,:));
+    
+    
+    plot3(squeeze(plot_data(plot_dims(1),1,trial_set)),...
+        squeeze(plot_data(plot_dims(2),1,trial_set)),...
+        squeeze(plot_data(plot_dims(3),1,trial_set)),'.','MarkerSize',20,'color',cmap(c1,:));
+    
+else
+    plot(squeeze(plot_data(plot_dims(1),:,trial_set)),...
+        squeeze(plot_data(plot_dims(2),:,trial_set)),':','color',cmap(c1,:));
+    
+    plot(squeeze(plot_data(plot_dims(1),:,1)),...
+        squeeze(plot_data(plot_dims(2),:,1)),'-','color',cmap(c1,:),'lineWidth',2);
+end
+end

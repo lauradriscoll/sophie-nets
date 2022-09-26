@@ -1,0 +1,793 @@
+Thu Dec 26 11:18:44 2019       
++-----------------------------------------------------------------------------+
+| NVIDIA-SMI 440.33.01    Driver Version: 440.33.01    CUDA Version: 10.2     |
+|-------------------------------+----------------------+----------------------+
+| GPU  Name        Persistence-M| Bus-Id        Disp.A | Volatile Uncorr. ECC |
+| Fan  Temp  Perf  Pwr:Usage/Cap|         Memory-Usage | GPU-Util  Compute M. |
+|===============================+======================+======================|
+|   0  Tesla V100-SXM2...  On   | 00000000:88:00.0 Off |                    0 |
+| N/A   36C    P0    44W / 300W |      0MiB / 32510MiB |      0%   E. Process |
++-------------------------------+----------------------+----------------------+
+                                                                               
++-----------------------------------------------------------------------------+
+| Processes:                                                       GPU Memory |
+|  GPU       PID   Type   Process name                             Usage      |
+|=============================================================================|
+|  No running processes found                                                 |
++-----------------------------------------------------------------------------+
+-------------------------------------------------------------------------------
+There are messages associated with the following module(s):
+-------------------------------------------------------------------------------
+
+py-tensorflow/1.12.0_py27:
+    Warning: this module requires a GPU, it won't work on CPU nodes.
+
+-------------------------------------------------------------------------------
+
+/home/users/lndrisco/code/recurrent-whisperer/AdaptiveLearningRate.py:18: UserWarning: 
+This call to matplotlib.use() has no effect because the backend has already
+been chosen; matplotlib.use() must be called *before* pylab, matplotlib.pyplot,
+or matplotlib.backends is imported for the first time.
+
+The backend was *originally* set to 'TkAgg' by the following code:
+  File "golub_fixed_pts.py", line 12, in <module>
+    import matplotlib.pyplot as plt
+  File "/share/software/user/open/py-matplotlib/2.2.2_py27/lib/python2.7/site-packages/matplotlib/pyplot.py", line 71, in <module>
+    from matplotlib.backends import pylab_setup
+  File "/share/software/user/open/py-matplotlib/2.2.2_py27/lib/python2.7/site-packages/matplotlib/backends/__init__.py", line 16, in <module>
+    line for line in traceback.format_stack()
+
+
+  matplotlib.use('Agg')
+2019-12-26 11:18:51.700258: I tensorflow/core/platform/cpu_feature_guard.cc:141] Your CPU supports instructions that this TensorFlow binary was not compiled to use: AVX2 AVX512F FMA
+2019-12-26 11:18:52.111675: I tensorflow/core/common_runtime/gpu/gpu_device.cc:1432] Found device 0 with properties: 
+name: Tesla V100-SXM2-32GB major: 7 minor: 0 memoryClockRate(GHz): 1.53
+pciBusID: 0000:88:00.0
+totalMemory: 31.75GiB freeMemory: 31.44GiB
+2019-12-26 11:18:52.111713: I tensorflow/core/common_runtime/gpu/gpu_device.cc:1511] Adding visible gpu devices: 0
+2019-12-26 11:18:52.498119: I tensorflow/core/common_runtime/gpu/gpu_device.cc:982] Device interconnect StreamExecutor with strength 1 edge matrix:
+2019-12-26 11:18:52.498166: I tensorflow/core/common_runtime/gpu/gpu_device.cc:988]      0 
+2019-12-26 11:18:52.498173: I tensorflow/core/common_runtime/gpu/gpu_device.cc:1001] 0:   N 
+2019-12-26 11:18:52.498304: I tensorflow/core/common_runtime/gpu/gpu_device.cc:1115] Created TensorFlow device (/job:localhost/replica:0/task:0/device:GPU:0 with 30503 MB memory) -> physical GPU (device: 0, name: Tesla V100-SXM2-32GB, pci bus id: 0000:88:00.0, compute capability: 7.0)
+2019-12-26 11:18:52.499240: I tensorflow/core/common_runtime/process_util.cc:69] Creating new thread pool with default inter op setting: 10. Tune using inter_op_parallelism_threads for best performance.
+WARNING:tensorflow:From /share/software/user/open/py-tensorflow/1.12.0_py27/lib/python2.7/site-packages/tensorflow/python/util/tf_should_use.py:189: initialize_all_variables (from tensorflow.python.ops.variables) is deprecated and will be removed after 2017-03-02.
+Instructions for updating:
+Use `tf.global_variables_initializer` instead.
+2019-12-26 11:18:53.177252: I tensorflow/core/common_runtime/gpu/gpu_device.cc:1511] Adding visible gpu devices: 0
+2019-12-26 11:18:53.177307: I tensorflow/core/common_runtime/gpu/gpu_device.cc:982] Device interconnect StreamExecutor with strength 1 edge matrix:
+2019-12-26 11:18:53.177329: I tensorflow/core/common_runtime/gpu/gpu_device.cc:988]      0 
+2019-12-26 11:18:53.177334: I tensorflow/core/common_runtime/gpu/gpu_device.cc:1001] 0:   N 
+2019-12-26 11:18:53.177393: I tensorflow/core/common_runtime/gpu/gpu_device.cc:1115] Created TensorFlow device (/job:localhost/replica:0/task:0/device:GPU:0 with 30503 MB memory) -> physical GPU (device: 0, name: Tesla V100-SXM2-32GB, pci bus id: 0000:88:00.0, compute capability: 7.0)
+2019-12-26 11:18:53.210207: I tensorflow/core/common_runtime/gpu/gpu_device.cc:1511] Adding visible gpu devices: 0
+2019-12-26 11:18:53.210251: I tensorflow/core/common_runtime/gpu/gpu_device.cc:982] Device interconnect StreamExecutor with strength 1 edge matrix:
+2019-12-26 11:18:53.210257: I tensorflow/core/common_runtime/gpu/gpu_device.cc:988]      0 
+2019-12-26 11:18:53.210261: I tensorflow/core/common_runtime/gpu/gpu_device.cc:1001] 0:   N 
+2019-12-26 11:18:53.216160: I tensorflow/core/common_runtime/gpu/gpu_device.cc:1115] Created TensorFlow device (/job:localhost/replica:0/task:0/device:GPU:0 with 30503 MB memory) -> physical GPU (device: 0, name: Tesla V100-SXM2-32GB, pci bus id: 0000:88:00.0, compute capability: 7.0)
+2019-12-26 11:18:53.244845: I tensorflow/core/common_runtime/gpu/gpu_device.cc:1511] Adding visible gpu devices: 0
+2019-12-26 11:18:53.244887: I tensorflow/core/common_runtime/gpu/gpu_device.cc:982] Device interconnect StreamExecutor with strength 1 edge matrix:
+2019-12-26 11:18:53.244893: I tensorflow/core/common_runtime/gpu/gpu_device.cc:988]      0 
+2019-12-26 11:18:53.244898: I tensorflow/core/common_runtime/gpu/gpu_device.cc:1001] 0:   N 
+2019-12-26 11:18:53.244954: I tensorflow/core/common_runtime/gpu/gpu_device.cc:1115] Created TensorFlow device (/job:localhost/replica:0/task:0/device:GPU:0 with 30503 MB memory) -> physical GPU (device: 0, name: Tesla V100-SXM2-32GB, pci bus id: 0000:88:00.0, compute capability: 7.0)
+2019-12-26 11:18:53.273783: I tensorflow/core/common_runtime/gpu/gpu_device.cc:1511] Adding visible gpu devices: 0
+2019-12-26 11:18:53.273825: I tensorflow/core/common_runtime/gpu/gpu_device.cc:982] Device interconnect StreamExecutor with strength 1 edge matrix:
+2019-12-26 11:18:53.273831: I tensorflow/core/common_runtime/gpu/gpu_device.cc:988]      0 
+2019-12-26 11:18:53.273835: I tensorflow/core/common_runtime/gpu/gpu_device.cc:1001] 0:   N 
+2019-12-26 11:18:53.273888: I tensorflow/core/common_runtime/gpu/gpu_device.cc:1115] Created TensorFlow device (/job:localhost/replica:0/task:0/device:GPU:0 with 30503 MB memory) -> physical GPU (device: 0, name: Tesla V100-SXM2-32GB, pci bus id: 0000:88:00.0, compute capability: 7.0)
+2019-12-26 11:18:53.302982: I tensorflow/core/common_runtime/gpu/gpu_device.cc:1511] Adding visible gpu devices: 0
+2019-12-26 11:18:53.303027: I tensorflow/core/common_runtime/gpu/gpu_device.cc:982] Device interconnect StreamExecutor with strength 1 edge matrix:
+2019-12-26 11:18:53.303032: I tensorflow/core/common_runtime/gpu/gpu_device.cc:988]      0 
+2019-12-26 11:18:53.303037: I tensorflow/core/common_runtime/gpu/gpu_device.cc:1001] 0:   N 
+2019-12-26 11:18:53.303093: I tensorflow/core/common_runtime/gpu/gpu_device.cc:1115] Created TensorFlow device (/job:localhost/replica:0/task:0/device:GPU:0 with 30503 MB memory) -> physical GPU (device: 0, name: Tesla V100-SXM2-32GB, pci bus id: 0000:88:00.0, compute capability: 7.0)
+2019-12-26 11:18:53.331761: I tensorflow/core/common_runtime/gpu/gpu_device.cc:1511] Adding visible gpu devices: 0
+2019-12-26 11:18:53.331804: I tensorflow/core/common_runtime/gpu/gpu_device.cc:982] Device interconnect StreamExecutor with strength 1 edge matrix:
+2019-12-26 11:18:53.331809: I tensorflow/core/common_runtime/gpu/gpu_device.cc:988]      0 
+2019-12-26 11:18:53.331814: I tensorflow/core/common_runtime/gpu/gpu_device.cc:1001] 0:   N 
+2019-12-26 11:18:53.331870: I tensorflow/core/common_runtime/gpu/gpu_device.cc:1115] Created TensorFlow device (/job:localhost/replica:0/task:0/device:GPU:0 with 30503 MB memory) -> physical GPU (device: 0, name: Tesla V100-SXM2-32GB, pci bus id: 0000:88:00.0, compute capability: 7.0)
+2019-12-26 11:18:53.360601: I tensorflow/core/common_runtime/gpu/gpu_device.cc:1511] Adding visible gpu devices: 0
+2019-12-26 11:18:53.360645: I tensorflow/core/common_runtime/gpu/gpu_device.cc:982] Device interconnect StreamExecutor with strength 1 edge matrix:
+2019-12-26 11:18:53.360651: I tensorflow/core/common_runtime/gpu/gpu_device.cc:988]      0 
+2019-12-26 11:18:53.360655: I tensorflow/core/common_runtime/gpu/gpu_device.cc:1001] 0:   N 
+2019-12-26 11:18:53.360710: I tensorflow/core/common_runtime/gpu/gpu_device.cc:1115] Created TensorFlow device (/job:localhost/replica:0/task:0/device:GPU:0 with 30503 MB memory) -> physical GPU (device: 0, name: Tesla V100-SXM2-32GB, pci bus id: 0000:88:00.0, compute capability: 7.0)
+2019-12-26 11:18:53.495477: I tensorflow/core/common_runtime/gpu/gpu_device.cc:1511] Adding visible gpu devices: 0
+2019-12-26 11:18:53.495535: I tensorflow/core/common_runtime/gpu/gpu_device.cc:982] Device interconnect StreamExecutor with strength 1 edge matrix:
+2019-12-26 11:18:53.495540: I tensorflow/core/common_runtime/gpu/gpu_device.cc:988]      0 
+2019-12-26 11:18:53.495545: I tensorflow/core/common_runtime/gpu/gpu_device.cc:1001] 0:   N 
+2019-12-26 11:18:53.497754: I tensorflow/core/common_runtime/gpu/gpu_device.cc:1115] Created TensorFlow device (/job:localhost/replica:0/task:0/device:GPU:0 with 30503 MB memory) -> physical GPU (device: 0, name: Tesla V100-SXM2-32GB, pci bus id: 0000:88:00.0, compute capability: 7.0)
+No display found. Using non-interactive Agg backend.
+Variables being optimized:
+<tf.Variable 'rnn/leaky_rnn_cell/kernel:0' shape=(281, 256) dtype=float32_ref>
+<tf.Variable 'rnn/leaky_rnn_cell/bias:0' shape=(256,) dtype=float32_ref>
+<tf.Variable 'output/weights:0' shape=(256, 3) dtype=float32_ref>
+<tf.Variable 'output/biases:0' shape=(3,) dtype=float32_ref>
+Model restored from file: /home/users/lndrisco/data/rnn/multitask/crystals/softplus/l2h00001/0/model.ckpt
+
+Warning: sample_states is deprecated and will be removed in a future version--use sample_inputs_and_states instead.
+		initial_states: 0 outliers detected (of 500).
+		fixed points: 0 outliers detected (of 474).
+	Decomposing Jacobians in a single batch.
+	Sorting by Eigenvalue magnitude.
+
+Warning: sample_states is deprecated and will be removed in a future version--use sample_inputs_and_states instead.
+		initial_states: 0 outliers detected (of 500).
+		fixed points: 0 outliers detected (of 468).
+	Decomposing Jacobians in a single batch.
+	Sorting by Eigenvalue magnitude.
+
+Warning: sample_states is deprecated and will be removed in a future version--use sample_inputs_and_states instead.
+		initial_states: 0 outliers detected (of 500).
+		fixed points: 0 outliers detected (of 453).
+	Decomposing Jacobians in a single batch.
+	Sorting by Eigenvalue magnitude.
+
+Warning: sample_states is deprecated and will be removed in a future version--use sample_inputs_and_states instead.
+		initial_states: 0 outliers detected (of 500).
+		fixed points: 0 outliers detected (of 477).
+	Decomposing Jacobians in a single batch.
+	Sorting by Eigenvalue magnitude.
+
+Warning: sample_states is deprecated and will be removed in a future version--use sample_inputs_and_states instead.
+		initial_states: 0 outliers detected (of 500).
+		fixed points: 0 outliers detected (of 480).
+	Decomposing Jacobians in a single batch.
+	Sorting by Eigenvalue magnitude.
+
+Warning: sample_states is deprecated and will be removed in a future version--use sample_inputs_and_states instead.
+		initial_states: 0 outliers detected (of 500).
+		fixed points: 0 outliers detected (of 486).
+	Decomposing Jacobians in a single batch.
+	Sorting by Eigenvalue magnitude.
+
+Warning: sample_states is deprecated and will be removed in a future version--use sample_inputs_and_states instead.
+		initial_states: 0 outliers detected (of 500).
+		fixed points: 0 outliers detected (of 486).
+	Decomposing Jacobians in a single batch.
+	Sorting by Eigenvalue magnitude.
+
+Warning: sample_states is deprecated and will be removed in a future version--use sample_inputs_and_states instead.
+		initial_states: 0 outliers detected (of 500).
+		fixed points: 0 outliers detected (of 494).
+	Decomposing Jacobians in a single batch.
+	Sorting by Eigenvalue magnitude.
+
+Warning: sample_states is deprecated and will be removed in a future version--use sample_inputs_and_states instead.
+		initial_states: 0 outliers detected (of 500).
+		fixed points: 0 outliers detected (of 494).
+	Decomposing Jacobians in a single batch.
+	Sorting by Eigenvalue magnitude.
+
+Warning: sample_states is deprecated and will be removed in a future version--use sample_inputs_and_states instead.
+		initial_states: 0 outliers detected (of 500).
+		fixed points: 0 outliers detected (of 489).
+	Decomposing Jacobians in a single batch.
+	Sorting by Eigenvalue magnitude.
+
+Warning: sample_states is deprecated and will be removed in a future version--use sample_inputs_and_states instead.
+		initial_states: 0 outliers detected (of 500).
+		fixed points: 0 outliers detected (of 499).
+	Decomposing Jacobians in a single batch.
+	Sorting by Eigenvalue magnitude.
+
+Warning: sample_states is deprecated and will be removed in a future version--use sample_inputs_and_states instead.
+		initial_states: 0 outliers detected (of 500).
+		fixed points: 0 outliers detected (of 499).
+	Decomposing Jacobians in a single batch.
+	Sorting by Eigenvalue magnitude.
+
+Warning: sample_states is deprecated and will be removed in a future version--use sample_inputs_and_states instead.
+		initial_states: 0 outliers detected (of 500).
+		fixed points: 0 outliers detected (of 493).
+	Decomposing Jacobians in a single batch.
+	Sorting by Eigenvalue magnitude.
+
+Warning: sample_states is deprecated and will be removed in a future version--use sample_inputs_and_states instead.
+		initial_states: 0 outliers detected (of 500).
+		fixed points: 0 outliers detected (of 475).
+	Decomposing Jacobians in a single batch.
+	Sorting by Eigenvalue magnitude.
+
+Warning: sample_states is deprecated and will be removed in a future version--use sample_inputs_and_states instead.
+		initial_states: 0 outliers detected (of 500).
+		fixed points: 0 outliers detected (of 483).
+	Decomposing Jacobians in a single batch.
+	Sorting by Eigenvalue magnitude.
+
+Warning: sample_states is deprecated and will be removed in a future version--use sample_inputs_and_states instead.
+		initial_states: 0 outliers detected (of 500).
+		fixed points: 0 outliers detected (of 495).
+	Decomposing Jacobians in a single batch.
+	Sorting by Eigenvalue magnitude.
+
+Warning: sample_states is deprecated and will be removed in a future version--use sample_inputs_and_states instead.
+		initial_states: 0 outliers detected (of 500).
+		fixed points: 0 outliers detected (of 473).
+	Decomposing Jacobians in a single batch.
+	Sorting by Eigenvalue magnitude.
+
+Warning: sample_states is deprecated and will be removed in a future version--use sample_inputs_and_states instead.
+		initial_states: 0 outliers detected (of 500).
+		fixed points: 0 outliers detected (of 462).
+	Decomposing Jacobians in a single batch.
+	Sorting by Eigenvalue magnitude.
+
+Warning: sample_states is deprecated and will be removed in a future version--use sample_inputs_and_states instead.
+		initial_states: 0 outliers detected (of 500).
+		fixed points: 0 outliers detected (of 443).
+	Decomposing Jacobians in a single batch.
+	Sorting by Eigenvalue magnitude.
+
+Warning: sample_states is deprecated and will be removed in a future version--use sample_inputs_and_states instead.
+		initial_states: 0 outliers detected (of 500).
+		fixed points: 0 outliers detected (of 469).
+	Decomposing Jacobians in a single batch.
+	Sorting by Eigenvalue magnitude.
+
+Warning: sample_states is deprecated and will be removed in a future version--use sample_inputs_and_states instead.
+		initial_states: 0 outliers detected (of 500).
+		fixed points: 0 outliers detected (of 488).
+	Decomposing Jacobians in a single batch.
+	Sorting by Eigenvalue magnitude.
+
+Warning: sample_states is deprecated and will be removed in a future version--use sample_inputs_and_states instead.
+		initial_states: 0 outliers detected (of 500).
+		fixed points: 84 outliers detected (of 500).
+	Decomposing Jacobians in a single batch.
+	Sorting by Eigenvalue magnitude.
+
+Warning: sample_states is deprecated and will be removed in a future version--use sample_inputs_and_states instead.
+		initial_states: 0 outliers detected (of 500).
+		fixed points: 0 outliers detected (of 495).
+	Decomposing Jacobians in a single batch.
+	Sorting by Eigenvalue magnitude.
+
+Warning: sample_states is deprecated and will be removed in a future version--use sample_inputs_and_states instead.
+		initial_states: 0 outliers detected (of 500).
+		fixed points: 0 outliers detected (of 488).
+	Decomposing Jacobians in a single batch.
+	Sorting by Eigenvalue magnitude.
+
+Warning: sample_states is deprecated and will be removed in a future version--use sample_inputs_and_states instead.
+		initial_states: 0 outliers detected (of 500).
+		fixed points: 0 outliers detected (of 492).
+	Decomposing Jacobians in a single batch.
+	Sorting by Eigenvalue magnitude.
+
+Warning: sample_states is deprecated and will be removed in a future version--use sample_inputs_and_states instead.
+		initial_states: 0 outliers detected (of 500).
+		fixed points: 0 outliers detected (of 492).
+	Decomposing Jacobians in a single batch.
+	Sorting by Eigenvalue magnitude.
+
+Warning: sample_states is deprecated and will be removed in a future version--use sample_inputs_and_states instead.
+		initial_states: 0 outliers detected (of 500).
+		fixed points: 0 outliers detected (of 499).
+	Decomposing Jacobians in a single batch.
+	Sorting by Eigenvalue magnitude.
+
+Warning: sample_states is deprecated and will be removed in a future version--use sample_inputs_and_states instead.
+		initial_states: 0 outliers detected (of 500).
+		fixed points: 120 outliers detected (of 500).
+	Decomposing Jacobians in a single batch.
+	Sorting by Eigenvalue magnitude.
+
+Warning: sample_states is deprecated and will be removed in a future version--use sample_inputs_and_states instead.
+		initial_states: 0 outliers detected (of 500).
+		fixed points: 105 outliers detected (of 500).
+	Decomposing Jacobians in a single batch.
+	Sorting by Eigenvalue magnitude.
+
+Warning: sample_states is deprecated and will be removed in a future version--use sample_inputs_and_states instead.
+		initial_states: 0 outliers detected (of 500).
+		fixed points: 0 outliers detected (of 393).
+	Decomposing Jacobians in a single batch.
+	Sorting by Eigenvalue magnitude.
+
+Warning: sample_states is deprecated and will be removed in a future version--use sample_inputs_and_states instead.
+		initial_states: 0 outliers detected (of 500).
+		fixed points: 0 outliers detected (of 474).
+	Decomposing Jacobians in a single batch.
+	Sorting by Eigenvalue magnitude.
+
+Warning: sample_states is deprecated and will be removed in a future version--use sample_inputs_and_states instead.
+		initial_states: 0 outliers detected (of 500).
+		fixed points: 0 outliers detected (of 498).
+	Decomposing Jacobians in a single batch.
+	Sorting by Eigenvalue magnitude.
+
+Warning: sample_states is deprecated and will be removed in a future version--use sample_inputs_and_states instead.
+		initial_states: 0 outliers detected (of 500).
+		fixed points: 0 outliers detected (of 500).
+	Decomposing Jacobians in a single batch.
+	Sorting by Eigenvalue magnitude.
+
+Warning: sample_states is deprecated and will be removed in a future version--use sample_inputs_and_states instead.
+		initial_states: 0 outliers detected (of 500).
+		fixed points: 70 outliers detected (of 500).
+	Decomposing Jacobians in a single batch.
+	Sorting by Eigenvalue magnitude.
+
+Warning: sample_states is deprecated and will be removed in a future version--use sample_inputs_and_states instead.
+		initial_states: 0 outliers detected (of 500).
+		fixed points: 319 outliers detected (of 500).
+	Decomposing Jacobians in a single batch.
+	Sorting by Eigenvalue magnitude.
+
+Warning: sample_states is deprecated and will be removed in a future version--use sample_inputs_and_states instead.
+		initial_states: 0 outliers detected (of 500).
+		fixed points: 0 outliers detected (of 498).
+	Decomposing Jacobians in a single batch.
+	Sorting by Eigenvalue magnitude.
+
+Warning: sample_states is deprecated and will be removed in a future version--use sample_inputs_and_states instead.
+		initial_states: 0 outliers detected (of 500).
+		fixed points: 195 outliers detected (of 500).
+	Decomposing Jacobians in a single batch.
+	Sorting by Eigenvalue magnitude.
+
+Warning: sample_states is deprecated and will be removed in a future version--use sample_inputs_and_states instead.
+		initial_states: 0 outliers detected (of 500).
+		fixed points: 159 outliers detected (of 500).
+	Decomposing Jacobians in a single batch.
+	Sorting by Eigenvalue magnitude.
+
+Warning: sample_states is deprecated and will be removed in a future version--use sample_inputs_and_states instead.
+		initial_states: 0 outliers detected (of 500).
+		fixed points: 0 outliers detected (of 497).
+	Decomposing Jacobians in a single batch.
+	Sorting by Eigenvalue magnitude.
+
+Warning: sample_states is deprecated and will be removed in a future version--use sample_inputs_and_states instead.
+		initial_states: 0 outliers detected (of 500).
+		fixed points: 0 outliers detected (of 494).
+	Decomposing Jacobians in a single batch.
+	Sorting by Eigenvalue magnitude.
+
+Warning: sample_states is deprecated and will be removed in a future version--use sample_inputs_and_states instead.
+		initial_states: 0 outliers detected (of 500).
+		fixed points: 0 outliers detected (of 497).
+	Decomposing Jacobians in a single batch.
+	Sorting by Eigenvalue magnitude.
+Variables being optimized:
+2019-12-26 11:49:26.269844: I tensorflow/core/common_runtime/gpu/gpu_device.cc:1511] Adding visible gpu devices: 0
+2019-12-26 11:49:26.269918: I tensorflow/core/common_runtime/gpu/gpu_device.cc:982] Device interconnect StreamExecutor with strength 1 edge matrix:
+2019-12-26 11:49:26.269924: I tensorflow/core/common_runtime/gpu/gpu_device.cc:988]      0 
+2019-12-26 11:49:26.269930: I tensorflow/core/common_runtime/gpu/gpu_device.cc:1001] 0:   N 
+2019-12-26 11:49:26.270065: I tensorflow/core/common_runtime/gpu/gpu_device.cc:1115] Created TensorFlow device (/job:localhost/replica:0/task:0/device:GPU:0 with 30503 MB memory) -> physical GPU (device: 0, name: Tesla V100-SXM2-32GB, pci bus id: 0000:88:00.0, compute capability: 7.0)
+2019-12-26 11:49:26.330137: I tensorflow/core/common_runtime/gpu/gpu_device.cc:1511] Adding visible gpu devices: 0
+2019-12-26 11:49:26.330189: I tensorflow/core/common_runtime/gpu/gpu_device.cc:982] Device interconnect StreamExecutor with strength 1 edge matrix:
+2019-12-26 11:49:26.330195: I tensorflow/core/common_runtime/gpu/gpu_device.cc:988]      0 
+2019-12-26 11:49:26.330199: I tensorflow/core/common_runtime/gpu/gpu_device.cc:1001] 0:   N 
+2019-12-26 11:49:26.330260: I tensorflow/core/common_runtime/gpu/gpu_device.cc:1115] Created TensorFlow device (/job:localhost/replica:0/task:0/device:GPU:0 with 30503 MB memory) -> physical GPU (device: 0, name: Tesla V100-SXM2-32GB, pci bus id: 0000:88:00.0, compute capability: 7.0)
+2019-12-26 11:49:26.382427: I tensorflow/core/common_runtime/gpu/gpu_device.cc:1511] Adding visible gpu devices: 0
+2019-12-26 11:49:26.382476: I tensorflow/core/common_runtime/gpu/gpu_device.cc:982] Device interconnect StreamExecutor with strength 1 edge matrix:
+2019-12-26 11:49:26.382482: I tensorflow/core/common_runtime/gpu/gpu_device.cc:988]      0 
+2019-12-26 11:49:26.382487: I tensorflow/core/common_runtime/gpu/gpu_device.cc:1001] 0:   N 
+2019-12-26 11:49:26.382554: I tensorflow/core/common_runtime/gpu/gpu_device.cc:1115] Created TensorFlow device (/job:localhost/replica:0/task:0/device:GPU:0 with 30503 MB memory) -> physical GPU (device: 0, name: Tesla V100-SXM2-32GB, pci bus id: 0000:88:00.0, compute capability: 7.0)
+2019-12-26 11:49:26.430544: I tensorflow/core/common_runtime/gpu/gpu_device.cc:1511] Adding visible gpu devices: 0
+2019-12-26 11:49:26.430592: I tensorflow/core/common_runtime/gpu/gpu_device.cc:982] Device interconnect StreamExecutor with strength 1 edge matrix:
+2019-12-26 11:49:26.430598: I tensorflow/core/common_runtime/gpu/gpu_device.cc:988]      0 
+2019-12-26 11:49:26.430603: I tensorflow/core/common_runtime/gpu/gpu_device.cc:1001] 0:   N 
+2019-12-26 11:49:26.430669: I tensorflow/core/common_runtime/gpu/gpu_device.cc:1115] Created TensorFlow device (/job:localhost/replica:0/task:0/device:GPU:0 with 30503 MB memory) -> physical GPU (device: 0, name: Tesla V100-SXM2-32GB, pci bus id: 0000:88:00.0, compute capability: 7.0)
+2019-12-26 11:49:26.482608: I tensorflow/core/common_runtime/gpu/gpu_device.cc:1511] Adding visible gpu devices: 0
+2019-12-26 11:49:26.482657: I tensorflow/core/common_runtime/gpu/gpu_device.cc:982] Device interconnect StreamExecutor with strength 1 edge matrix:
+2019-12-26 11:49:26.482663: I tensorflow/core/common_runtime/gpu/gpu_device.cc:988]      0 
+2019-12-26 11:49:26.482668: I tensorflow/core/common_runtime/gpu/gpu_device.cc:1001] 0:   N 
+2019-12-26 11:49:26.482737: I tensorflow/core/common_runtime/gpu/gpu_device.cc:1115] Created TensorFlow device (/job:localhost/replica:0/task:0/device:GPU:0 with 30503 MB memory) -> physical GPU (device: 0, name: Tesla V100-SXM2-32GB, pci bus id: 0000:88:00.0, compute capability: 7.0)
+2019-12-26 11:49:26.530761: I tensorflow/core/common_runtime/gpu/gpu_device.cc:1511] Adding visible gpu devices: 0
+2019-12-26 11:49:26.530811: I tensorflow/core/common_runtime/gpu/gpu_device.cc:982] Device interconnect StreamExecutor with strength 1 edge matrix:
+2019-12-26 11:49:26.530817: I tensorflow/core/common_runtime/gpu/gpu_device.cc:988]      0 
+2019-12-26 11:49:26.530822: I tensorflow/core/common_runtime/gpu/gpu_device.cc:1001] 0:   N 
+2019-12-26 11:49:26.532154: I tensorflow/core/common_runtime/gpu/gpu_device.cc:1115] Created TensorFlow device (/job:localhost/replica:0/task:0/device:GPU:0 with 30503 MB memory) -> physical GPU (device: 0, name: Tesla V100-SXM2-32GB, pci bus id: 0000:88:00.0, compute capability: 7.0)
+2019-12-26 11:49:26.580652: I tensorflow/core/common_runtime/gpu/gpu_device.cc:1511] Adding visible gpu devices: 0
+2019-12-26 11:49:26.580704: I tensorflow/core/common_runtime/gpu/gpu_device.cc:982] Device interconnect StreamExecutor with strength 1 edge matrix:
+2019-12-26 11:49:26.580710: I tensorflow/core/common_runtime/gpu/gpu_device.cc:988]      0 
+2019-12-26 11:49:26.580715: I tensorflow/core/common_runtime/gpu/gpu_device.cc:1001] 0:   N 
+2019-12-26 11:49:26.580784: I tensorflow/core/common_runtime/gpu/gpu_device.cc:1115] Created TensorFlow device (/job:localhost/replica:0/task:0/device:GPU:0 with 30503 MB memory) -> physical GPU (device: 0, name: Tesla V100-SXM2-32GB, pci bus id: 0000:88:00.0, compute capability: 7.0)
+2019-12-26 11:49:26.630312: I tensorflow/core/common_runtime/gpu/gpu_device.cc:1511] Adding visible gpu devices: 0
+2019-12-26 11:49:26.630362: I tensorflow/core/common_runtime/gpu/gpu_device.cc:982] Device interconnect StreamExecutor with strength 1 edge matrix:
+2019-12-26 11:49:26.630368: I tensorflow/core/common_runtime/gpu/gpu_device.cc:988]      0 
+2019-12-26 11:49:26.630372: I tensorflow/core/common_runtime/gpu/gpu_device.cc:1001] 0:   N 
+2019-12-26 11:49:26.630440: I tensorflow/core/common_runtime/gpu/gpu_device.cc:1115] Created TensorFlow device (/job:localhost/replica:0/task:0/device:GPU:0 with 30503 MB memory) -> physical GPU (device: 0, name: Tesla V100-SXM2-32GB, pci bus id: 0000:88:00.0, compute capability: 7.0)
+2019-12-26 11:49:26.733020: I tensorflow/core/common_runtime/gpu/gpu_device.cc:1511] Adding visible gpu devices: 0
+2019-12-26 11:49:26.733075: I tensorflow/core/common_runtime/gpu/gpu_device.cc:982] Device interconnect StreamExecutor with strength 1 edge matrix:
+2019-12-26 11:49:26.733080: I tensorflow/core/common_runtime/gpu/gpu_device.cc:988]      0 
+2019-12-26 11:49:26.733085: I tensorflow/core/common_runtime/gpu/gpu_device.cc:1001] 0:   N 
+2019-12-26 11:49:26.733157: I tensorflow/core/common_runtime/gpu/gpu_device.cc:1115] Created TensorFlow device (/job:localhost/replica:0/task:0/device:GPU:0 with 30503 MB memory) -> physical GPU (device: 0, name: Tesla V100-SXM2-32GB, pci bus id: 0000:88:00.0, compute capability: 7.0)
+<tf.Variable 'rnn/leaky_rnn_cell/kernel:0' shape=(281, 256) dtype=float32_ref>
+<tf.Variable 'rnn/leaky_rnn_cell/bias:0' shape=(256,) dtype=float32_ref>
+<tf.Variable 'output/weights:0' shape=(256, 3) dtype=float32_ref>
+<tf.Variable 'output/biases:0' shape=(3,) dtype=float32_ref>
+Model restored from file: /home/users/lndrisco/data/rnn/multitask/crystals/softplus/l2h00001/0/model.ckpt
+
+Warning: sample_states is deprecated and will be removed in a future version--use sample_inputs_and_states instead.
+		initial_states: 0 outliers detected (of 500).
+		fixed points: 0 outliers detected (of 499).
+	Decomposing Jacobians in a single batch.
+	Sorting by Eigenvalue magnitude.
+
+Warning: sample_states is deprecated and will be removed in a future version--use sample_inputs_and_states instead.
+		initial_states: 0 outliers detected (of 500).
+		fixed points: 0 outliers detected (of 499).
+	Decomposing Jacobians in a single batch.
+	Sorting by Eigenvalue magnitude.
+
+Warning: sample_states is deprecated and will be removed in a future version--use sample_inputs_and_states instead.
+		initial_states: 0 outliers detected (of 500).
+		fixed points: 0 outliers detected (of 500).
+	Decomposing Jacobians in a single batch.
+	Sorting by Eigenvalue magnitude.
+
+Warning: sample_states is deprecated and will be removed in a future version--use sample_inputs_and_states instead.
+		initial_states: 0 outliers detected (of 500).
+		fixed points: 0 outliers detected (of 498).
+	Decomposing Jacobians in a single batch.
+	Sorting by Eigenvalue magnitude.
+
+Warning: sample_states is deprecated and will be removed in a future version--use sample_inputs_and_states instead.
+		initial_states: 0 outliers detected (of 500).
+		fixed points: 157 outliers detected (of 500).
+	Decomposing Jacobians in a single batch.
+	Sorting by Eigenvalue magnitude.
+
+Warning: sample_states is deprecated and will be removed in a future version--use sample_inputs_and_states instead.
+		initial_states: 0 outliers detected (of 500).
+		fixed points: 0 outliers detected (of 498).
+	Decomposing Jacobians in a single batch.
+	Sorting by Eigenvalue magnitude.
+
+Warning: sample_states is deprecated and will be removed in a future version--use sample_inputs_and_states instead.
+		initial_states: 0 outliers detected (of 500).
+		fixed points: 216 outliers detected (of 500).
+	Decomposing Jacobians in a single batch.
+	Sorting by Eigenvalue magnitude.
+
+Warning: sample_states is deprecated and will be removed in a future version--use sample_inputs_and_states instead.
+		initial_states: 0 outliers detected (of 500).
+		fixed points: 0 outliers detected (of 500).
+	Decomposing Jacobians in a single batch.
+	Sorting by Eigenvalue magnitude.
+
+Warning: sample_states is deprecated and will be removed in a future version--use sample_inputs_and_states instead.
+		initial_states: 0 outliers detected (of 500).
+		fixed points: 196 outliers detected (of 500).
+	Decomposing Jacobians in a single batch.
+	Sorting by Eigenvalue magnitude.
+
+Warning: sample_states is deprecated and will be removed in a future version--use sample_inputs_and_states instead.
+		initial_states: 0 outliers detected (of 500).
+		fixed points: 0 outliers detected (of 490).
+	Decomposing Jacobians in a single batch.
+	Sorting by Eigenvalue magnitude.
+
+Warning: sample_states is deprecated and will be removed in a future version--use sample_inputs_and_states instead.
+		initial_states: 0 outliers detected (of 500).
+		fixed points: 0 outliers detected (of 500).
+	Decomposing Jacobians in a single batch.
+	Sorting by Eigenvalue magnitude.
+
+Warning: sample_states is deprecated and will be removed in a future version--use sample_inputs_and_states instead.
+		initial_states: 0 outliers detected (of 500).
+		fixed points: 0 outliers detected (of 500).
+	Decomposing Jacobians in a single batch.
+	Sorting by Eigenvalue magnitude.
+
+Warning: sample_states is deprecated and will be removed in a future version--use sample_inputs_and_states instead.
+		initial_states: 0 outliers detected (of 500).
+		fixed points: 0 outliers detected (of 500).
+	Decomposing Jacobians in a single batch.
+2019-12-26 12:04:26.692387: I tensorflow/core/common_runtime/gpu/gpu_device.cc:1511] Adding visible gpu devices: 0
+2019-12-26 12:04:26.692459: I tensorflow/core/common_runtime/gpu/gpu_device.cc:982] Device interconnect StreamExecutor with strength 1 edge matrix:
+2019-12-26 12:04:26.692466: I tensorflow/core/common_runtime/gpu/gpu_device.cc:988]      0 
+2019-12-26 12:04:26.692471: I tensorflow/core/common_runtime/gpu/gpu_device.cc:1001] 0:   N 
+2019-12-26 12:04:26.692591: I tensorflow/core/common_runtime/gpu/gpu_device.cc:1115] Created TensorFlow device (/job:localhost/replica:0/task:0/device:GPU:0 with 30503 MB memory) -> physical GPU (device: 0, name: Tesla V100-SXM2-32GB, pci bus id: 0000:88:00.0, compute capability: 7.0)
+2019-12-26 12:04:26.745208: I tensorflow/core/common_runtime/gpu/gpu_device.cc:1511] Adding visible gpu devices: 0
+2019-12-26 12:04:26.745276: I tensorflow/core/common_runtime/gpu/gpu_device.cc:982] Device interconnect StreamExecutor with strength 1 edge matrix:
+2019-12-26 12:04:26.745283: I tensorflow/core/common_runtime/gpu/gpu_device.cc:988]      0 
+2019-12-26 12:04:26.745288: I tensorflow/core/common_runtime/gpu/gpu_device.cc:1001] 0:   N 
+2019-12-26 12:04:26.745374: I tensorflow/core/common_runtime/gpu/gpu_device.cc:1115] Created TensorFlow device (/job:localhost/replica:0/task:0/device:GPU:0 with 30503 MB memory) -> physical GPU (device: 0, name: Tesla V100-SXM2-32GB, pci bus id: 0000:88:00.0, compute capability: 7.0)
+2019-12-26 12:04:26.793732: I tensorflow/core/common_runtime/gpu/gpu_device.cc:1511] Adding visible gpu devices: 0
+2019-12-26 12:04:26.793787: I tensorflow/core/common_runtime/gpu/gpu_device.cc:982] Device interconnect StreamExecutor with strength 1 edge matrix:
+2019-12-26 12:04:26.793793: I tensorflow/core/common_runtime/gpu/gpu_device.cc:988]      0 
+2019-12-26 12:04:26.793798: I tensorflow/core/common_runtime/gpu/gpu_device.cc:1001] 0:   N 
+2019-12-26 12:04:26.793877: I tensorflow/core/common_runtime/gpu/gpu_device.cc:1115] Created TensorFlow device (/job:localhost/replica:0/task:0/device:GPU:0 with 30503 MB memory) -> physical GPU (device: 0, name: Tesla V100-SXM2-32GB, pci bus id: 0000:88:00.0, compute capability: 7.0)
+2019-12-26 12:04:26.842616: I tensorflow/core/common_runtime/gpu/gpu_device.cc:1511] Adding visible gpu devices: 0
+2019-12-26 12:04:26.842668: I tensorflow/core/common_runtime/gpu/gpu_device.cc:982] Device interconnect StreamExecutor with strength 1 edge matrix:
+2019-12-26 12:04:26.842675: I tensorflow/core/common_runtime/gpu/gpu_device.cc:988]      0 
+2019-12-26 12:04:26.842680: I tensorflow/core/common_runtime/gpu/gpu_device.cc:1001] 0:   N 
+2019-12-26 12:04:26.842766: I tensorflow/core/common_runtime/gpu/gpu_device.cc:1115] Created TensorFlow device (/job:localhost/replica:0/task:0/device:GPU:0 with 30503 MB memory) -> physical GPU (device: 0, name: Tesla V100-SXM2-32GB, pci bus id: 0000:88:00.0, compute capability: 7.0)
+2019-12-26 12:04:26.892385: I tensorflow/core/common_runtime/gpu/gpu_device.cc:1511] Adding visible gpu devices: 0
+2019-12-26 12:04:26.892438: I tensorflow/core/common_runtime/gpu/gpu_device.cc:982] Device interconnect StreamExecutor with strength 1 edge matrix:
+2019-12-26 12:04:26.892444: I tensorflow/core/common_runtime/gpu/gpu_device.cc:988]      0 
+2019-12-26 12:04:26.892449: I tensorflow/core/common_runtime/gpu/gpu_device.cc:1001] 0:   N 
+2019-12-26 12:04:26.892536: I tensorflow/core/common_runtime/gpu/gpu_device.cc:1115] Created TensorFlow device (/job:localhost/replica:0/task:0/device:GPU:0 with 30503 MB memory) -> physical GPU (device: 0, name: Tesla V100-SXM2-32GB, pci bus id: 0000:88:00.0, compute capability: 7.0)
+2019-12-26 12:04:26.941876: I tensorflow/core/common_runtime/gpu/gpu_device.cc:1511] Adding visible gpu devices: 0
+2019-12-26 12:04:26.941930: I tensorflow/core/common_runtime/gpu/gpu_device.cc:982] Device interconnect StreamExecutor with strength 1 edge matrix:
+2019-12-26 12:04:26.941936: I tensorflow/core/common_runtime/gpu/gpu_device.cc:988]      0 
+2019-12-26 12:04:26.941941: I tensorflow/core/common_runtime/gpu/gpu_device.cc:1001] 0:   N 
+2019-12-26 12:04:26.942030: I tensorflow/core/common_runtime/gpu/gpu_device.cc:1115] Created TensorFlow device (/job:localhost/replica:0/task:0/device:GPU:0 with 30503 MB memory) -> physical GPU (device: 0, name: Tesla V100-SXM2-32GB, pci bus id: 0000:88:00.0, compute capability: 7.0)
+2019-12-26 12:04:26.992614: I tensorflow/core/common_runtime/gpu/gpu_device.cc:1511] Adding visible gpu devices: 0
+2019-12-26 12:04:26.992668: I tensorflow/core/common_runtime/gpu/gpu_device.cc:982] Device interconnect StreamExecutor with strength 1 edge matrix:
+2019-12-26 12:04:26.992675: I tensorflow/core/common_runtime/gpu/gpu_device.cc:988]      0 
+2019-12-26 12:04:26.992681: I tensorflow/core/common_runtime/gpu/gpu_device.cc:1001] 0:   N 
+2019-12-26 12:04:26.992772: I tensorflow/core/common_runtime/gpu/gpu_device.cc:1115] Created TensorFlow device (/job:localhost/replica:0/task:0/device:GPU:0 with 30503 MB memory) -> physical GPU (device: 0, name: Tesla V100-SXM2-32GB, pci bus id: 0000:88:00.0, compute capability: 7.0)
+2019-12-26 12:04:27.043425: I tensorflow/core/common_runtime/gpu/gpu_device.cc:1511] Adding visible gpu devices: 0
+2019-12-26 12:04:27.043479: I tensorflow/core/common_runtime/gpu/gpu_device.cc:982] Device interconnect StreamExecutor with strength 1 edge matrix:
+2019-12-26 12:04:27.043485: I tensorflow/core/common_runtime/gpu/gpu_device.cc:988]      0 
+2019-12-26 12:04:27.043491: I tensorflow/core/common_runtime/gpu/gpu_device.cc:1001] 0:   N 
+2019-12-26 12:04:27.043577: I tensorflow/core/common_runtime/gpu/gpu_device.cc:1115] Created TensorFlow device (/job:localhost/replica:0/task:0/device:GPU:0 with 30503 MB memory) -> physical GPU (device: 0, name: Tesla V100-SXM2-32GB, pci bus id: 0000:88:00.0, compute capability: 7.0)
+2019-12-26 12:04:27.151350: I tensorflow/core/common_runtime/gpu/gpu_device.cc:1511] Adding visible gpu devices: 0
+2019-12-26 12:04:27.151405: I tensorflow/core/common_runtime/gpu/gpu_device.cc:982] Device interconnect StreamExecutor with strength 1 edge matrix:
+2019-12-26 12:04:27.151412: I tensorflow/core/common_runtime/gpu/gpu_device.cc:988]      0 
+2019-12-26 12:04:27.151417: I tensorflow/core/common_runtime/gpu/gpu_device.cc:1001] 0:   N 
+2019-12-26 12:04:27.151502: I tensorflow/core/common_runtime/gpu/gpu_device.cc:1115] Created TensorFlow device (/job:localhost/replica:0/task:0/device:GPU:0 with 30503 MB memory) -> physical GPU (device: 0, name: Tesla V100-SXM2-32GB, pci bus id: 0000:88:00.0, compute capability: 7.0)
+	Sorting by Eigenvalue magnitude.
+
+Warning: sample_states is deprecated and will be removed in a future version--use sample_inputs_and_states instead.
+		initial_states: 0 outliers detected (of 500).
+		fixed points: 0 outliers detected (of 500).
+	Decomposing Jacobians in a single batch.
+	Sorting by Eigenvalue magnitude.
+
+Warning: sample_states is deprecated and will be removed in a future version--use sample_inputs_and_states instead.
+		initial_states: 0 outliers detected (of 500).
+		fixed points: 0 outliers detected (of 500).
+	Decomposing Jacobians in a single batch.
+	Sorting by Eigenvalue magnitude.
+
+Warning: sample_states is deprecated and will be removed in a future version--use sample_inputs_and_states instead.
+		initial_states: 0 outliers detected (of 500).
+		fixed points: 0 outliers detected (of 496).
+	Decomposing Jacobians in a single batch.
+	Sorting by Eigenvalue magnitude.
+
+Warning: sample_states is deprecated and will be removed in a future version--use sample_inputs_and_states instead.
+		initial_states: 0 outliers detected (of 500).
+		fixed points: 0 outliers detected (of 500).
+	Decomposing Jacobians in a single batch.
+	Sorting by Eigenvalue magnitude.
+
+Warning: sample_states is deprecated and will be removed in a future version--use sample_inputs_and_states instead.
+		initial_states: 0 outliers detected (of 500).
+		fixed points: 0 outliers detected (of 500).
+	Decomposing Jacobians in a single batch.
+	Sorting by Eigenvalue magnitude.
+
+Warning: sample_states is deprecated and will be removed in a future version--use sample_inputs_and_states instead.
+		initial_states: 0 outliers detected (of 500).
+		fixed points: 0 outliers detected (of 499).
+	Decomposing Jacobians in a single batch.
+	Sorting by Eigenvalue magnitude.
+
+Warning: sample_states is deprecated and will be removed in a future version--use sample_inputs_and_states instead.
+		initial_states: 0 outliers detected (of 500).
+		fixed points: 0 outliers detected (of 500).
+	Decomposing Jacobians in a single batch.
+	Sorting by Eigenvalue magnitude.
+
+Warning: sample_states is deprecated and will be removed in a future version--use sample_inputs_and_states instead.
+		initial_states: 0 outliers detected (of 500).
+		fixed points: 84 outliers detected (of 500).
+	Decomposing Jacobians in a single batch.
+	Sorting by Eigenvalue magnitude.
+Variables being optimized:
+<tf.Variable 'rnn/leaky_rnn_cell/kernel:0' shape=(281, 256) dtype=float32_ref>
+<tf.Variable 'rnn/leaky_rnn_cell/bias:0' shape=(256,) dtype=float32_ref>
+<tf.Variable 'output/weights:0' shape=(256, 3) dtype=float32_ref>
+<tf.Variable 'output/biases:0' shape=(3,) dtype=float32_ref>
+Model restored from file: /home/users/lndrisco/data/rnn/multitask/crystals/softplus/l2h00001/0/model.ckpt
+
+Warning: sample_states is deprecated and will be removed in a future version--use sample_inputs_and_states instead.
+		initial_states: 0 outliers detected (of 500).
+		fixed points: 0 outliers detected (of 500).
+	Decomposing Jacobians in a single batch.
+	Sorting by Eigenvalue magnitude.
+
+Warning: sample_states is deprecated and will be removed in a future version--use sample_inputs_and_states instead.
+		initial_states: 0 outliers detected (of 500).
+		fixed points: 0 outliers detected (of 257).
+	Decomposing Jacobians in a single batch.
+	Sorting by Eigenvalue magnitude.
+
+Warning: sample_states is deprecated and will be removed in a future version--use sample_inputs_and_states instead.
+		initial_states: 0 outliers detected (of 500).
+		fixed points: 76 outliers detected (of 500).
+	Decomposing Jacobians in a single batch.
+	Sorting by Eigenvalue magnitude.
+
+Warning: sample_states is deprecated and will be removed in a future version--use sample_inputs_and_states instead.
+		initial_states: 0 outliers detected (of 500).
+		fixed points: 0 outliers detected (of 232).
+	Decomposing Jacobians in a single batch.
+	Sorting by Eigenvalue magnitude.
+
+Warning: sample_states is deprecated and will be removed in a future version--use sample_inputs_and_states instead.
+		initial_states: 0 outliers detected (of 500).
+		fixed points: 0 outliers detected (of 346).
+	Decomposing Jacobians in a single batch.
+	Sorting by Eigenvalue magnitude.
+
+Warning: sample_states is deprecated and will be removed in a future version--use sample_inputs_and_states instead.
+		initial_states: 0 outliers detected (of 500).
+		fixed points: 155 outliers detected (of 500).
+	Decomposing Jacobians in a single batch.
+	Sorting by Eigenvalue magnitude.
+
+Warning: sample_states is deprecated and will be removed in a future version--use sample_inputs_and_states instead.
+		initial_states: 0 outliers detected (of 500).
+		fixed points: 0 outliers detected (of 401).
+	Decomposing Jacobians in a single batch.
+	Sorting by Eigenvalue magnitude.
+
+Warning: sample_states is deprecated and will be removed in a future version--use sample_inputs_and_states instead.
+		initial_states: 0 outliers detected (of 500).
+		fixed points: 0 outliers detected (of 461).
+	Decomposing Jacobians in a single batch.
+	Sorting by Eigenvalue magnitude.
+
+Warning: sample_states is deprecated and will be removed in a future version--use sample_inputs_and_states instead.
+		initial_states: 0 outliers detected (of 500).
+		fixed points: 0 outliers detected (of 472).
+	Decomposing Jacobians in a single batch.
+	Sorting by Eigenvalue magnitude.
+
+Warning: sample_states is deprecated and will be removed in a future version--use sample_inputs_and_states instead.
+		initial_states: 0 outliers detected (of 500).
+		fixed points: 0 outliers detected (of 470).
+	Decomposing Jacobians in a single batch.
+	Sorting by Eigenvalue magnitude.
+
+Warning: sample_states is deprecated and will be removed in a future version--use sample_inputs_and_states instead.
+		initial_states: 0 outliers detected (of 500).
+		fixed points: 0 outliers detected (of 446).
+	Decomposing Jacobians in a single batch.
+	Sorting by Eigenvalue magnitude.
+
+Warning: sample_states is deprecated and will be removed in a future version--use sample_inputs_and_states instead.
+		initial_states: 0 outliers detected (of 500).
+		fixed points: 0 outliers detected (of 494).
+	Decomposing Jacobians in a single batch.
+	Sorting by Eigenvalue magnitude.
+
+Warning: sample_states is deprecated and will be removed in a future version--use sample_inputs_and_states instead.
+		initial_states: 0 outliers detected (of 500).
+		fixed points: 0 outliers detected (of 483).
+	Decomposing Jacobians in a single batch.
+	Sorting by Eigenvalue magnitude.
+
+Warning: sample_states is deprecated and will be removed in a future version--use sample_inputs_and_states instead.
+		initial_states: 0 outliers detected (of 500).
+		fixed points: 0 outliers detected (of 429).
+	Decomposing Jacobians in a single batch.
+	Sorting by Eigenvalue magnitude.
+
+Warning: sample_states is deprecated and will be removed in a future version--use sample_inputs_and_states instead.
+		initial_states: 0 outliers detected (of 500).
+		fixed points: 0 outliers detected (of 426).
+	Decomposing Jacobians in a single batch.
+	Sorting by Eigenvalue magnitude.
+
+Warning: sample_states is deprecated and will be removed in a future version--use sample_inputs_and_states instead.
+		initial_states: 0 outliers detected (of 500).
+		fixed points: 0 outliers detected (of 482).
+	Decomposing Jacobians in a single batch.
+	Sorting by Eigenvalue magnitude.
+
+Warning: sample_states is deprecated and will be removed in a future version--use sample_inputs_and_states instead.
+		initial_states: 0 outliers detected (of 500).
+		fixed points: 386 outliers detected (of 500).
+	Decomposing Jacobians in a single batch.
+	Sorting by Eigenvalue magnitude.
+
+Warning: sample_states is deprecated and will be removed in a future version--use sample_inputs_and_states instead.
+		initial_states: 0 outliers detected (of 500).
+		fixed points: 0 outliers detected (of 459).
+	Decomposing Jacobians in a single batch.
+	Sorting by Eigenvalue magnitude.
+
+Warning: sample_states is deprecated and will be removed in a future version--use sample_inputs_and_states instead.
+		initial_states: 0 outliers detected (of 500).
+		fixed points: 0 outliers detected (of 475).
+	Decomposing Jacobians in a single batch.
+	Sorting by Eigenvalue magnitude.
+
+2019-12-26 12:19:48.173956: I tensorflow/core/common_runtime/gpu/gpu_device.cc:1511] Adding visible gpu devices: 0
+2019-12-26 12:19:48.174028: I tensorflow/core/common_runtime/gpu/gpu_device.cc:982] Device interconnect StreamExecutor with strength 1 edge matrix:
+2019-12-26 12:19:48.174034: I tensorflow/core/common_runtime/gpu/gpu_device.cc:988]      0 
+2019-12-26 12:19:48.174039: I tensorflow/core/common_runtime/gpu/gpu_device.cc:1001] 0:   N 
+2019-12-26 12:19:48.174162: I tensorflow/core/common_runtime/gpu/gpu_device.cc:1115] Created TensorFlow device (/job:localhost/replica:0/task:0/device:GPU:0 with 30503 MB memory) -> physical GPU (device: 0, name: Tesla V100-SXM2-32GB, pci bus id: 0000:88:00.0, compute capability: 7.0)
+2019-12-26 12:19:48.224929: I tensorflow/core/common_runtime/gpu/gpu_device.cc:1511] Adding visible gpu devices: 0
+2019-12-26 12:19:48.224987: I tensorflow/core/common_runtime/gpu/gpu_device.cc:982] Device interconnect StreamExecutor with strength 1 edge matrix:
+2019-12-26 12:19:48.224992: I tensorflow/core/common_runtime/gpu/gpu_device.cc:988]      0 
+2019-12-26 12:19:48.224998: I tensorflow/core/common_runtime/gpu/gpu_device.cc:1001] 0:   N 
+2019-12-26 12:19:48.225091: I tensorflow/core/common_runtime/gpu/gpu_device.cc:1115] Created TensorFlow device (/job:localhost/replica:0/task:0/device:GPU:0 with 30503 MB memory) -> physical GPU (device: 0, name: Tesla V100-SXM2-32GB, pci bus id: 0000:88:00.0, compute capability: 7.0)
+2019-12-26 12:19:48.271941: I tensorflow/core/common_runtime/gpu/gpu_device.cc:1511] Adding visible gpu devices: 0
+2019-12-26 12:19:48.271995: I tensorflow/core/common_runtime/gpu/gpu_device.cc:982] Device interconnect StreamExecutor with strength 1 edge matrix:
+2019-12-26 12:19:48.272001: I tensorflow/core/common_runtime/gpu/gpu_device.cc:988]      0 
+2019-12-26 12:19:48.272007: I tensorflow/core/common_runtime/gpu/gpu_device.cc:1001] 0:   N 
+2019-12-26 12:19:48.272094: I tensorflow/core/common_runtime/gpu/gpu_device.cc:1115] Created TensorFlow device (/job:localhost/replica:0/task:0/device:GPU:0 with 30503 MB memory) -> physical GPU (device: 0, name: Tesla V100-SXM2-32GB, pci bus id: 0000:88:00.0, compute capability: 7.0)
+2019-12-26 12:19:48.323832: I tensorflow/core/common_runtime/gpu/gpu_device.cc:1511] Adding visible gpu devices: 0
+2019-12-26 12:19:48.323879: I tensorflow/core/common_runtime/gpu/gpu_device.cc:982] Device interconnect StreamExecutor with strength 1 edge matrix:
+2019-12-26 12:19:48.323885: I tensorflow/core/common_runtime/gpu/gpu_device.cc:988]      0 
+2019-12-26 12:19:48.323890: I tensorflow/core/common_runtime/gpu/gpu_device.cc:1001] 0:   N 
+2019-12-26 12:19:48.323967: I tensorflow/core/common_runtime/gpu/gpu_device.cc:1115] Created TensorFlow device (/job:localhost/replica:0/task:0/device:GPU:0 with 30503 MB memory) -> physical GPU (device: 0, name: Tesla V100-SXM2-32GB, pci bus id: 0000:88:00.0, compute capability: 7.0)
+2019-12-26 12:19:48.370616: I tensorflow/core/common_runtime/gpu/gpu_device.cc:1511] Adding visible gpu devices: 0
+2019-12-26 12:19:48.370677: I tensorflow/core/common_runtime/gpu/gpu_device.cc:982] Device interconnect StreamExecutor with strength 1 edge matrix:
+2019-12-26 12:19:48.370682: I tensorflow/core/common_runtime/gpu/gpu_device.cc:988]      0 
+2019-12-26 12:19:48.370687: I tensorflow/core/common_runtime/gpu/gpu_device.cc:1001] 0:   N 
+2019-12-26 12:19:48.370766: I tensorflow/core/common_runtime/gpu/gpu_device.cc:1115] Created TensorFlow device (/job:localhost/replica:0/task:0/device:GPU:0 with 30503 MB memory) -> physical GPU (device: 0, name: Tesla V100-SXM2-32GB, pci bus id: 0000:88:00.0, compute capability: 7.0)
+2019-12-26 12:19:48.418358: I tensorflow/core/common_runtime/gpu/gpu_device.cc:1511] Adding visible gpu devices: 0
+2019-12-26 12:19:48.418408: I tensorflow/core/common_runtime/gpu/gpu_device.cc:982] Device interconnect StreamExecutor with strength 1 edge matrix:
+2019-12-26 12:19:48.418414: I tensorflow/core/common_runtime/gpu/gpu_device.cc:988]      0 
+2019-12-26 12:19:48.418419: I tensorflow/core/common_runtime/gpu/gpu_device.cc:1001] 0:   N 
+2019-12-26 12:19:48.418497: I tensorflow/core/common_runtime/gpu/gpu_device.cc:1115] Created TensorFlow device (/job:localhost/replica:0/task:0/device:GPU:0 with 30503 MB memory) -> physical GPU (device: 0, name: Tesla V100-SXM2-32GB, pci bus id: 0000:88:00.0, compute capability: 7.0)
+2019-12-26 12:19:48.465617: I tensorflow/core/common_runtime/gpu/gpu_device.cc:1511] Adding visible gpu devices: 0
+2019-12-26 12:19:48.465682: I tensorflow/core/common_runtime/gpu/gpu_device.cc:982] Device interconnect StreamExecutor with strength 1 edge matrix:
+2019-12-26 12:19:48.465688: I tensorflow/core/common_runtime/gpu/gpu_device.cc:988]      0 
+2019-12-26 12:19:48.465693: I tensorflow/core/common_runtime/gpu/gpu_device.cc:1001] 0:   N 
+2019-12-26 12:19:48.465774: I tensorflow/core/common_runtime/gpu/gpu_device.cc:1115] Created TensorFlow device (/job:localhost/replica:0/task:0/device:GPU:0 with 30503 MB memory) -> physical GPU (device: 0, name: Tesla V100-SXM2-32GB, pci bus id: 0000:88:00.0, compute capability: 7.0)
+2019-12-26 12:19:48.513868: I tensorflow/core/common_runtime/gpu/gpu_device.cc:1511] Adding visible gpu devices: 0
+2019-12-26 12:19:48.513914: I tensorflow/core/common_runtime/gpu/gpu_device.cc:982] Device interconnect StreamExecutor with strength 1 edge matrix:
+2019-12-26 12:19:48.513919: I tensorflow/core/common_runtime/gpu/gpu_device.cc:988]      0 
+2019-12-26 12:19:48.513924: I tensorflow/core/common_runtime/gpu/gpu_device.cc:1001] 0:   N 
+2019-12-26 12:19:48.514023: I tensorflow/core/common_runtime/gpu/gpu_device.cc:1115] Created TensorFlow device (/job:localhost/replica:0/task:0/device:GPU:0 with 30503 MB memory) -> physical GPU (device: 0, name: Tesla V100-SXM2-32GB, pci bus id: 0000:88:00.0, compute capability: 7.0)
+2019-12-26 12:19:48.617912: I tensorflow/core/common_runtime/gpu/gpu_device.cc:1511] Adding visible gpu devices: 0
+2019-12-26 12:19:48.617963: I tensorflow/core/common_runtime/gpu/gpu_device.cc:982] Device interconnect StreamExecutor with strength 1 edge matrix:
+2019-12-26 12:19:48.617968: I tensorflow/core/common_runtime/gpu/gpu_device.cc:988]      0 
+2019-12-26 12:19:48.617974: I tensorflow/core/common_runtime/gpu/gpu_device.cc:1001] 0:   N 
+2019-12-26 12:19:48.618047: I tensorflow/core/common_runtime/gpu/gpu_device.cc:1115] Created TensorFlow device (/job:localhost/replica:0/task:0/device:GPU:0 with 30503 MB memory) -> physical GPU (device: 0, name: Tesla V100-SXM2-32GB, pci bus id: 0000:88:00.0, compute capability: 7.0)
+Warning: sample_states is deprecated and will be removed in a future version--use sample_inputs_and_states instead.
+		initial_states: 0 outliers detected (of 500).
+		fixed points: 0 outliers detected (of 421).
+	Decomposing Jacobians in a single batch.
+	Sorting by Eigenvalue magnitude.
+
+Warning: sample_states is deprecated and will be removed in a future version--use sample_inputs_and_states instead.
+		initial_states: 0 outliers detected (of 500).
+		fixed points: 0 outliers detected (of 337).
+	Decomposing Jacobians in a single batch.
+	Sorting by Eigenvalue magnitude.
+
+Warning: sample_states is deprecated and will be removed in a future version--use sample_inputs_and_states instead.
+		initial_states: 0 outliers detected (of 500).
+		fixed points: 86 outliers detected (of 500).
+	Decomposing Jacobians in a single batch.
+	Sorting by Eigenvalue magnitude.
+
+Warning: sample_states is deprecated and will be removed in a future version--use sample_inputs_and_states instead.
+		initial_states: 0 outliers detected (of 500).
+		fixed points: 0 outliers detected (of 499).
+	Decomposing Jacobians in a single batch.
+	Sorting by Eigenvalue magnitude.
+Variables being optimized:
+<tf.Variable 'rnn/leaky_rnn_cell/kernel:0' shape=(281, 256) dtype=float32_ref>
+<tf.Variable 'rnn/leaky_rnn_cell/bias:0' shape=(256,) dtype=float32_ref>
+<tf.Variable 'output/weights:0' shape=(256, 3) dtype=float32_ref>
+<tf.Variable 'output/biases:0' shape=(3,) dtype=float32_ref>
+Model restored from file: /home/users/lndrisco/data/rnn/multitask/crystals/softplus/l2h00001/0/model.ckpt
+
+Warning: sample_states is deprecated and will be removed in a future version--use sample_inputs_and_states instead.
+		initial_states: 0 outliers detected (of 500).
+		fixed points: 0 outliers detected (of 473).
+	Decomposing Jacobians in a single batch.
+	Sorting by Eigenvalue magnitude.
+
+Warning: sample_states is deprecated and will be removed in a future version--use sample_inputs_and_states instead.
+		initial_states: 0 outliers detected (of 500).
+		fixed points: 134 outliers detected (of 500).
+	Decomposing Jacobians in a single batch.
+	Sorting by Eigenvalue magnitude.
+
+Warning: sample_states is deprecated and will be removed in a future version--use sample_inputs_and_states instead.
+		initial_states: 0 outliers detected (of 500).
+		fixed points: 94 outliers detected (of 500).
+	Decomposing Jacobians in a single batch.
+	Sorting by Eigenvalue magnitude.
+Traceback (most recent call last):
+  File "golub_fixed_pts.py", line 184, in <module>
+    np.savez(os.path.join(save_dir,filename+'.npz'),**all_fps)
+  File "/share/software/user/open/py-numpy/1.14.3_py27/lib/python2.7/site-packages/numpy/lib/npyio.py", line 595, in savez
+    _savez(file, args, kwds, False)
+  File "/share/software/user/open/py-numpy/1.14.3_py27/lib/python2.7/site-packages/numpy/lib/npyio.py", line 721, in _savez
+    raise IOError("Failed to write to %s: %s" % (tmpfile, exc))
+IOError: Failed to write to /home/users/lndrisco/data/rnn/multitask/crystals/softplus/l2h00001/0/golub_fixed_pts/fdanti/stim1_216.0.npzI3YmG2-numpy.npy: [Errno 28] No space left on device
+srun: error: sh-116-01: task 0: Exited with exit code 1
+srun: Terminating job step 57142116.0

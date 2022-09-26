@@ -1,0 +1,23 @@
+block = 4;
+load(fullfile('/home/laura/data/human/yangnet/20180730/process/zscore/',['R_process_block' num2str(block) '.mat']))
+movement_lfrun
+%%
+nr = 2;
+nc = 2;
+
+time_steps = 1:25;
+cmap = hsv(4);
+figure;
+%%
+subplot(nr,nc,1)
+hold on
+for t = 1:4
+plot(squeeze(allCursorR{3}(trial.target==t,time_steps,1))',squeeze(allCursorR{3}(trial.target==t,time_steps,2))','-','color',cmap(t,:))
+end
+%%
+
+for t = find(trial.target==t)
+    t_addy = block*10^3+t;
+    find(data.trialAddress==t_addy)
+    
+    imagesc(pm.rates

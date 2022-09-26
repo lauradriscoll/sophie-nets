@@ -1,0 +1,417 @@
+-------------------------------------------------------------------------------
+There are messages associated with the following module(s):
+-------------------------------------------------------------------------------
+
+py-scipystack/1.0_py27:
+    The SciPy Stack module is deprecated. Please use those individual
+    modules instead: py-scipy, py-numpy, py-matplotlib, py-pandas, py-sympy
+
+
+py-tensorflow/1.9.0_py27:
+    This module is deprecated and will soon be removed.
+
+-------------------------------------------------------------------------------
+
+2022-07-31 14:33:53.713381: I tensorflow/core/platform/cpu_feature_guard.cc:141] Your CPU supports instructions that this TensorFlow binary was not compiled to use: AVX2 FMA
+2022-07-31 14:33:53.717191: E tensorflow/stream_executor/cuda/cuda_driver.cc:397] failed call to cuInit: CUDA_ERROR_NO_DEVICE
+2022-07-31 14:33:53.717226: I tensorflow/stream_executor/cuda/cuda_diagnostics.cc:158] retrieving CUDA diagnostic information for host: sh03-15n16.int
+2022-07-31 14:33:53.717231: I tensorflow/stream_executor/cuda/cuda_diagnostics.cc:165] hostname: sh03-15n16.int
+2022-07-31 14:33:53.717268: I tensorflow/stream_executor/cuda/cuda_diagnostics.cc:189] libcuda reported version is: 510.47.3
+2022-07-31 14:33:53.717296: I tensorflow/stream_executor/cuda/cuda_diagnostics.cc:193] kernel reported version is: 510.47.3
+2022-07-31 14:33:53.717301: I tensorflow/stream_executor/cuda/cuda_diagnostics.cc:300] kernel version seems to match DSO: 510.47.3
+WARNING:tensorflow:From /share/software/user/open/py-tensorflow/1.9.0_py27/lib/python2.7/site-packages/tensorflow/python/util/tf_should_use.py:118: initialize_all_variables (from tensorflow.python.ops.variables) is deprecated and will be removed after 2017-03-02.
+Instructions for updating:
+Use `tf.global_variables_initializer` instead.
+Variables being optimized:
+<tf.Variable 'rnn/leaky_rnn_cell/kernel:0' shape=(148, 128) dtype=float32_ref>
+<tf.Variable 'rnn/leaky_rnn_cell/bias:0' shape=(128,) dtype=float32_ref>
+<tf.Variable 'output/weights:0' shape=(128, 3) dtype=float32_ref>
+<tf.Variable 'output/biases:0' shape=(3,) dtype=float32_ref>
+tau                  = 100
+l2_weight_init       = 0
+w_rec_init           = diag
+alpha                = 0.2
+target_cost          = 0
+l2_h                 = 1e-06
+n_eachring           = 2
+rule_start           = 5
+sigma_x              = 0.1
+w_rec_coeff          = 0.8
+batch_size_train     = 64
+target_perf          = 1.0
+l1_h                 = 0.0
+n_rnn                = 128
+rules                = ['multidelaydm']
+n_output             = 3
+p_weight_train       = None
+learning_rate        = 0.001
+save_name            = test
+ruleset              = all
+loss_type            = lsq
+optimizer            = adam
+rule_probs           = [1.0]
+n_input              = 20
+l1_weight            = 0.0
+activation           = softplus
+out_type             = all
+rng                  = <mtrand.RandomState object at 0x7f81ba243b40>
+c_intsyn             = 0
+l2_weight            = 1e-06
+num_ring             = 2
+dt                   = 20
+seed                 = 6
+in_type              = normal
+use_separate_input   = False
+rule_trains          = ['multidelaydm']
+batch_size_test      = 8192
+sigma_rec            = 0.05
+n_rule               = 15
+rnn_type             = LeakyRNN
+n_rep                = 256
+ksi_intsyn           = 0
+Model saved in file: data/all/LeakyRNN/softplus/diag/1_tasks/128_n_rnn/lr6.0l2_w6.0_h6.0_sig_rec0.05_sig_x0.1_w_rec_coeff0.8_multidelaydm/6/ckpts/model.ckpt-0
+Trial       0  | Time 0.42 s  | Now training multidelaydm
+multidelaydm   | cost 18.705400| c_reg 1.162116  | perf 0.10
+Model saved in file: data/all/LeakyRNN/softplus/diag/1_tasks/128_n_rnn/lr6.0l2_w6.0_h6.0_sig_rec0.05_sig_x0.1_w_rec_coeff0.8_multidelaydm/6/model.ckpt
+Model saved in file: data/all/LeakyRNN/softplus/diag/1_tasks/128_n_rnn/lr6.0l2_w6.0_h6.0_sig_rec0.05_sig_x0.1_w_rec_coeff0.8_multidelaydm/6/ckpts/model.ckpt-1
+Model saved in file: data/all/LeakyRNN/softplus/diag/1_tasks/128_n_rnn/lr6.0l2_w6.0_h6.0_sig_rec0.05_sig_x0.1_w_rec_coeff0.8_multidelaydm/6/ckpts/model.ckpt-2
+Model saved in file: data/all/LeakyRNN/softplus/diag/1_tasks/128_n_rnn/lr6.0l2_w6.0_h6.0_sig_rec0.05_sig_x0.1_w_rec_coeff0.8_multidelaydm/6/ckpts/model.ckpt-3
+Model saved in file: data/all/LeakyRNN/softplus/diag/1_tasks/128_n_rnn/lr6.0l2_w6.0_h6.0_sig_rec0.05_sig_x0.1_w_rec_coeff0.8_multidelaydm/6/ckpts/model.ckpt-4
+Model saved in file: data/all/LeakyRNN/softplus/diag/1_tasks/128_n_rnn/lr6.0l2_w6.0_h6.0_sig_rec0.05_sig_x0.1_w_rec_coeff0.8_multidelaydm/6/ckpts/model.ckpt-5
+Model saved in file: data/all/LeakyRNN/softplus/diag/1_tasks/128_n_rnn/lr6.0l2_w6.0_h6.0_sig_rec0.05_sig_x0.1_w_rec_coeff0.8_multidelaydm/6/ckpts/model.ckpt-6
+Model saved in file: data/all/LeakyRNN/softplus/diag/1_tasks/128_n_rnn/lr6.0l2_w6.0_h6.0_sig_rec0.05_sig_x0.1_w_rec_coeff0.8_multidelaydm/6/ckpts/model.ckpt-7
+Model saved in file: data/all/LeakyRNN/softplus/diag/1_tasks/128_n_rnn/lr6.0l2_w6.0_h6.0_sig_rec0.05_sig_x0.1_w_rec_coeff0.8_multidelaydm/6/ckpts/model.ckpt-8
+Model saved in file: data/all/LeakyRNN/softplus/diag/1_tasks/128_n_rnn/lr6.0l2_w6.0_h6.0_sig_rec0.05_sig_x0.1_w_rec_coeff0.8_multidelaydm/6/ckpts/model.ckpt-9
+Model saved in file: data/all/LeakyRNN/softplus/diag/1_tasks/128_n_rnn/lr6.0l2_w6.0_h6.0_sig_rec0.05_sig_x0.1_w_rec_coeff0.8_multidelaydm/6/ckpts/model.ckpt-1000
+Trial   64000  | Time 141.11 s  | Now training multidelaydm
+multidelaydm   | cost 0.859084| c_reg 0.174590  | perf 0.27
+Model saved in file: data/all/LeakyRNN/softplus/diag/1_tasks/128_n_rnn/lr6.0l2_w6.0_h6.0_sig_rec0.05_sig_x0.1_w_rec_coeff0.8_multidelaydm/6/model.ckpt
+Model saved in file: data/all/LeakyRNN/softplus/diag/1_tasks/128_n_rnn/lr6.0l2_w6.0_h6.0_sig_rec0.05_sig_x0.1_w_rec_coeff0.8_multidelaydm/6/ckpts/model.ckpt-2000
+Trial  128000  | Time 280.45 s  | Now training multidelaydm
+multidelaydm   | cost 0.788309| c_reg 0.114218  | perf 0.32
+Model saved in file: data/all/LeakyRNN/softplus/diag/1_tasks/128_n_rnn/lr6.0l2_w6.0_h6.0_sig_rec0.05_sig_x0.1_w_rec_coeff0.8_multidelaydm/6/model.ckpt
+Model saved in file: data/all/LeakyRNN/softplus/diag/1_tasks/128_n_rnn/lr6.0l2_w6.0_h6.0_sig_rec0.05_sig_x0.1_w_rec_coeff0.8_multidelaydm/6/ckpts/model.ckpt-3000
+Trial  192000  | Time 420.72 s  | Now training multidelaydm
+multidelaydm   | cost 0.756495| c_reg 0.083219  | perf 0.38
+Model saved in file: data/all/LeakyRNN/softplus/diag/1_tasks/128_n_rnn/lr6.0l2_w6.0_h6.0_sig_rec0.05_sig_x0.1_w_rec_coeff0.8_multidelaydm/6/model.ckpt
+Model saved in file: data/all/LeakyRNN/softplus/diag/1_tasks/128_n_rnn/lr6.0l2_w6.0_h6.0_sig_rec0.05_sig_x0.1_w_rec_coeff0.8_multidelaydm/6/ckpts/model.ckpt-4000
+Trial  256000  | Time 561.38 s  | Now training multidelaydm
+multidelaydm   | cost 0.595491| c_reg 0.085466  | perf 0.37
+Model saved in file: data/all/LeakyRNN/softplus/diag/1_tasks/128_n_rnn/lr6.0l2_w6.0_h6.0_sig_rec0.05_sig_x0.1_w_rec_coeff0.8_multidelaydm/6/model.ckpt
+Model saved in file: data/all/LeakyRNN/softplus/diag/1_tasks/128_n_rnn/lr6.0l2_w6.0_h6.0_sig_rec0.05_sig_x0.1_w_rec_coeff0.8_multidelaydm/6/ckpts/model.ckpt-5000
+Trial  320000  | Time 701.88 s  | Now training multidelaydm
+multidelaydm   | cost 0.475187| c_reg 0.082290  | perf 0.53
+Model saved in file: data/all/LeakyRNN/softplus/diag/1_tasks/128_n_rnn/lr6.0l2_w6.0_h6.0_sig_rec0.05_sig_x0.1_w_rec_coeff0.8_multidelaydm/6/model.ckpt
+Model saved in file: data/all/LeakyRNN/softplus/diag/1_tasks/128_n_rnn/lr6.0l2_w6.0_h6.0_sig_rec0.05_sig_x0.1_w_rec_coeff0.8_multidelaydm/6/ckpts/model.ckpt-6000
+Trial  384000  | Time 841.53 s  | Now training multidelaydm
+multidelaydm   | cost 0.347860| c_reg 0.079343  | perf 0.68
+Model saved in file: data/all/LeakyRNN/softplus/diag/1_tasks/128_n_rnn/lr6.0l2_w6.0_h6.0_sig_rec0.05_sig_x0.1_w_rec_coeff0.8_multidelaydm/6/model.ckpt
+Model saved in file: data/all/LeakyRNN/softplus/diag/1_tasks/128_n_rnn/lr6.0l2_w6.0_h6.0_sig_rec0.05_sig_x0.1_w_rec_coeff0.8_multidelaydm/6/ckpts/model.ckpt-7000
+Trial  448000  | Time 980.41 s  | Now training multidelaydm
+multidelaydm   | cost 0.266557| c_reg 0.065526  | perf 0.75
+Model saved in file: data/all/LeakyRNN/softplus/diag/1_tasks/128_n_rnn/lr6.0l2_w6.0_h6.0_sig_rec0.05_sig_x0.1_w_rec_coeff0.8_multidelaydm/6/model.ckpt
+Model saved in file: data/all/LeakyRNN/softplus/diag/1_tasks/128_n_rnn/lr6.0l2_w6.0_h6.0_sig_rec0.05_sig_x0.1_w_rec_coeff0.8_multidelaydm/6/ckpts/model.ckpt-8000
+Trial  512000  | Time 1120.31 s  | Now training multidelaydm
+multidelaydm   | cost 0.236527| c_reg 0.053398  | perf 0.79
+Model saved in file: data/all/LeakyRNN/softplus/diag/1_tasks/128_n_rnn/lr6.0l2_w6.0_h6.0_sig_rec0.05_sig_x0.1_w_rec_coeff0.8_multidelaydm/6/model.ckpt
+Model saved in file: data/all/LeakyRNN/softplus/diag/1_tasks/128_n_rnn/lr6.0l2_w6.0_h6.0_sig_rec0.05_sig_x0.1_w_rec_coeff0.8_multidelaydm/6/ckpts/model.ckpt-9000
+Trial  576000  | Time 1260.30 s  | Now training multidelaydm
+multidelaydm   | cost 0.221466| c_reg 0.046613  | perf 0.78
+Model saved in file: data/all/LeakyRNN/softplus/diag/1_tasks/128_n_rnn/lr6.0l2_w6.0_h6.0_sig_rec0.05_sig_x0.1_w_rec_coeff0.8_multidelaydm/6/model.ckpt
+Model saved in file: data/all/LeakyRNN/softplus/diag/1_tasks/128_n_rnn/lr6.0l2_w6.0_h6.0_sig_rec0.05_sig_x0.1_w_rec_coeff0.8_multidelaydm/6/ckpts/model.ckpt-10000
+Trial  640000  | Time 1400.72 s  | Now training multidelaydm
+multidelaydm   | cost 0.187593| c_reg 0.042555  | perf 0.82
+Model saved in file: data/all/LeakyRNN/softplus/diag/1_tasks/128_n_rnn/lr6.0l2_w6.0_h6.0_sig_rec0.05_sig_x0.1_w_rec_coeff0.8_multidelaydm/6/model.ckpt
+Model saved in file: data/all/LeakyRNN/softplus/diag/1_tasks/128_n_rnn/lr6.0l2_w6.0_h6.0_sig_rec0.05_sig_x0.1_w_rec_coeff0.8_multidelaydm/6/ckpts/model.ckpt-11000
+Trial  704000  | Time 1540.88 s  | Now training multidelaydm
+multidelaydm   | cost 0.190309| c_reg 0.037295  | perf 0.82
+Model saved in file: data/all/LeakyRNN/softplus/diag/1_tasks/128_n_rnn/lr6.0l2_w6.0_h6.0_sig_rec0.05_sig_x0.1_w_rec_coeff0.8_multidelaydm/6/model.ckpt
+Model saved in file: data/all/LeakyRNN/softplus/diag/1_tasks/128_n_rnn/lr6.0l2_w6.0_h6.0_sig_rec0.05_sig_x0.1_w_rec_coeff0.8_multidelaydm/6/ckpts/model.ckpt-12000
+Trial  768000  | Time 1680.87 s  | Now training multidelaydm
+multidelaydm   | cost 0.182823| c_reg 0.036357  | perf 0.82
+Model saved in file: data/all/LeakyRNN/softplus/diag/1_tasks/128_n_rnn/lr6.0l2_w6.0_h6.0_sig_rec0.05_sig_x0.1_w_rec_coeff0.8_multidelaydm/6/model.ckpt
+Model saved in file: data/all/LeakyRNN/softplus/diag/1_tasks/128_n_rnn/lr6.0l2_w6.0_h6.0_sig_rec0.05_sig_x0.1_w_rec_coeff0.8_multidelaydm/6/ckpts/model.ckpt-13000
+Trial  832000  | Time 1819.93 s  | Now training multidelaydm
+multidelaydm   | cost 0.185280| c_reg 0.032116  | perf 0.74
+/home/users/lndrisco/code/multitask-nets/stepnet/task.py:144: RuntimeWarning: overflow encountered in multiply
+  self.stim_strength = 100*np.empty((len(locs),4))
+Model saved in file: data/all/LeakyRNN/softplus/diag/1_tasks/128_n_rnn/lr6.0l2_w6.0_h6.0_sig_rec0.05_sig_x0.1_w_rec_coeff0.8_multidelaydm/6/model.ckpt
+Model saved in file: data/all/LeakyRNN/softplus/diag/1_tasks/128_n_rnn/lr6.0l2_w6.0_h6.0_sig_rec0.05_sig_x0.1_w_rec_coeff0.8_multidelaydm/6/ckpts/model.ckpt-14000
+Trial  896000  | Time 1960.11 s  | Now training multidelaydm
+multidelaydm   | cost 0.173417| c_reg 0.033197  | perf 0.79
+Model saved in file: data/all/LeakyRNN/softplus/diag/1_tasks/128_n_rnn/lr6.0l2_w6.0_h6.0_sig_rec0.05_sig_x0.1_w_rec_coeff0.8_multidelaydm/6/model.ckpt
+Model saved in file: data/all/LeakyRNN/softplus/diag/1_tasks/128_n_rnn/lr6.0l2_w6.0_h6.0_sig_rec0.05_sig_x0.1_w_rec_coeff0.8_multidelaydm/6/ckpts/model.ckpt-15000
+Trial  960000  | Time 2099.57 s  | Now training multidelaydm
+multidelaydm   | cost 0.147131| c_reg 0.029122  | perf 0.85
+Model saved in file: data/all/LeakyRNN/softplus/diag/1_tasks/128_n_rnn/lr6.0l2_w6.0_h6.0_sig_rec0.05_sig_x0.1_w_rec_coeff0.8_multidelaydm/6/model.ckpt
+Model saved in file: data/all/LeakyRNN/softplus/diag/1_tasks/128_n_rnn/lr6.0l2_w6.0_h6.0_sig_rec0.05_sig_x0.1_w_rec_coeff0.8_multidelaydm/6/ckpts/model.ckpt-16000
+Trial 1024000  | Time 2239.46 s  | Now training multidelaydm
+multidelaydm   | cost 0.152432| c_reg 0.027115  | perf 0.84
+Model saved in file: data/all/LeakyRNN/softplus/diag/1_tasks/128_n_rnn/lr6.0l2_w6.0_h6.0_sig_rec0.05_sig_x0.1_w_rec_coeff0.8_multidelaydm/6/model.ckpt
+Model saved in file: data/all/LeakyRNN/softplus/diag/1_tasks/128_n_rnn/lr6.0l2_w6.0_h6.0_sig_rec0.05_sig_x0.1_w_rec_coeff0.8_multidelaydm/6/ckpts/model.ckpt-17000
+Trial 1088000  | Time 2379.79 s  | Now training multidelaydm
+multidelaydm   | cost 0.186505| c_reg 0.026977  | perf 0.78
+Model saved in file: data/all/LeakyRNN/softplus/diag/1_tasks/128_n_rnn/lr6.0l2_w6.0_h6.0_sig_rec0.05_sig_x0.1_w_rec_coeff0.8_multidelaydm/6/model.ckpt
+Model saved in file: data/all/LeakyRNN/softplus/diag/1_tasks/128_n_rnn/lr6.0l2_w6.0_h6.0_sig_rec0.05_sig_x0.1_w_rec_coeff0.8_multidelaydm/6/ckpts/model.ckpt-18000
+Trial 1152000  | Time 2521.56 s  | Now training multidelaydm
+multidelaydm   | cost 0.138441| c_reg 0.025948  | perf 0.86
+Model saved in file: data/all/LeakyRNN/softplus/diag/1_tasks/128_n_rnn/lr6.0l2_w6.0_h6.0_sig_rec0.05_sig_x0.1_w_rec_coeff0.8_multidelaydm/6/model.ckpt
+Model saved in file: data/all/LeakyRNN/softplus/diag/1_tasks/128_n_rnn/lr6.0l2_w6.0_h6.0_sig_rec0.05_sig_x0.1_w_rec_coeff0.8_multidelaydm/6/ckpts/model.ckpt-19000
+Trial 1216000  | Time 2661.85 s  | Now training multidelaydm
+multidelaydm   | cost 0.129675| c_reg 0.024270  | perf 0.86
+Model saved in file: data/all/LeakyRNN/softplus/diag/1_tasks/128_n_rnn/lr6.0l2_w6.0_h6.0_sig_rec0.05_sig_x0.1_w_rec_coeff0.8_multidelaydm/6/model.ckpt
+Model saved in file: data/all/LeakyRNN/softplus/diag/1_tasks/128_n_rnn/lr6.0l2_w6.0_h6.0_sig_rec0.05_sig_x0.1_w_rec_coeff0.8_multidelaydm/6/ckpts/model.ckpt-20000
+Trial 1280000  | Time 2802.13 s  | Now training multidelaydm
+multidelaydm   | cost 0.182869| c_reg 0.020862  | perf 0.73
+Model saved in file: data/all/LeakyRNN/softplus/diag/1_tasks/128_n_rnn/lr6.0l2_w6.0_h6.0_sig_rec0.05_sig_x0.1_w_rec_coeff0.8_multidelaydm/6/model.ckpt
+Model saved in file: data/all/LeakyRNN/softplus/diag/1_tasks/128_n_rnn/lr6.0l2_w6.0_h6.0_sig_rec0.05_sig_x0.1_w_rec_coeff0.8_multidelaydm/6/ckpts/model.ckpt-21000
+Trial 1344000  | Time 2942.30 s  | Now training multidelaydm
+multidelaydm   | cost 0.151958| c_reg 0.021239  | perf 0.78
+Model saved in file: data/all/LeakyRNN/softplus/diag/1_tasks/128_n_rnn/lr6.0l2_w6.0_h6.0_sig_rec0.05_sig_x0.1_w_rec_coeff0.8_multidelaydm/6/model.ckpt
+Model saved in file: data/all/LeakyRNN/softplus/diag/1_tasks/128_n_rnn/lr6.0l2_w6.0_h6.0_sig_rec0.05_sig_x0.1_w_rec_coeff0.8_multidelaydm/6/ckpts/model.ckpt-22000
+Trial 1408000  | Time 3083.32 s  | Now training multidelaydm
+multidelaydm   | cost 0.136952| c_reg 0.021039  | perf 0.83
+Model saved in file: data/all/LeakyRNN/softplus/diag/1_tasks/128_n_rnn/lr6.0l2_w6.0_h6.0_sig_rec0.05_sig_x0.1_w_rec_coeff0.8_multidelaydm/6/model.ckpt
+Model saved in file: data/all/LeakyRNN/softplus/diag/1_tasks/128_n_rnn/lr6.0l2_w6.0_h6.0_sig_rec0.05_sig_x0.1_w_rec_coeff0.8_multidelaydm/6/ckpts/model.ckpt-23000
+Trial 1472000  | Time 3222.51 s  | Now training multidelaydm
+multidelaydm   | cost 0.112119| c_reg 0.023229  | perf 0.87
+Model saved in file: data/all/LeakyRNN/softplus/diag/1_tasks/128_n_rnn/lr6.0l2_w6.0_h6.0_sig_rec0.05_sig_x0.1_w_rec_coeff0.8_multidelaydm/6/model.ckpt
+Model saved in file: data/all/LeakyRNN/softplus/diag/1_tasks/128_n_rnn/lr6.0l2_w6.0_h6.0_sig_rec0.05_sig_x0.1_w_rec_coeff0.8_multidelaydm/6/ckpts/model.ckpt-24000
+Trial 1536000  | Time 3363.10 s  | Now training multidelaydm
+multidelaydm   | cost 0.108525| c_reg 0.021306  | perf 0.89
+Model saved in file: data/all/LeakyRNN/softplus/diag/1_tasks/128_n_rnn/lr6.0l2_w6.0_h6.0_sig_rec0.05_sig_x0.1_w_rec_coeff0.8_multidelaydm/6/model.ckpt
+Model saved in file: data/all/LeakyRNN/softplus/diag/1_tasks/128_n_rnn/lr6.0l2_w6.0_h6.0_sig_rec0.05_sig_x0.1_w_rec_coeff0.8_multidelaydm/6/ckpts/model.ckpt-25000
+Trial 1600000  | Time 3503.40 s  | Now training multidelaydm
+multidelaydm   | cost 0.140774| c_reg 0.021138  | perf 0.75
+Model saved in file: data/all/LeakyRNN/softplus/diag/1_tasks/128_n_rnn/lr6.0l2_w6.0_h6.0_sig_rec0.05_sig_x0.1_w_rec_coeff0.8_multidelaydm/6/model.ckpt
+Model saved in file: data/all/LeakyRNN/softplus/diag/1_tasks/128_n_rnn/lr6.0l2_w6.0_h6.0_sig_rec0.05_sig_x0.1_w_rec_coeff0.8_multidelaydm/6/ckpts/model.ckpt-26000
+Trial 1664000  | Time 3643.22 s  | Now training multidelaydm
+multidelaydm   | cost 0.101181| c_reg 0.019749  | perf 0.90
+Model saved in file: data/all/LeakyRNN/softplus/diag/1_tasks/128_n_rnn/lr6.0l2_w6.0_h6.0_sig_rec0.05_sig_x0.1_w_rec_coeff0.8_multidelaydm/6/model.ckpt
+Model saved in file: data/all/LeakyRNN/softplus/diag/1_tasks/128_n_rnn/lr6.0l2_w6.0_h6.0_sig_rec0.05_sig_x0.1_w_rec_coeff0.8_multidelaydm/6/ckpts/model.ckpt-27000
+Trial 1728000  | Time 3784.53 s  | Now training multidelaydm
+multidelaydm   | cost 0.097284| c_reg 0.019488  | perf 0.89
+Model saved in file: data/all/LeakyRNN/softplus/diag/1_tasks/128_n_rnn/lr6.0l2_w6.0_h6.0_sig_rec0.05_sig_x0.1_w_rec_coeff0.8_multidelaydm/6/model.ckpt
+Model saved in file: data/all/LeakyRNN/softplus/diag/1_tasks/128_n_rnn/lr6.0l2_w6.0_h6.0_sig_rec0.05_sig_x0.1_w_rec_coeff0.8_multidelaydm/6/ckpts/model.ckpt-28000
+Trial 1792000  | Time 3923.47 s  | Now training multidelaydm
+multidelaydm   | cost 0.098457| c_reg 0.018802  | perf 0.88
+Model saved in file: data/all/LeakyRNN/softplus/diag/1_tasks/128_n_rnn/lr6.0l2_w6.0_h6.0_sig_rec0.05_sig_x0.1_w_rec_coeff0.8_multidelaydm/6/model.ckpt
+Model saved in file: data/all/LeakyRNN/softplus/diag/1_tasks/128_n_rnn/lr6.0l2_w6.0_h6.0_sig_rec0.05_sig_x0.1_w_rec_coeff0.8_multidelaydm/6/ckpts/model.ckpt-29000
+Trial 1856000  | Time 4062.71 s  | Now training multidelaydm
+multidelaydm   | cost 0.094536| c_reg 0.018218  | perf 0.88
+Model saved in file: data/all/LeakyRNN/softplus/diag/1_tasks/128_n_rnn/lr6.0l2_w6.0_h6.0_sig_rec0.05_sig_x0.1_w_rec_coeff0.8_multidelaydm/6/model.ckpt
+Model saved in file: data/all/LeakyRNN/softplus/diag/1_tasks/128_n_rnn/lr6.0l2_w6.0_h6.0_sig_rec0.05_sig_x0.1_w_rec_coeff0.8_multidelaydm/6/ckpts/model.ckpt-30000
+Trial 1920000  | Time 4202.87 s  | Now training multidelaydm
+multidelaydm   | cost 0.097323| c_reg 0.018170  | perf 0.90
+Model saved in file: data/all/LeakyRNN/softplus/diag/1_tasks/128_n_rnn/lr6.0l2_w6.0_h6.0_sig_rec0.05_sig_x0.1_w_rec_coeff0.8_multidelaydm/6/model.ckpt
+Model saved in file: data/all/LeakyRNN/softplus/diag/1_tasks/128_n_rnn/lr6.0l2_w6.0_h6.0_sig_rec0.05_sig_x0.1_w_rec_coeff0.8_multidelaydm/6/ckpts/model.ckpt-31000
+Trial 1984000  | Time 4343.62 s  | Now training multidelaydm
+multidelaydm   | cost 0.084702| c_reg 0.017372  | perf 0.91
+Model saved in file: data/all/LeakyRNN/softplus/diag/1_tasks/128_n_rnn/lr6.0l2_w6.0_h6.0_sig_rec0.05_sig_x0.1_w_rec_coeff0.8_multidelaydm/6/model.ckpt
+Model saved in file: data/all/LeakyRNN/softplus/diag/1_tasks/128_n_rnn/lr6.0l2_w6.0_h6.0_sig_rec0.05_sig_x0.1_w_rec_coeff0.8_multidelaydm/6/ckpts/model.ckpt-32000
+Trial 2048000  | Time 4483.60 s  | Now training multidelaydm
+multidelaydm   | cost 0.081759| c_reg 0.017725  | perf 0.92
+Model saved in file: data/all/LeakyRNN/softplus/diag/1_tasks/128_n_rnn/lr6.0l2_w6.0_h6.0_sig_rec0.05_sig_x0.1_w_rec_coeff0.8_multidelaydm/6/model.ckpt
+Model saved in file: data/all/LeakyRNN/softplus/diag/1_tasks/128_n_rnn/lr6.0l2_w6.0_h6.0_sig_rec0.05_sig_x0.1_w_rec_coeff0.8_multidelaydm/6/ckpts/model.ckpt-33000
+Trial 2112000  | Time 4623.22 s  | Now training multidelaydm
+multidelaydm   | cost 0.092772| c_reg 0.016479  | perf 0.89
+Model saved in file: data/all/LeakyRNN/softplus/diag/1_tasks/128_n_rnn/lr6.0l2_w6.0_h6.0_sig_rec0.05_sig_x0.1_w_rec_coeff0.8_multidelaydm/6/model.ckpt
+Model saved in file: data/all/LeakyRNN/softplus/diag/1_tasks/128_n_rnn/lr6.0l2_w6.0_h6.0_sig_rec0.05_sig_x0.1_w_rec_coeff0.8_multidelaydm/6/ckpts/model.ckpt-34000
+Trial 2176000  | Time 4763.51 s  | Now training multidelaydm
+multidelaydm   | cost 0.092541| c_reg 0.016691  | perf 0.89
+Model saved in file: data/all/LeakyRNN/softplus/diag/1_tasks/128_n_rnn/lr6.0l2_w6.0_h6.0_sig_rec0.05_sig_x0.1_w_rec_coeff0.8_multidelaydm/6/model.ckpt
+Model saved in file: data/all/LeakyRNN/softplus/diag/1_tasks/128_n_rnn/lr6.0l2_w6.0_h6.0_sig_rec0.05_sig_x0.1_w_rec_coeff0.8_multidelaydm/6/ckpts/model.ckpt-35000
+Trial 2240000  | Time 4902.07 s  | Now training multidelaydm
+multidelaydm   | cost 0.093020| c_reg 0.016103  | perf 0.89
+Model saved in file: data/all/LeakyRNN/softplus/diag/1_tasks/128_n_rnn/lr6.0l2_w6.0_h6.0_sig_rec0.05_sig_x0.1_w_rec_coeff0.8_multidelaydm/6/model.ckpt
+Model saved in file: data/all/LeakyRNN/softplus/diag/1_tasks/128_n_rnn/lr6.0l2_w6.0_h6.0_sig_rec0.05_sig_x0.1_w_rec_coeff0.8_multidelaydm/6/ckpts/model.ckpt-36000
+Trial 2304000  | Time 5041.71 s  | Now training multidelaydm
+multidelaydm   | cost 0.082057| c_reg 0.015595  | perf 0.91
+Model saved in file: data/all/LeakyRNN/softplus/diag/1_tasks/128_n_rnn/lr6.0l2_w6.0_h6.0_sig_rec0.05_sig_x0.1_w_rec_coeff0.8_multidelaydm/6/model.ckpt
+Model saved in file: data/all/LeakyRNN/softplus/diag/1_tasks/128_n_rnn/lr6.0l2_w6.0_h6.0_sig_rec0.05_sig_x0.1_w_rec_coeff0.8_multidelaydm/6/ckpts/model.ckpt-37000
+Trial 2368000  | Time 5181.16 s  | Now training multidelaydm
+multidelaydm   | cost 0.071287| c_reg 0.015858  | perf 0.93
+Model saved in file: data/all/LeakyRNN/softplus/diag/1_tasks/128_n_rnn/lr6.0l2_w6.0_h6.0_sig_rec0.05_sig_x0.1_w_rec_coeff0.8_multidelaydm/6/model.ckpt
+Model saved in file: data/all/LeakyRNN/softplus/diag/1_tasks/128_n_rnn/lr6.0l2_w6.0_h6.0_sig_rec0.05_sig_x0.1_w_rec_coeff0.8_multidelaydm/6/ckpts/model.ckpt-38000
+Trial 2432000  | Time 5321.67 s  | Now training multidelaydm
+multidelaydm   | cost 0.073341| c_reg 0.015559  | perf 0.93
+Model saved in file: data/all/LeakyRNN/softplus/diag/1_tasks/128_n_rnn/lr6.0l2_w6.0_h6.0_sig_rec0.05_sig_x0.1_w_rec_coeff0.8_multidelaydm/6/model.ckpt
+Model saved in file: data/all/LeakyRNN/softplus/diag/1_tasks/128_n_rnn/lr6.0l2_w6.0_h6.0_sig_rec0.05_sig_x0.1_w_rec_coeff0.8_multidelaydm/6/ckpts/model.ckpt-39000
+Trial 2496000  | Time 5462.58 s  | Now training multidelaydm
+multidelaydm   | cost 0.073914| c_reg 0.014867  | perf 0.93
+Model saved in file: data/all/LeakyRNN/softplus/diag/1_tasks/128_n_rnn/lr6.0l2_w6.0_h6.0_sig_rec0.05_sig_x0.1_w_rec_coeff0.8_multidelaydm/6/model.ckpt
+Model saved in file: data/all/LeakyRNN/softplus/diag/1_tasks/128_n_rnn/lr6.0l2_w6.0_h6.0_sig_rec0.05_sig_x0.1_w_rec_coeff0.8_multidelaydm/6/ckpts/model.ckpt-40000
+Trial 2560000  | Time 5603.82 s  | Now training multidelaydm
+multidelaydm   | cost 0.068732| c_reg 0.014895  | perf 0.93
+Model saved in file: data/all/LeakyRNN/softplus/diag/1_tasks/128_n_rnn/lr6.0l2_w6.0_h6.0_sig_rec0.05_sig_x0.1_w_rec_coeff0.8_multidelaydm/6/model.ckpt
+Model saved in file: data/all/LeakyRNN/softplus/diag/1_tasks/128_n_rnn/lr6.0l2_w6.0_h6.0_sig_rec0.05_sig_x0.1_w_rec_coeff0.8_multidelaydm/6/ckpts/model.ckpt-41000
+Trial 2624000  | Time 5743.51 s  | Now training multidelaydm
+multidelaydm   | cost 0.073557| c_reg 0.014047  | perf 0.93
+Model saved in file: data/all/LeakyRNN/softplus/diag/1_tasks/128_n_rnn/lr6.0l2_w6.0_h6.0_sig_rec0.05_sig_x0.1_w_rec_coeff0.8_multidelaydm/6/model.ckpt
+Model saved in file: data/all/LeakyRNN/softplus/diag/1_tasks/128_n_rnn/lr6.0l2_w6.0_h6.0_sig_rec0.05_sig_x0.1_w_rec_coeff0.8_multidelaydm/6/ckpts/model.ckpt-42000
+Trial 2688000  | Time 5882.89 s  | Now training multidelaydm
+multidelaydm   | cost 0.091226| c_reg 0.014480  | perf 0.89
+Model saved in file: data/all/LeakyRNN/softplus/diag/1_tasks/128_n_rnn/lr6.0l2_w6.0_h6.0_sig_rec0.05_sig_x0.1_w_rec_coeff0.8_multidelaydm/6/model.ckpt
+Model saved in file: data/all/LeakyRNN/softplus/diag/1_tasks/128_n_rnn/lr6.0l2_w6.0_h6.0_sig_rec0.05_sig_x0.1_w_rec_coeff0.8_multidelaydm/6/ckpts/model.ckpt-43000
+Trial 2752000  | Time 6022.95 s  | Now training multidelaydm
+multidelaydm   | cost 0.070780| c_reg 0.014496  | perf 0.93
+Model saved in file: data/all/LeakyRNN/softplus/diag/1_tasks/128_n_rnn/lr6.0l2_w6.0_h6.0_sig_rec0.05_sig_x0.1_w_rec_coeff0.8_multidelaydm/6/model.ckpt
+Model saved in file: data/all/LeakyRNN/softplus/diag/1_tasks/128_n_rnn/lr6.0l2_w6.0_h6.0_sig_rec0.05_sig_x0.1_w_rec_coeff0.8_multidelaydm/6/ckpts/model.ckpt-44000
+Trial 2816000  | Time 6163.45 s  | Now training multidelaydm
+multidelaydm   | cost 0.096581| c_reg 0.014037  | perf 0.90
+Model saved in file: data/all/LeakyRNN/softplus/diag/1_tasks/128_n_rnn/lr6.0l2_w6.0_h6.0_sig_rec0.05_sig_x0.1_w_rec_coeff0.8_multidelaydm/6/model.ckpt
+Model saved in file: data/all/LeakyRNN/softplus/diag/1_tasks/128_n_rnn/lr6.0l2_w6.0_h6.0_sig_rec0.05_sig_x0.1_w_rec_coeff0.8_multidelaydm/6/ckpts/model.ckpt-45000
+Trial 2880000  | Time 6305.21 s  | Now training multidelaydm
+multidelaydm   | cost 0.068422| c_reg 0.013697  | perf 0.94
+Model saved in file: data/all/LeakyRNN/softplus/diag/1_tasks/128_n_rnn/lr6.0l2_w6.0_h6.0_sig_rec0.05_sig_x0.1_w_rec_coeff0.8_multidelaydm/6/model.ckpt
+Model saved in file: data/all/LeakyRNN/softplus/diag/1_tasks/128_n_rnn/lr6.0l2_w6.0_h6.0_sig_rec0.05_sig_x0.1_w_rec_coeff0.8_multidelaydm/6/ckpts/model.ckpt-46000
+Trial 2944000  | Time 6445.34 s  | Now training multidelaydm
+multidelaydm   | cost 0.081353| c_reg 0.013649  | perf 0.90
+Model saved in file: data/all/LeakyRNN/softplus/diag/1_tasks/128_n_rnn/lr6.0l2_w6.0_h6.0_sig_rec0.05_sig_x0.1_w_rec_coeff0.8_multidelaydm/6/model.ckpt
+Model saved in file: data/all/LeakyRNN/softplus/diag/1_tasks/128_n_rnn/lr6.0l2_w6.0_h6.0_sig_rec0.05_sig_x0.1_w_rec_coeff0.8_multidelaydm/6/ckpts/model.ckpt-47000
+Trial 3008000  | Time 6586.54 s  | Now training multidelaydm
+multidelaydm   | cost 0.075859| c_reg 0.012837  | perf 0.93
+Model saved in file: data/all/LeakyRNN/softplus/diag/1_tasks/128_n_rnn/lr6.0l2_w6.0_h6.0_sig_rec0.05_sig_x0.1_w_rec_coeff0.8_multidelaydm/6/model.ckpt
+Model saved in file: data/all/LeakyRNN/softplus/diag/1_tasks/128_n_rnn/lr6.0l2_w6.0_h6.0_sig_rec0.05_sig_x0.1_w_rec_coeff0.8_multidelaydm/6/ckpts/model.ckpt-48000
+Trial 3072000  | Time 6727.06 s  | Now training multidelaydm
+multidelaydm   | cost 0.096810| c_reg 0.012714  | perf 0.90
+Model saved in file: data/all/LeakyRNN/softplus/diag/1_tasks/128_n_rnn/lr6.0l2_w6.0_h6.0_sig_rec0.05_sig_x0.1_w_rec_coeff0.8_multidelaydm/6/model.ckpt
+Model saved in file: data/all/LeakyRNN/softplus/diag/1_tasks/128_n_rnn/lr6.0l2_w6.0_h6.0_sig_rec0.05_sig_x0.1_w_rec_coeff0.8_multidelaydm/6/ckpts/model.ckpt-49000
+Trial 3136000  | Time 6868.13 s  | Now training multidelaydm
+multidelaydm   | cost 0.067687| c_reg 0.012376  | perf 0.94
+Model saved in file: data/all/LeakyRNN/softplus/diag/1_tasks/128_n_rnn/lr6.0l2_w6.0_h6.0_sig_rec0.05_sig_x0.1_w_rec_coeff0.8_multidelaydm/6/model.ckpt
+Model saved in file: data/all/LeakyRNN/softplus/diag/1_tasks/128_n_rnn/lr6.0l2_w6.0_h6.0_sig_rec0.05_sig_x0.1_w_rec_coeff0.8_multidelaydm/6/ckpts/model.ckpt-50000
+Trial 3200000  | Time 7008.71 s  | Now training multidelaydm
+multidelaydm   | cost 0.069187| c_reg 0.012620  | perf 0.93
+Model saved in file: data/all/LeakyRNN/softplus/diag/1_tasks/128_n_rnn/lr6.0l2_w6.0_h6.0_sig_rec0.05_sig_x0.1_w_rec_coeff0.8_multidelaydm/6/model.ckpt
+Model saved in file: data/all/LeakyRNN/softplus/diag/1_tasks/128_n_rnn/lr6.0l2_w6.0_h6.0_sig_rec0.05_sig_x0.1_w_rec_coeff0.8_multidelaydm/6/ckpts/model.ckpt-51000
+Trial 3264000  | Time 7149.60 s  | Now training multidelaydm
+multidelaydm   | cost 0.076291| c_reg 0.012588  | perf 0.92
+Model saved in file: data/all/LeakyRNN/softplus/diag/1_tasks/128_n_rnn/lr6.0l2_w6.0_h6.0_sig_rec0.05_sig_x0.1_w_rec_coeff0.8_multidelaydm/6/model.ckpt
+Model saved in file: data/all/LeakyRNN/softplus/diag/1_tasks/128_n_rnn/lr6.0l2_w6.0_h6.0_sig_rec0.05_sig_x0.1_w_rec_coeff0.8_multidelaydm/6/ckpts/model.ckpt-52000
+Trial 3328000  | Time 7289.21 s  | Now training multidelaydm
+multidelaydm   | cost 0.165713| c_reg 0.012197  | perf 0.69
+Model saved in file: data/all/LeakyRNN/softplus/diag/1_tasks/128_n_rnn/lr6.0l2_w6.0_h6.0_sig_rec0.05_sig_x0.1_w_rec_coeff0.8_multidelaydm/6/model.ckpt
+Model saved in file: data/all/LeakyRNN/softplus/diag/1_tasks/128_n_rnn/lr6.0l2_w6.0_h6.0_sig_rec0.05_sig_x0.1_w_rec_coeff0.8_multidelaydm/6/ckpts/model.ckpt-53000
+Trial 3392000  | Time 7429.66 s  | Now training multidelaydm
+multidelaydm   | cost 0.081443| c_reg 0.011516  | perf 0.90
+Model saved in file: data/all/LeakyRNN/softplus/diag/1_tasks/128_n_rnn/lr6.0l2_w6.0_h6.0_sig_rec0.05_sig_x0.1_w_rec_coeff0.8_multidelaydm/6/model.ckpt
+Model saved in file: data/all/LeakyRNN/softplus/diag/1_tasks/128_n_rnn/lr6.0l2_w6.0_h6.0_sig_rec0.05_sig_x0.1_w_rec_coeff0.8_multidelaydm/6/ckpts/model.ckpt-54000
+Trial 3456000  | Time 7572.09 s  | Now training multidelaydm
+multidelaydm   | cost 0.065228| c_reg 0.012215  | perf 0.94
+Model saved in file: data/all/LeakyRNN/softplus/diag/1_tasks/128_n_rnn/lr6.0l2_w6.0_h6.0_sig_rec0.05_sig_x0.1_w_rec_coeff0.8_multidelaydm/6/model.ckpt
+Model saved in file: data/all/LeakyRNN/softplus/diag/1_tasks/128_n_rnn/lr6.0l2_w6.0_h6.0_sig_rec0.05_sig_x0.1_w_rec_coeff0.8_multidelaydm/6/ckpts/model.ckpt-55000
+Trial 3520000  | Time 7713.55 s  | Now training multidelaydm
+multidelaydm   | cost 0.069759| c_reg 0.011755  | perf 0.93
+Model saved in file: data/all/LeakyRNN/softplus/diag/1_tasks/128_n_rnn/lr6.0l2_w6.0_h6.0_sig_rec0.05_sig_x0.1_w_rec_coeff0.8_multidelaydm/6/model.ckpt
+Model saved in file: data/all/LeakyRNN/softplus/diag/1_tasks/128_n_rnn/lr6.0l2_w6.0_h6.0_sig_rec0.05_sig_x0.1_w_rec_coeff0.8_multidelaydm/6/ckpts/model.ckpt-56000
+Trial 3584000  | Time 7854.89 s  | Now training multidelaydm
+multidelaydm   | cost 0.071551| c_reg 0.012033  | perf 0.92
+Model saved in file: data/all/LeakyRNN/softplus/diag/1_tasks/128_n_rnn/lr6.0l2_w6.0_h6.0_sig_rec0.05_sig_x0.1_w_rec_coeff0.8_multidelaydm/6/model.ckpt
+Model saved in file: data/all/LeakyRNN/softplus/diag/1_tasks/128_n_rnn/lr6.0l2_w6.0_h6.0_sig_rec0.05_sig_x0.1_w_rec_coeff0.8_multidelaydm/6/ckpts/model.ckpt-57000
+Trial 3648000  | Time 7995.57 s  | Now training multidelaydm
+multidelaydm   | cost 0.068849| c_reg 0.011834  | perf 0.91
+Model saved in file: data/all/LeakyRNN/softplus/diag/1_tasks/128_n_rnn/lr6.0l2_w6.0_h6.0_sig_rec0.05_sig_x0.1_w_rec_coeff0.8_multidelaydm/6/model.ckpt
+Model saved in file: data/all/LeakyRNN/softplus/diag/1_tasks/128_n_rnn/lr6.0l2_w6.0_h6.0_sig_rec0.05_sig_x0.1_w_rec_coeff0.8_multidelaydm/6/ckpts/model.ckpt-58000
+Trial 3712000  | Time 8137.49 s  | Now training multidelaydm
+multidelaydm   | cost 0.104245| c_reg 0.011442  | perf 0.88
+Model saved in file: data/all/LeakyRNN/softplus/diag/1_tasks/128_n_rnn/lr6.0l2_w6.0_h6.0_sig_rec0.05_sig_x0.1_w_rec_coeff0.8_multidelaydm/6/model.ckpt
+Model saved in file: data/all/LeakyRNN/softplus/diag/1_tasks/128_n_rnn/lr6.0l2_w6.0_h6.0_sig_rec0.05_sig_x0.1_w_rec_coeff0.8_multidelaydm/6/ckpts/model.ckpt-59000
+Trial 3776000  | Time 8278.23 s  | Now training multidelaydm
+multidelaydm   | cost 0.060776| c_reg 0.011524  | perf 0.94
+Model saved in file: data/all/LeakyRNN/softplus/diag/1_tasks/128_n_rnn/lr6.0l2_w6.0_h6.0_sig_rec0.05_sig_x0.1_w_rec_coeff0.8_multidelaydm/6/model.ckpt
+Model saved in file: data/all/LeakyRNN/softplus/diag/1_tasks/128_n_rnn/lr6.0l2_w6.0_h6.0_sig_rec0.05_sig_x0.1_w_rec_coeff0.8_multidelaydm/6/ckpts/model.ckpt-60000
+Trial 3840000  | Time 8419.70 s  | Now training multidelaydm
+multidelaydm   | cost 0.081635| c_reg 0.011594  | perf 0.92
+Model saved in file: data/all/LeakyRNN/softplus/diag/1_tasks/128_n_rnn/lr6.0l2_w6.0_h6.0_sig_rec0.05_sig_x0.1_w_rec_coeff0.8_multidelaydm/6/model.ckpt
+Model saved in file: data/all/LeakyRNN/softplus/diag/1_tasks/128_n_rnn/lr6.0l2_w6.0_h6.0_sig_rec0.05_sig_x0.1_w_rec_coeff0.8_multidelaydm/6/ckpts/model.ckpt-61000
+Trial 3904000  | Time 8561.68 s  | Now training multidelaydm
+multidelaydm   | cost 0.064408| c_reg 0.011359  | perf 0.94
+Model saved in file: data/all/LeakyRNN/softplus/diag/1_tasks/128_n_rnn/lr6.0l2_w6.0_h6.0_sig_rec0.05_sig_x0.1_w_rec_coeff0.8_multidelaydm/6/model.ckpt
+Model saved in file: data/all/LeakyRNN/softplus/diag/1_tasks/128_n_rnn/lr6.0l2_w6.0_h6.0_sig_rec0.05_sig_x0.1_w_rec_coeff0.8_multidelaydm/6/ckpts/model.ckpt-62000
+Trial 3968000  | Time 8702.65 s  | Now training multidelaydm
+multidelaydm   | cost 0.079778| c_reg 0.010979  | perf 0.90
+Model saved in file: data/all/LeakyRNN/softplus/diag/1_tasks/128_n_rnn/lr6.0l2_w6.0_h6.0_sig_rec0.05_sig_x0.1_w_rec_coeff0.8_multidelaydm/6/model.ckpt
+Model saved in file: data/all/LeakyRNN/softplus/diag/1_tasks/128_n_rnn/lr6.0l2_w6.0_h6.0_sig_rec0.05_sig_x0.1_w_rec_coeff0.8_multidelaydm/6/ckpts/model.ckpt-63000
+Trial 4032000  | Time 8843.60 s  | Now training multidelaydm
+multidelaydm   | cost 0.065485| c_reg 0.011043  | perf 0.95
+Model saved in file: data/all/LeakyRNN/softplus/diag/1_tasks/128_n_rnn/lr6.0l2_w6.0_h6.0_sig_rec0.05_sig_x0.1_w_rec_coeff0.8_multidelaydm/6/model.ckpt
+Model saved in file: data/all/LeakyRNN/softplus/diag/1_tasks/128_n_rnn/lr6.0l2_w6.0_h6.0_sig_rec0.05_sig_x0.1_w_rec_coeff0.8_multidelaydm/6/ckpts/model.ckpt-64000
+Trial 4096000  | Time 8982.55 s  | Now training multidelaydm
+multidelaydm   | cost 0.068350| c_reg 0.010633  | perf 0.94
+Model saved in file: data/all/LeakyRNN/softplus/diag/1_tasks/128_n_rnn/lr6.0l2_w6.0_h6.0_sig_rec0.05_sig_x0.1_w_rec_coeff0.8_multidelaydm/6/model.ckpt
+Model saved in file: data/all/LeakyRNN/softplus/diag/1_tasks/128_n_rnn/lr6.0l2_w6.0_h6.0_sig_rec0.05_sig_x0.1_w_rec_coeff0.8_multidelaydm/6/ckpts/model.ckpt-65000
+Trial 4160000  | Time 9122.93 s  | Now training multidelaydm
+multidelaydm   | cost 0.084425| c_reg 0.010499  | perf 0.90
+Model saved in file: data/all/LeakyRNN/softplus/diag/1_tasks/128_n_rnn/lr6.0l2_w6.0_h6.0_sig_rec0.05_sig_x0.1_w_rec_coeff0.8_multidelaydm/6/model.ckpt
+Model saved in file: data/all/LeakyRNN/softplus/diag/1_tasks/128_n_rnn/lr6.0l2_w6.0_h6.0_sig_rec0.05_sig_x0.1_w_rec_coeff0.8_multidelaydm/6/ckpts/model.ckpt-66000
+Trial 4224000  | Time 9263.72 s  | Now training multidelaydm
+multidelaydm   | cost 0.063415| c_reg 0.011272  | perf 0.95
+Model saved in file: data/all/LeakyRNN/softplus/diag/1_tasks/128_n_rnn/lr6.0l2_w6.0_h6.0_sig_rec0.05_sig_x0.1_w_rec_coeff0.8_multidelaydm/6/model.ckpt
+Model saved in file: data/all/LeakyRNN/softplus/diag/1_tasks/128_n_rnn/lr6.0l2_w6.0_h6.0_sig_rec0.05_sig_x0.1_w_rec_coeff0.8_multidelaydm/6/ckpts/model.ckpt-67000
+Trial 4288000  | Time 9404.51 s  | Now training multidelaydm
+multidelaydm   | cost 0.076359| c_reg 0.010938  | perf 0.93
+Model saved in file: data/all/LeakyRNN/softplus/diag/1_tasks/128_n_rnn/lr6.0l2_w6.0_h6.0_sig_rec0.05_sig_x0.1_w_rec_coeff0.8_multidelaydm/6/model.ckpt
+Model saved in file: data/all/LeakyRNN/softplus/diag/1_tasks/128_n_rnn/lr6.0l2_w6.0_h6.0_sig_rec0.05_sig_x0.1_w_rec_coeff0.8_multidelaydm/6/ckpts/model.ckpt-68000
+Trial 4352000  | Time 9544.18 s  | Now training multidelaydm
+multidelaydm   | cost 0.071104| c_reg 0.010948  | perf 0.90
+Model saved in file: data/all/LeakyRNN/softplus/diag/1_tasks/128_n_rnn/lr6.0l2_w6.0_h6.0_sig_rec0.05_sig_x0.1_w_rec_coeff0.8_multidelaydm/6/model.ckpt
+Model saved in file: data/all/LeakyRNN/softplus/diag/1_tasks/128_n_rnn/lr6.0l2_w6.0_h6.0_sig_rec0.05_sig_x0.1_w_rec_coeff0.8_multidelaydm/6/ckpts/model.ckpt-69000
+Trial 4416000  | Time 9683.46 s  | Now training multidelaydm
+multidelaydm   | cost 0.064213| c_reg 0.010414  | perf 0.95
+Model saved in file: data/all/LeakyRNN/softplus/diag/1_tasks/128_n_rnn/lr6.0l2_w6.0_h6.0_sig_rec0.05_sig_x0.1_w_rec_coeff0.8_multidelaydm/6/model.ckpt
+Model saved in file: data/all/LeakyRNN/softplus/diag/1_tasks/128_n_rnn/lr6.0l2_w6.0_h6.0_sig_rec0.05_sig_x0.1_w_rec_coeff0.8_multidelaydm/6/ckpts/model.ckpt-70000
+Trial 4480000  | Time 9822.77 s  | Now training multidelaydm
+multidelaydm   | cost 0.079101| c_reg 0.010320  | perf 0.92
+Model saved in file: data/all/LeakyRNN/softplus/diag/1_tasks/128_n_rnn/lr6.0l2_w6.0_h6.0_sig_rec0.05_sig_x0.1_w_rec_coeff0.8_multidelaydm/6/model.ckpt
+Model saved in file: data/all/LeakyRNN/softplus/diag/1_tasks/128_n_rnn/lr6.0l2_w6.0_h6.0_sig_rec0.05_sig_x0.1_w_rec_coeff0.8_multidelaydm/6/ckpts/model.ckpt-71000
+Trial 4544000  | Time 9961.87 s  | Now training multidelaydm
+multidelaydm   | cost 0.065427| c_reg 0.010473  | perf 0.93
+Model saved in file: data/all/LeakyRNN/softplus/diag/1_tasks/128_n_rnn/lr6.0l2_w6.0_h6.0_sig_rec0.05_sig_x0.1_w_rec_coeff0.8_multidelaydm/6/model.ckpt
+Model saved in file: data/all/LeakyRNN/softplus/diag/1_tasks/128_n_rnn/lr6.0l2_w6.0_h6.0_sig_rec0.05_sig_x0.1_w_rec_coeff0.8_multidelaydm/6/ckpts/model.ckpt-72000
+Trial 4608000  | Time 10100.47 s  | Now training multidelaydm
+multidelaydm   | cost 0.070783| c_reg 0.010257  | perf 0.93
+Model saved in file: data/all/LeakyRNN/softplus/diag/1_tasks/128_n_rnn/lr6.0l2_w6.0_h6.0_sig_rec0.05_sig_x0.1_w_rec_coeff0.8_multidelaydm/6/model.ckpt
+Model saved in file: data/all/LeakyRNN/softplus/diag/1_tasks/128_n_rnn/lr6.0l2_w6.0_h6.0_sig_rec0.05_sig_x0.1_w_rec_coeff0.8_multidelaydm/6/ckpts/model.ckpt-73000
+Trial 4672000  | Time 10239.39 s  | Now training multidelaydm
+multidelaydm   | cost 0.083859| c_reg 0.010387  | perf 0.90
+Model saved in file: data/all/LeakyRNN/softplus/diag/1_tasks/128_n_rnn/lr6.0l2_w6.0_h6.0_sig_rec0.05_sig_x0.1_w_rec_coeff0.8_multidelaydm/6/model.ckpt
+Model saved in file: data/all/LeakyRNN/softplus/diag/1_tasks/128_n_rnn/lr6.0l2_w6.0_h6.0_sig_rec0.05_sig_x0.1_w_rec_coeff0.8_multidelaydm/6/ckpts/model.ckpt-74000
+Trial 4736000  | Time 10377.82 s  | Now training multidelaydm
+multidelaydm   | cost 0.066025| c_reg 0.010094  | perf 0.94
+Model saved in file: data/all/LeakyRNN/softplus/diag/1_tasks/128_n_rnn/lr6.0l2_w6.0_h6.0_sig_rec0.05_sig_x0.1_w_rec_coeff0.8_multidelaydm/6/model.ckpt
+Model saved in file: data/all/LeakyRNN/softplus/diag/1_tasks/128_n_rnn/lr6.0l2_w6.0_h6.0_sig_rec0.05_sig_x0.1_w_rec_coeff0.8_multidelaydm/6/ckpts/model.ckpt-75000
+Trial 4800000  | Time 10516.47 s  | Now training multidelaydm
+multidelaydm   | cost 0.109325| c_reg 0.010378  | perf 0.85
+Model saved in file: data/all/LeakyRNN/softplus/diag/1_tasks/128_n_rnn/lr6.0l2_w6.0_h6.0_sig_rec0.05_sig_x0.1_w_rec_coeff0.8_multidelaydm/6/model.ckpt
+Model saved in file: data/all/LeakyRNN/softplus/diag/1_tasks/128_n_rnn/lr6.0l2_w6.0_h6.0_sig_rec0.05_sig_x0.1_w_rec_coeff0.8_multidelaydm/6/ckpts/model.ckpt-76000
+Trial 4864000  | Time 10655.16 s  | Now training multidelaydm
+multidelaydm   | cost 0.061729| c_reg 0.010173  | perf 0.95
+Model saved in file: data/all/LeakyRNN/softplus/diag/1_tasks/128_n_rnn/lr6.0l2_w6.0_h6.0_sig_rec0.05_sig_x0.1_w_rec_coeff0.8_multidelaydm/6/model.ckpt
+Model saved in file: data/all/LeakyRNN/softplus/diag/1_tasks/128_n_rnn/lr6.0l2_w6.0_h6.0_sig_rec0.05_sig_x0.1_w_rec_coeff0.8_multidelaydm/6/ckpts/model.ckpt-77000
+Trial 4928000  | Time 10794.14 s  | Now training multidelaydm
+multidelaydm   | cost 0.060869| c_reg 0.010060  | perf 0.95
+Model saved in file: data/all/LeakyRNN/softplus/diag/1_tasks/128_n_rnn/lr6.0l2_w6.0_h6.0_sig_rec0.05_sig_x0.1_w_rec_coeff0.8_multidelaydm/6/model.ckpt
+Model saved in file: data/all/LeakyRNN/softplus/diag/1_tasks/128_n_rnn/lr6.0l2_w6.0_h6.0_sig_rec0.05_sig_x0.1_w_rec_coeff0.8_multidelaydm/6/ckpts/model.ckpt-78000
+Trial 4992000  | Time 10931.98 s  | Now training multidelaydm
+multidelaydm   | cost 0.077741| c_reg 0.009730  | perf 0.91
+Model saved in file: data/all/LeakyRNN/softplus/diag/1_tasks/128_n_rnn/lr6.0l2_w6.0_h6.0_sig_rec0.05_sig_x0.1_w_rec_coeff0.8_multidelaydm/6/model.ckpt
+Model saved in file: data/all/LeakyRNN/softplus/diag/1_tasks/128_n_rnn/lr6.0l2_w6.0_h6.0_sig_rec0.05_sig_x0.1_w_rec_coeff0.8_multidelaydm/6/ckpts/model.ckpt-79000
+Trial 5056000  | Time 11070.84 s  | Now training multidelaydm
+multidelaydm   | cost 0.058814| c_reg 0.009593  | perf 0.95
+Model saved in file: data/all/LeakyRNN/softplus/diag/1_tasks/128_n_rnn/lr6.0l2_w6.0_h6.0_sig_rec0.05_sig_x0.1_w_rec_coeff0.8_multidelaydm/6/model.ckpt
+Model saved in file: data/all/LeakyRNN/softplus/diag/1_tasks/128_n_rnn/lr6.0l2_w6.0_h6.0_sig_rec0.05_sig_x0.1_w_rec_coeff0.8_multidelaydm/6/ckpts/model.ckpt-80000
+Trial 5120000  | Time 11207.80 s  | Now training multidelaydm
+multidelaydm   | cost 0.060342| c_reg 0.009945  | perf 0.94
+Model saved in file: data/all/LeakyRNN/softplus/diag/1_tasks/128_n_rnn/lr6.0l2_w6.0_h6.0_sig_rec0.05_sig_x0.1_w_rec_coeff0.8_multidelaydm/6/model.ckpt
+Model saved in file: data/all/LeakyRNN/softplus/diag/1_tasks/128_n_rnn/lr6.0l2_w6.0_h6.0_sig_rec0.05_sig_x0.1_w_rec_coeff0.8_multidelaydm/6/ckpts/model.ckpt-81000
+Trial 5184000  | Time 11345.92 s  | Now training multidelaydm
+multidelaydm   | cost 0.072343| c_reg 0.009843  | perf 0.92
+Model saved in file: data/all/LeakyRNN/softplus/diag/1_tasks/128_n_rnn/lr6.0l2_w6.0_h6.0_sig_rec0.05_sig_x0.1_w_rec_coeff0.8_multidelaydm/6/model.ckpt
+Model saved in file: data/all/LeakyRNN/softplus/diag/1_tasks/128_n_rnn/lr6.0l2_w6.0_h6.0_sig_rec0.05_sig_x0.1_w_rec_coeff0.8_multidelaydm/6/ckpts/model.ckpt-82000
+Trial 5248000  | Time 11484.82 s  | Now training multidelaydm
+multidelaydm   | cost 0.068382| c_reg 0.009735  | perf 0.93
+Model saved in file: data/all/LeakyRNN/softplus/diag/1_tasks/128_n_rnn/lr6.0l2_w6.0_h6.0_sig_rec0.05_sig_x0.1_w_rec_coeff0.8_multidelaydm/6/model.ckpt
+Model saved in file: data/all/LeakyRNN/softplus/diag/1_tasks/128_n_rnn/lr6.0l2_w6.0_h6.0_sig_rec0.05_sig_x0.1_w_rec_coeff0.8_multidelaydm/6/ckpts/model.ckpt-83000
+Trial 5312000  | Time 11623.06 s  | Now training multidelaydm
+multidelaydm   | cost 0.057617| c_reg 0.009501  | perf 0.95

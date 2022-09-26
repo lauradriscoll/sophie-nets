@@ -1,0 +1,195 @@
+block = 4;
+load('/home/laura/data/human/yangnet/20180730/process/zscore/alignGo/LFADS_20180730_block4.mat')
+% movement_lfrun2
+% pm = rc.runs(1).loadPosteriorMeans();
+%%
+nr = 2;
+nc = 2;
+
+time_steps = 1:25;
+cmap = hsv(4);
+figure;
+%%
+subplot(nr,nc,1)
+hold on
+for target = 1:4
+plot(squeeze(allCursorR{3}(trial.target==target,time_steps,1))',squeeze(allCursorR{3}(trial.target==target,time_steps,2))','-','color',cmap(target,:))
+end
+
+%%
+trials = 1:80;
+X = reshape(pm.factors(:,:,trials),40,[]);
+X_musub = X - mean(X,2);
+
+pcs = pca(X');
+num_pcs = 40;
+pc_project = pcs(:,1:num_pcs)'*X_musub;
+pc_proj_reshape = reshape(pc_project, [num_pcs, size(pm.factors,2), size(trials,2)]);
+
+%%
+for target = 1:2
+    figure
+for trial_it = find(trial.target==target)'
+    t_addy = block*10^3+trial_it;
+    T = find(data.trialAddress==t_addy);
+    
+    subplot(nr,nc,1)
+    hold on
+    plot(squeeze(allCursorR{3}(trial_it,time_steps,1))',squeeze(allCursorR{3}(trial_it,time_steps,2))','color',cmap(target,:))
+    xlim([-.5 .5])
+    ylim([-.5 .5])
+    
+    subplot(nr,nc,2)
+    hold on
+    imagesc(squeeze(pm.rates(:,:,T)))
+    
+    subplot(nr,nc,4)
+    imagesc(squeeze(pm.factors(:,:,T)) - mean(reshape(pm.factors,size(pm.factors,1),[]),2))
+    
+    subplot(nr,nc,3) 
+    hold on
+    plot(pc_proj_reshape(3,:,T),pc_proj_reshape(5,:,T),'color',cmap(target,:))
+    pause
+end
+end
+
+%%
+
+targets = ceil(data.conditionId(1:80)/6);
+Y = repmat(permute((targets>2)+1,[2 3 1]),1,size(pm.factors,2),1);
+Y = reshape(Y,1,[]);
+
+[B,dev,stats] = mnrfit(X',Y');
+%%
+X = reshape(pm.factors(:,:,inds),40,[]);
+targets = ceil(data.conditionId(inds)/6);
+Y = repmat(permute((targets>2)+1,[2 3 1]),1,size(pm.factors,2),1);
+Y = reshape(Y,1,[]);
+
+pihat = mnrval(B,X');
+%%
+load('/home/laura/data/human/yangnet/20180813/process/zscore/alignGo/LFADS_20180813_block5.mat')
+%%
+
+task = mod(data.conditionId(inds)-1,6)+1;
+target = ceil(data.conditionId(inds)/6);
+
+figure;
+inds = 1:200;
+epoch = 3;
+Xn = permute(pm.rates(:,:,inds),[3 2 1]);%allCellResponsesR{epoch};%
+trial_labels = target>2;%data.conditionId(inds)>12;%trial.target==3 | trial.target==1;%(trial.task==2 | trial.task==5); %
+
+use_trials = (task==2 | task==5);%trial.success==1 & trial.end>trial.go & 
+step_size = 2;
+sts = 1:step_size:(size(Xn,2)-step_size-1);%1:step_size:size(pm.rates,2)-step_size;%sum(useInd)
+cmap = spring(2*size(sts,2));
+hmap = summer(2*size(sts,2));
+
+num_its = 10;
+neuron_test_group = nan(size(sts,2),num_its);
+neuron_train_group = nan(size(sts,2),num_its);
+behave_test_group = nan(size(sts,2),num_its);
+behave_train_group = nan(size(sts,2),num_its);
+
+for st = sts
+    frames = st:(st+step_size);
+    ndata = squeeze(nanmean(Xn(:,frames,:),2))'; %ceil(frames/10) %frames
+%     bdata = squeeze(nanmean(allCursorR{epoch}(:,frames,:),2))';
+    trial_t = trial_labels(inds) & use_trials(inds);%use_trials;
+    trial_f = trial_labels(inds)==0 & use_trials(inds);%use_trials;
+    
+    subplot(1,2,1)
+    hold on
+%     plot(bdata(1,trial_t),bdata(2,trial_t),'.','color',cmap(st==sts,:),'MarkerSize',10)
+%     plot(bdata(1,trial_f),bdata(2,trial_f),'.','color',hmap(st==sts,:),'MarkerSize',10)
+    
+    for it = 1:num_its
+        
+        [~, accuracy_test, accuracy_train] = ...
+            qsvmc(ndata,trial_labels,1:size(ndata,1),use_trials,.000001);
+        neuron_test_group(st==sts,it) = accuracy_test;
+        neuron_train_group(st==sts,it) = accuracy_train;
+        
+%         [~, accuracy_test, accuracy_train] = ...
+%             qsvmc(bdata,trial_labels,1:size(bdata,1),use_trials,.1);
+%         behave_test_group(st==sts,it) = accuracy_test;
+%         behave_train_group(st==sts,it) = accuracy_train;
+        
+    end
+end
+
+subplot(1,2,2)
+hold on
+plot(nanmean(behave_test_group,2),':r','lineWidth',2)
+plot(nanmean(behave_train_group,2),'-r','lineWidth',2)
+plot(nanmean(neuron_test_group,2),':b','lineWidth',2)
+plot(nanmean(neuron_train_group,2),'-b','lineWidth',2)
+
+%%
+epoch = 3;
+figure;
+for t = 1:100
+subplot(1,3,1)
+imagesc(squeeze(allCellResponsesR{epoch}(t,:,:))')
+subplot(1,3,2)
+imagesc(squeeze(permute(pm.rates(:,:,t),[3 2 1]))')
+subplot(1,3,3)
+imagesc(squeeze(data.spikes(t,:,:)))
+pause 
+end
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+

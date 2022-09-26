@@ -1,0 +1,31 @@
+-------------------------------------------------------------------------------
+There are messages associated with the following module(s):
+-------------------------------------------------------------------------------
+
+py-scipystack/1.0_py27:
+    The SciPy Stack module is deprecated. Please use those individual
+    modules instead: py-scipy, py-numpy, py-matplotlib, py-pandas, py-sympy
+
+
+py-tensorflow/1.9.0_py27:
+    This module is deprecated and will soon be removed.
+
+-------------------------------------------------------------------------------
+
+Traceback (most recent call last):
+  File "ruleset.py", line 89, in <module>
+    display_step=1000, rich_output=False)
+  File "/home/users/lndrisco/code/multitask-nets/transfer_learn/train.py", line 285, in train
+    model = Model(model_dir, hp=hp)
+  File "/home/users/lndrisco/code/multitask-nets/transfer_learn/network.py", line 554, in __init__
+    self._build(hp)
+  File "/home/users/lndrisco/code/multitask-nets/transfer_learn/network.py", line 561, in _build
+    self._build_fused(hp)
+  File "/home/users/lndrisco/code/multitask-nets/transfer_learn/network.py", line 630, in _build_fused
+    rng=self.rng)
+  File "/home/users/lndrisco/code/multitask-nets/transfer_learn/network.py", line 188, in __init__
+    if os.path.exists(os.path.join(self.model_dir,'model_params.npz')):
+AttributeError: 'LeakyRNNCell' object has no attribute 'model_dir'
+srun: error: sh02-16n01: task 0: Exited with exit code 1
+srun: launch/slurm: _step_signal: Terminating StepId=44935172.0
+/var/spool/slurmd/job44935172/slurm_script: line 12: deactivate: command not found

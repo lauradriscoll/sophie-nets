@@ -1,0 +1,33 @@
+-------------------------------------------------------------------------------
+There are messages associated with the following module(s):
+-------------------------------------------------------------------------------
+
+py-scipystack/1.0_py27:
+    The SciPy Stack module is deprecated. Please use those individual
+    modules instead: py-scipy, py-numpy, py-matplotlib, py-pandas, py-sympy
+
+
+py-tensorflow/1.9.0_py27:
+    This module is deprecated and will soon be removed.
+
+-------------------------------------------------------------------------------
+
+Traceback (most recent call last):
+  File "leave_one_out.py", line 96, in <module>
+    display_step=10000, rich_output=False)
+  File "/home/users/lndrisco/code/multitask-nets/transfer_learn/train.py", line 285, in train
+    model = Model(model_dir, hp=hp)
+  File "/home/users/lndrisco/code/multitask-nets/transfer_learn/network.py", line 556, in __init__
+    self._build(hp)
+  File "/home/users/lndrisco/code/multitask-nets/transfer_learn/network.py", line 563, in _build
+    self._build_fused(hp)
+  File "/home/users/lndrisco/code/multitask-nets/transfer_learn/network.py", line 633, in _build_fused
+    rng=self.rng)
+  File "/home/users/lndrisco/code/multitask-nets/transfer_learn/network.py", line 194, in __init__
+    model_params = np.load(os.path.join(self._w_rec_init ,'model_params.npz'))
+  File "/share/software/user/open/py-numpy/1.14.3_py27/lib/python2.7/site-packages/numpy/lib/npyio.py", line 372, in load
+    fid = open(file, "rb")
+IOError: [Errno 2] No such file or directory: 'data/LeakyRNN/softplus/diag/leave_one_out/14_tasks/128_n_rnn/lr6.0l2_w6.0_h6.0_fdgo_reactgo_delaygo_fdanti_reactanti_delayanti_delaydm1_delaydm2_contextdelaydm1_contextdelaydm2_multidelaydm_dmsgo_dmsnogo_dmcnogo/post_train_dmcgo/0/model_params.npz'
+srun: error: sh03-15n16: task 0: Exited with exit code 1
+srun: launch/slurm: _step_signal: Terminating StepId=57218113.0
+/var/spool/slurmd/job57218113/slurm_script: line 12: deactivate: command not found

@@ -1,0 +1,99 @@
+-------------------------------------------------------------------------------
+The following dependent module(s) are not currently loaded: python/2.7 (required by: py-numpy/1.14.3_py27)
+-------------------------------------------------------------------------------
+-------------------------------------------------------------------------------
+There are messages associated with the following module(s):
+-------------------------------------------------------------------------------
+
+py-scipystack/1.0_py27:
+    The SciPy Stack module is deprecated. Please use those individual
+    modules instead: py-scipy, py-numpy, py-matplotlib, py-pandas, py-sympy
+
+
+py-tensorflow/1.9.0_py27:
+    This module is deprecated and will soon be removed.
+
+-------------------------------------------------------------------------------
+
+2022-06-20 11:30:57.789632: I tensorflow/core/platform/cpu_feature_guard.cc:141] Your CPU supports instructions that this TensorFlow binary was not compiled to use: AVX2 FMA
+2022-06-20 11:30:57.795507: E tensorflow/stream_executor/cuda/cuda_driver.cc:397] failed call to cuInit: CUDA_ERROR_NO_DEVICE
+2022-06-20 11:30:57.795538: I tensorflow/stream_executor/cuda/cuda_diagnostics.cc:158] retrieving CUDA diagnostic information for host: sh03-15n16.int
+2022-06-20 11:30:57.795543: I tensorflow/stream_executor/cuda/cuda_diagnostics.cc:165] hostname: sh03-15n16.int
+2022-06-20 11:30:57.795576: I tensorflow/stream_executor/cuda/cuda_diagnostics.cc:189] libcuda reported version is: 510.47.3
+2022-06-20 11:30:57.795600: I tensorflow/stream_executor/cuda/cuda_diagnostics.cc:193] kernel reported version is: 510.47.3
+2022-06-20 11:30:57.795605: I tensorflow/stream_executor/cuda/cuda_diagnostics.cc:300] kernel version seems to match DSO: 510.47.3
+WARNING:tensorflow:From /share/software/user/open/py-tensorflow/1.9.0_py27/lib/python2.7/site-packages/tensorflow/python/util/tf_should_use.py:118: initialize_all_variables (from tensorflow.python.ops.variables) is deprecated and will be removed after 2017-03-02.
+Instructions for updating:
+Use `tf.global_variables_initializer` instead.
+0.158113883008419
+Variables being optimized:
+<tf.Variable 'rnn/leaky_rnn_cell/kernel_input_delayanti:0' shape=(1, 256) dtype=float32_ref>
+tau                  = 100
+l2_weight_init       = 0
+w_rec_init           = /home/users/lndrisco/code/multitask-nets/stepnet/data/untrained/LeakyRNN/softplus/diag/15_tasks/256_n_rnn/lr7.0l2_w6.0_h6.0_sig_rec0.05_sig_x0.1_w_rec_coeff0.8_fdgo_reactgo_delaygo_fdanti_reactanti_delayanti_delaydm1_delaydm2_contextdelaydm1_contextdelaydm2_multidelaydm_dmsgo_dmsnogo_dmcgo_dmcnogo/4
+alpha                = 0.2
+target_cost          = 0
+l2_h                 = 1e-06
+n_eachring           = 2
+rule_start           = 5
+sigma_x              = 0.01
+batch_size_train     = 64
+target_perf          = 1.0
+l1_h                 = 0.0
+n_rnn                = 256
+rules                = ['delayanti']
+n_output             = 3
+p_weight_train       = None
+learning_rate        = 0.000316227766017
+save_name            = test
+ruleset              = all
+loss_type            = lsq
+optimizer            = adam
+model_dir            = data/LeakyRNN/softplus/diag/untrained/15_tasks/256_n_rnn/lr7.0l2_w6.0_h6.0_fdgo_reactgo_delaygo_fdanti_reactanti_delayanti_delaydm1_delaydm2_contextdelaydm1_contextdelaydm2_multidelaydm_dmsgo_dmsnogo_dmcgo_dmcnogo/post_train_delayanti/4
+rule_probs           = [1.0]
+n_input              = 20
+l1_weight            = 0.0
+activation           = softplus
+out_type             = untrained
+rng                  = <mtrand.RandomState object at 0x7f87796c5b90>
+c_intsyn             = 0
+l2_weight            = 1e-06
+num_ring             = 2
+dt                   = 20
+seed                 = 4
+in_type              = normal
+use_separate_input   = False
+rule_trains          = ['delayanti']
+batch_size_test      = 8192
+sigma_rec            = 0.05
+n_rule               = 15
+rnn_type             = LeakyRNN
+n_rep                = 256
+ksi_intsyn           = 0
+Trial       0  | Time 0.41 s  | Now training delayanti
+delayanti      | cost 66.034882| c_reg 1.434322  | perf 0.11
+/home/users/lndrisco/code/multitask-nets/transfer_learn/task.py:130: RuntimeWarning: overflow encountered in multiply
+  self.stim_strength = 100*np.empty((len(locs),4))
+Model saved in file: data/LeakyRNN/softplus/diag/untrained/15_tasks/256_n_rnn/lr7.0l2_w6.0_h6.0_fdgo_reactgo_delaygo_fdanti_reactanti_delayanti_delaydm1_delaydm2_contextdelaydm1_contextdelaydm2_multidelaydm_dmsgo_dmsnogo_dmcgo_dmcnogo/post_train_delayanti/4/model.ckpt
+Model saved in file: data/LeakyRNN/softplus/diag/untrained/15_tasks/256_n_rnn/lr7.0l2_w6.0_h6.0_fdgo_reactgo_delaygo_fdanti_reactanti_delayanti_delaydm1_delaydm2_contextdelaydm1_contextdelaydm2_multidelaydm_dmsgo_dmsnogo_dmcgo_dmcnogo/post_train_delayanti/4/ckpts/model.ckpt-1
+Model saved in file: data/LeakyRNN/softplus/diag/untrained/15_tasks/256_n_rnn/lr7.0l2_w6.0_h6.0_fdgo_reactgo_delaygo_fdanti_reactanti_delayanti_delaydm1_delaydm2_contextdelaydm1_contextdelaydm2_multidelaydm_dmsgo_dmsnogo_dmcgo_dmcnogo/post_train_delayanti/4/ckpts/model.ckpt-2
+Model saved in file: data/LeakyRNN/softplus/diag/untrained/15_tasks/256_n_rnn/lr7.0l2_w6.0_h6.0_fdgo_reactgo_delaygo_fdanti_reactanti_delayanti_delaydm1_delaydm2_contextdelaydm1_contextdelaydm2_multidelaydm_dmsgo_dmsnogo_dmcgo_dmcnogo/post_train_delayanti/4/ckpts/model.ckpt-3
+Model saved in file: data/LeakyRNN/softplus/diag/untrained/15_tasks/256_n_rnn/lr7.0l2_w6.0_h6.0_fdgo_reactgo_delaygo_fdanti_reactanti_delayanti_delaydm1_delaydm2_contextdelaydm1_contextdelaydm2_multidelaydm_dmsgo_dmsnogo_dmcgo_dmcnogo/post_train_delayanti/4/ckpts/model.ckpt-4
+Model saved in file: data/LeakyRNN/softplus/diag/untrained/15_tasks/256_n_rnn/lr7.0l2_w6.0_h6.0_fdgo_reactgo_delaygo_fdanti_reactanti_delayanti_delaydm1_delaydm2_contextdelaydm1_contextdelaydm2_multidelaydm_dmsgo_dmsnogo_dmcgo_dmcnogo/post_train_delayanti/4/ckpts/model.ckpt-5
+Model saved in file: data/LeakyRNN/softplus/diag/untrained/15_tasks/256_n_rnn/lr7.0l2_w6.0_h6.0_fdgo_reactgo_delaygo_fdanti_reactanti_delayanti_delaydm1_delaydm2_contextdelaydm1_contextdelaydm2_multidelaydm_dmsgo_dmsnogo_dmcgo_dmcnogo/post_train_delayanti/4/ckpts/model.ckpt-6
+Model saved in file: data/LeakyRNN/softplus/diag/untrained/15_tasks/256_n_rnn/lr7.0l2_w6.0_h6.0_fdgo_reactgo_delaygo_fdanti_reactanti_delayanti_delaydm1_delaydm2_contextdelaydm1_contextdelaydm2_multidelaydm_dmsgo_dmsnogo_dmcgo_dmcnogo/post_train_delayanti/4/ckpts/model.ckpt-7
+Model saved in file: data/LeakyRNN/softplus/diag/untrained/15_tasks/256_n_rnn/lr7.0l2_w6.0_h6.0_fdgo_reactgo_delaygo_fdanti_reactanti_delayanti_delaydm1_delaydm2_contextdelaydm1_contextdelaydm2_multidelaydm_dmsgo_dmsnogo_dmcgo_dmcnogo/post_train_delayanti/4/ckpts/model.ckpt-8
+Model saved in file: data/LeakyRNN/softplus/diag/untrained/15_tasks/256_n_rnn/lr7.0l2_w6.0_h6.0_fdgo_reactgo_delaygo_fdanti_reactanti_delayanti_delaydm1_delaydm2_contextdelaydm1_contextdelaydm2_multidelaydm_dmsgo_dmsnogo_dmcgo_dmcnogo/post_train_delayanti/4/ckpts/model.ckpt-9
+Model saved in file: data/LeakyRNN/softplus/diag/untrained/15_tasks/256_n_rnn/lr7.0l2_w6.0_h6.0_fdgo_reactgo_delaygo_fdanti_reactanti_delayanti_delaydm1_delaydm2_contextdelaydm1_contextdelaydm2_multidelaydm_dmsgo_dmsnogo_dmcgo_dmcnogo/post_train_delayanti/4/ckpts/model.ckpt-1000
+Trial   64000  | Time 200.86 s  | Now training delayanti
+delayanti      | cost 3.006670| c_reg 1.425820  | perf 0.10
+/home/users/lndrisco/code/multitask-nets/transfer_learn/task.py:130: RuntimeWarning: invalid value encountered in multiply
+  self.stim_strength = 100*np.empty((len(locs),4))
+Model saved in file: data/LeakyRNN/softplus/diag/untrained/15_tasks/256_n_rnn/lr7.0l2_w6.0_h6.0_fdgo_reactgo_delaygo_fdanti_reactanti_delayanti_delaydm1_delaydm2_contextdelaydm1_contextdelaydm2_multidelaydm_dmsgo_dmsnogo_dmcgo_dmcnogo/post_train_delayanti/4/model.ckpt
+Model saved in file: data/LeakyRNN/softplus/diag/untrained/15_tasks/256_n_rnn/lr7.0l2_w6.0_h6.0_fdgo_reactgo_delaygo_fdanti_reactanti_delayanti_delaydm1_delaydm2_contextdelaydm1_contextdelaydm2_multidelaydm_dmsgo_dmsnogo_dmcgo_dmcnogo/post_train_delayanti/4/ckpts/model.ckpt-2000
+Trial  128000  | Time 397.95 s  | Now training delayanti
+delayanti      | cost 2.850041| c_reg 1.425787  | perf 0.09
+Model saved in file: data/LeakyRNN/softplus/diag/untrained/15_tasks/256_n_rnn/lr7.0l2_w6.0_h6.0_fdgo_reactgo_delaygo_fdanti_reactanti_delayanti_delaydm1_delaydm2_contextdelaydm1_contextdelaydm2_multidelaydm_dmsgo_dmsnogo_dmcgo_dmcnogo/post_train_delayanti/4/model.ckpt
+Model saved in file: data/LeakyRNN/softplus/diag/untrained/15_tasks/256_n_rnn/lr7.0l2_w6.0_h6.0_fdgo_reactgo_delaygo_fdanti_reactanti_delayanti_delaydm1_delaydm2_contextdelaydm1_contextdelaydm2_multidelaydm_dmsgo_dmsnogo_dmcgo_dmcnogo/post_train_delayanti/4/ckpts/model.ckpt-3000
+Trial  192000  | Time 597.06 s  | Now training delayanti
+delayanti      | cost 2.730105| c_reg 1.263558  | perf 0.10

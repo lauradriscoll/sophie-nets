@@ -1,0 +1,36 @@
+#!/bin/bash
+rnn_type_array=("LeakyRNN")
+activation_array=("softplus")
+init_array=("diag")
+ruleset_array=("all")
+for rnn_type in ${rnn_type_array[*]};do
+for activation in ${activation_array[*]};do
+for init in ${init_array[*]};do
+for n_rnn in 128;do
+for l2w in -6;do #-6
+for l2h in -6;do #-6
+for l1w in -0;do
+for l1h in -0;do
+for seed in 6;do
+for lr in -6;do #-7
+for sigma_rec in 1;do #1
+for sigma_x in 2;do #2
+for pop_rule in 1;do
+for ruleset in ${ruleset_array[*]};do
+for w_rec_coeff in 9;do
+sbatch -p shenoy ruleset_sweep_"$rnn_type"_"$activation"_"$init"_"$n_rnn"_"$l2w"_"$l2h"_"$l1w"_"$l1h"_"$seed"_"$lr"_"$sigma_rec"_"$sigma_x"_"$pop_rule"_"$ruleset"_"$w_rec_coeff"
+done
+done
+done
+done
+done
+done
+done
+done
+done
+done
+done
+done
+done
+done
+done

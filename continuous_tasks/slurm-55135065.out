@@ -1,0 +1,1957 @@
+-------------------------------------------------------------------------------
+There are messages associated with the following module(s):
+-------------------------------------------------------------------------------
+
+py-scipystack/1.0_py27:
+    The SciPy Stack module is deprecated. Please use those individual
+    modules instead: py-scipy, py-numpy, py-matplotlib, py-pandas, py-sympy
+
+
+py-tensorflow/1.9.0_py27:
+    Warning: this module requires a GPU, it won't work on CPU nodes.
+
+-------------------------------------------------------------------------------
+
+2019-11-22 09:00:48.743633: I tensorflow/core/platform/cpu_feature_guard.cc:141] Your CPU supports instructions that this TensorFlow binary was not compiled to use: AVX2 FMA
+2019-11-22 09:00:48.953856: I tensorflow/core/common_runtime/gpu/gpu_device.cc:1392] Found device 0 with properties: 
+name: Tesla P40 major: 6 minor: 1 memoryClockRate(GHz): 1.531
+pciBusID: 0000:04:00.0
+totalMemory: 22.38GiB freeMemory: 22.23GiB
+2019-11-22 09:00:48.953906: I tensorflow/core/common_runtime/gpu/gpu_device.cc:1471] Adding visible gpu devices: 0
+2019-11-22 09:00:49.501509: I tensorflow/core/common_runtime/gpu/gpu_device.cc:952] Device interconnect StreamExecutor with strength 1 edge matrix:
+2019-11-22 09:00:49.501566: I tensorflow/core/common_runtime/gpu/gpu_device.cc:958]      0 
+2019-11-22 09:00:49.501575: I tensorflow/core/common_runtime/gpu/gpu_device.cc:971] 0:   N 
+2019-11-22 09:00:49.501758: I tensorflow/core/common_runtime/gpu/gpu_device.cc:1084] Created TensorFlow device (/job:localhost/replica:0/task:0/device:GPU:0 with 21568 MB memory) -> physical GPU (device: 0, name: Tesla P40, pci bus id: 0000:04:00.0, compute capability: 6.1)
+WARNING:tensorflow:From /share/software/user/open/py-tensorflow/1.9.0_py27/lib/python2.7/site-packages/tensorflow/python/util/tf_should_use.py:118: initialize_all_variables (from tensorflow.python.ops.variables) is deprecated and will be removed after 2017-03-02.
+Instructions for updating:
+Use `tf.global_variables_initializer` instead.
+2019-11-22 09:00:50.069880: I tensorflow/core/common_runtime/gpu/gpu_device.cc:1471] Adding visible gpu devices: 0
+2019-11-22 09:00:50.069925: I tensorflow/core/common_runtime/gpu/gpu_device.cc:952] Device interconnect StreamExecutor with strength 1 edge matrix:
+2019-11-22 09:00:50.069934: I tensorflow/core/common_runtime/gpu/gpu_device.cc:958]      0 
+2019-11-22 09:00:50.069939: I tensorflow/core/common_runtime/gpu/gpu_device.cc:971] 0:   N 
+2019-11-22 09:00:50.070034: I tensorflow/core/common_runtime/gpu/gpu_device.cc:1084] Created TensorFlow device (/job:localhost/replica:0/task:0/device:GPU:0 with 21568 MB memory) -> physical GPU (device: 0, name: Tesla P40, pci bus id: 0000:04:00.0, compute capability: 6.1)
+2019-11-22 09:00:50.091327: I tensorflow/core/common_runtime/gpu/gpu_device.cc:1471] Adding visible gpu devices: 0
+2019-11-22 09:00:50.091355: I tensorflow/core/common_runtime/gpu/gpu_device.cc:952] Device interconnect StreamExecutor with strength 1 edge matrix:
+2019-11-22 09:00:50.091362: I tensorflow/core/common_runtime/gpu/gpu_device.cc:958]      0 
+2019-11-22 09:00:50.091367: I tensorflow/core/common_runtime/gpu/gpu_device.cc:971] 0:   N 
+2019-11-22 09:00:50.091450: I tensorflow/core/common_runtime/gpu/gpu_device.cc:1084] Created TensorFlow device (/job:localhost/replica:0/task:0/device:GPU:0 with 21568 MB memory) -> physical GPU (device: 0, name: Tesla P40, pci bus id: 0000:04:00.0, compute capability: 6.1)
+2019-11-22 09:00:50.112398: I tensorflow/core/common_runtime/gpu/gpu_device.cc:1471] Adding visible gpu devices: 0
+2019-11-22 09:00:50.112427: I tensorflow/core/common_runtime/gpu/gpu_device.cc:952] Device interconnect StreamExecutor with strength 1 edge matrix:
+2019-11-22 09:00:50.112434: I tensorflow/core/common_runtime/gpu/gpu_device.cc:958]      0 
+2019-11-22 09:00:50.112440: I tensorflow/core/common_runtime/gpu/gpu_device.cc:971] 0:   N 
+2019-11-22 09:00:50.112522: I tensorflow/core/common_runtime/gpu/gpu_device.cc:1084] Created TensorFlow device (/job:localhost/replica:0/task:0/device:GPU:0 with 21568 MB memory) -> physical GPU (device: 0, name: Tesla P40, pci bus id: 0000:04:00.0, compute capability: 6.1)
+2019-11-22 09:00:50.133442: I tensorflow/core/common_runtime/gpu/gpu_device.cc:1471] Adding visible gpu devices: 0
+2019-11-22 09:00:50.133469: I tensorflow/core/common_runtime/gpu/gpu_device.cc:952] Device interconnect StreamExecutor with strength 1 edge matrix:
+2019-11-22 09:00:50.133477: I tensorflow/core/common_runtime/gpu/gpu_device.cc:958]      0 
+2019-11-22 09:00:50.133482: I tensorflow/core/common_runtime/gpu/gpu_device.cc:971] 0:   N 
+2019-11-22 09:00:50.133564: I tensorflow/core/common_runtime/gpu/gpu_device.cc:1084] Created TensorFlow device (/job:localhost/replica:0/task:0/device:GPU:0 with 21568 MB memory) -> physical GPU (device: 0, name: Tesla P40, pci bus id: 0000:04:00.0, compute capability: 6.1)
+2019-11-22 09:00:50.154772: I tensorflow/core/common_runtime/gpu/gpu_device.cc:1471] Adding visible gpu devices: 0
+2019-11-22 09:00:50.154800: I tensorflow/core/common_runtime/gpu/gpu_device.cc:952] Device interconnect StreamExecutor with strength 1 edge matrix:
+2019-11-22 09:00:50.154807: I tensorflow/core/common_runtime/gpu/gpu_device.cc:958]      0 
+2019-11-22 09:00:50.154813: I tensorflow/core/common_runtime/gpu/gpu_device.cc:971] 0:   N 
+2019-11-22 09:00:50.154896: I tensorflow/core/common_runtime/gpu/gpu_device.cc:1084] Created TensorFlow device (/job:localhost/replica:0/task:0/device:GPU:0 with 21568 MB memory) -> physical GPU (device: 0, name: Tesla P40, pci bus id: 0000:04:00.0, compute capability: 6.1)
+2019-11-22 09:00:50.176304: I tensorflow/core/common_runtime/gpu/gpu_device.cc:1471] Adding visible gpu devices: 0
+2019-11-22 09:00:50.176332: I tensorflow/core/common_runtime/gpu/gpu_device.cc:952] Device interconnect StreamExecutor with strength 1 edge matrix:
+2019-11-22 09:00:50.176340: I tensorflow/core/common_runtime/gpu/gpu_device.cc:958]      0 
+2019-11-22 09:00:50.176345: I tensorflow/core/common_runtime/gpu/gpu_device.cc:971] 0:   N 
+2019-11-22 09:00:50.176433: I tensorflow/core/common_runtime/gpu/gpu_device.cc:1084] Created TensorFlow device (/job:localhost/replica:0/task:0/device:GPU:0 with 21568 MB memory) -> physical GPU (device: 0, name: Tesla P40, pci bus id: 0000:04:00.0, compute capability: 6.1)
+2019-11-22 09:00:50.197747: I tensorflow/core/common_runtime/gpu/gpu_device.cc:1471] Adding visible gpu devices: 0
+2019-11-22 09:00:50.197775: I tensorflow/core/common_runtime/gpu/gpu_device.cc:952] Device interconnect StreamExecutor with strength 1 edge matrix:
+2019-11-22 09:00:50.197783: I tensorflow/core/common_runtime/gpu/gpu_device.cc:958]      0 
+2019-11-22 09:00:50.197788: I tensorflow/core/common_runtime/gpu/gpu_device.cc:971] 0:   N 
+2019-11-22 09:00:50.197871: I tensorflow/core/common_runtime/gpu/gpu_device.cc:1084] Created TensorFlow device (/job:localhost/replica:0/task:0/device:GPU:0 with 21568 MB memory) -> physical GPU (device: 0, name: Tesla P40, pci bus id: 0000:04:00.0, compute capability: 6.1)
+2019-11-22 09:00:50.281829: I tensorflow/core/common_runtime/gpu/gpu_device.cc:1471] Adding visible gpu devices: 0
+2019-11-22 09:00:50.281862: I tensorflow/core/common_runtime/gpu/gpu_device.cc:952] Device interconnect StreamExecutor with strength 1 edge matrix:
+2019-11-22 09:00:50.281871: I tensorflow/core/common_runtime/gpu/gpu_device.cc:958]      0 
+2019-11-22 09:00:50.281876: I tensorflow/core/common_runtime/gpu/gpu_device.cc:971] 0:   N 
+2019-11-22 09:00:50.281971: I tensorflow/core/common_runtime/gpu/gpu_device.cc:1084] Created TensorFlow device (/job:localhost/replica:0/task:0/device:GPU:0 with 21568 MB memory) -> physical GPU (device: 0, name: Tesla P40, pci bus id: 0000:04:00.0, compute capability: 6.1)
+Variables being optimized:
+<tf.Variable 'rnn/leaky_rnn_cell/kernel:0' shape=(281, 256) dtype=float32_ref>
+<tf.Variable 'rnn/leaky_rnn_cell/bias:0' shape=(256,) dtype=float32_ref>
+<tf.Variable 'output/weights:0' shape=(256, 3) dtype=float32_ref>
+<tf.Variable 'output/biases:0' shape=(3,) dtype=float32_ref>
+tau                  = 100
+l2_weight_init       = 0
+w_rec_init           = randortho
+alpha                = 0.2
+target_cost          = 0
+l2_h                 = 0
+n_eachring           = 2
+rule_start           = 5
+sigma_x              = 0
+batch_size_train     = 64
+target_perf          = 1.0
+l1_h                 = 0
+n_rnn                = 256
+rules                = ['fdgo', 'reactgo', 'delaygo', 'fdanti', 'reactanti', 'delayanti', 'delaydm1', 'delaydm2', 'contextdelaydm1', 'contextdelaydm2', 'multidelaydm', 'dmsgo', 'dmsnogo', 'dmcgo', 'dmcnogo']
+n_output             = 3
+p_weight_train       = None
+learning_rate        = 0.001
+save_name            = test
+ruleset              = all
+loss_type            = lsq
+optimizer            = adam
+rule_probs           = [0.06666666666666667, 0.06666666666666667, 0.06666666666666667, 0.06666666666666667, 0.06666666666666667, 0.06666666666666667, 0.06666666666666667, 0.06666666666666667, 0.06666666666666667, 0.06666666666666667, 0.06666666666666667, 0.06666666666666667, 0.06666666666666667, 0.06666666666666667, 0.06666666666666667]
+n_input              = 25
+l1_weight            = 0
+activation           = softplus
+rng                  = <mtrand.RandomState object at 0x7f10afb09870>
+delay_fac            = 1
+c_intsyn             = 0
+l2_weight            = 0
+num_ring             = 2
+dt                   = 20
+seed                 = 0
+in_type              = normal
+use_separate_input   = False
+rule_trains          = ['fdgo', 'reactgo', 'delaygo', 'fdanti', 'reactanti', 'delayanti', 'delaydm1', 'delaydm2', 'contextdelaydm1', 'contextdelaydm2', 'multidelaydm', 'dmsgo', 'dmsnogo', 'dmcgo', 'dmcnogo']
+batch_size_test      = 8192
+sigma_rec            = 0
+n_rule               = 20
+rnn_type             = LeakyRNN
+n_rep                = 256
+ksi_intsyn           = 0
+Trial       0  | Time 1.20 s  | Now training fdgo & reactgo & delaygo & fdanti & reactanti & delayanti & delaydm1 & delaydm2 & contextdelaydm1 & contextdelaydm2 & multidelaydm & dmsgo & dmsnogo & dmcgo & dmcnogo
+fdgo           | cost 11.426321| c_reg 0.000000  | perf 0.19
+reactgo        | cost 14.696975| c_reg 0.000000  | perf 0.18
+delaygo        | cost 10.794764| c_reg 0.000000  | perf 0.20
+fdanti         | cost 13.113708| c_reg 0.000000  | perf 0.21
+reactanti      | cost 15.204493| c_reg 0.000000  | perf 0.21
+delayanti      | cost 11.333324| c_reg 0.000000  | perf 0.20
+delaydm1       | cost 10.920990| c_reg 0.000000  | perf 0.20
+delaydm2       | cost 8.077366| c_reg 0.000000  | perf 0.20
+contextdelaydm1| cost 11.951597| c_reg 0.000000  | perf 0.20
+contextdelaydm2| cost 7.361987| c_reg 0.000000  | perf 0.20
+multidelaydm   | cost 10.191983| c_reg 0.000000  | perf 0.20
+dmsgo          | cost 25.020988| c_reg 0.000000  | perf 0.09
+dmsnogo        | cost 23.887329| c_reg 0.000000  | perf 0.10
+dmcgo          | cost 20.532101| c_reg 0.000000  | perf 0.09
+dmcnogo        | cost 23.888332| c_reg 0.000000  | perf 0.10
+Model saved in file: data/crystals/softplus/no_noise/0/model.ckpt
+Model saved in file: data/crystals/softplus/no_noise/0/ckpts/model.ckpt-1
+Model saved in file: data/crystals/softplus/no_noise/0/ckpts/model.ckpt-2
+Model saved in file: data/crystals/softplus/no_noise/0/ckpts/model.ckpt-3
+Model saved in file: data/crystals/softplus/no_noise/0/ckpts/model.ckpt-4
+Model saved in file: data/crystals/softplus/no_noise/0/ckpts/model.ckpt-5
+Model saved in file: data/crystals/softplus/no_noise/0/ckpts/model.ckpt-6
+Model saved in file: data/crystals/softplus/no_noise/0/ckpts/model.ckpt-7
+Model saved in file: data/crystals/softplus/no_noise/0/ckpts/model.ckpt-8
+Model saved in file: data/crystals/softplus/no_noise/0/ckpts/model.ckpt-9
+Model saved in file: data/crystals/softplus/no_noise/0/ckpts/model.ckpt-1000
+Trial   64000  | Time 355.96 s  | Now training fdgo & reactgo & delaygo & fdanti & reactanti & delayanti & delaydm1 & delaydm2 & contextdelaydm1 & contextdelaydm2 & multidelaydm & dmsgo & dmsnogo & dmcgo & dmcnogo
+fdgo           | cost 1.382117| c_reg 0.000000  | perf 0.59
+reactgo        | cost 1.761476| c_reg 0.000000  | perf 0.60
+delaygo        | cost 1.534705| c_reg 0.000000  | perf 0.19
+fdanti         | cost 1.907293| c_reg 0.000000  | perf 0.25
+reactanti      | cost 2.408742| c_reg 0.000000  | perf 0.16
+delayanti      | cost 1.588206| c_reg 0.000000  | perf 0.20
+delaydm1       | cost 1.256210| c_reg 0.000000  | perf 0.21
+delaydm2       | cost 1.252614| c_reg 0.000000  | perf 0.21
+contextdelaydm1| cost 1.307296| c_reg 0.000000  | perf 0.19
+contextdelaydm2| cost 1.286720| c_reg 0.000000  | perf 0.20
+multidelaydm   | cost 1.270181| c_reg 0.000000  | perf 0.21
+dmsgo          | cost 1.731994| c_reg 0.000000  | perf 0.22
+dmsnogo        | cost 1.751030| c_reg 0.000000  | perf 0.29
+dmcgo          | cost 1.697658| c_reg 0.000000  | perf 0.40
+dmcnogo        | cost 1.603649| c_reg 0.000000  | perf 0.33
+Model saved in file: data/crystals/softplus/no_noise/0/model.ckpt
+Model saved in file: data/crystals/softplus/no_noise/0/ckpts/model.ckpt-2000
+Trial  128000  | Time 710.30 s  | Now training fdgo & reactgo & delaygo & fdanti & reactanti & delayanti & delaydm1 & delaydm2 & contextdelaydm1 & contextdelaydm2 & multidelaydm & dmsgo & dmsnogo & dmcgo & dmcnogo
+fdgo           | cost 0.383473| c_reg 0.000000  | perf 1.00
+reactgo        | cost 0.818362| c_reg 0.000000  | perf 1.00
+delaygo        | cost 1.520839| c_reg 0.000000  | perf 0.21
+fdanti         | cost 0.243246| c_reg 0.000000  | perf 1.00
+reactanti      | cost 0.707166| c_reg 0.000000  | perf 1.00
+delayanti      | cost 1.490041| c_reg 0.000000  | perf 0.20
+delaydm1       | cost 1.255475| c_reg 0.000000  | perf 0.20
+delaydm2       | cost 1.215932| c_reg 0.000000  | perf 0.20
+contextdelaydm1| cost 1.275563| c_reg 0.000000  | perf 0.19
+contextdelaydm2| cost 1.293064| c_reg 0.000000  | perf 0.21
+multidelaydm   | cost 1.294755| c_reg 0.000000  | perf 0.21
+dmsgo          | cost 1.528057| c_reg 0.000000  | perf 0.49
+dmsnogo        | cost 1.597972| c_reg 0.000000  | perf 0.50
+dmcgo          | cost 1.610244| c_reg 0.000000  | perf 0.51
+dmcnogo        | cost 1.462801| c_reg 0.000000  | perf 0.51
+Model saved in file: data/crystals/softplus/no_noise/0/model.ckpt
+Model saved in file: data/crystals/softplus/no_noise/0/ckpts/model.ckpt-3000
+Trial  192000  | Time 1065.08 s  | Now training fdgo & reactgo & delaygo & fdanti & reactanti & delayanti & delaydm1 & delaydm2 & contextdelaydm1 & contextdelaydm2 & multidelaydm & dmsgo & dmsnogo & dmcgo & dmcnogo
+fdgo           | cost 0.147144| c_reg 0.000000  | perf 1.00
+reactgo        | cost 0.473281| c_reg 0.000000  | perf 1.00
+delaygo        | cost 1.441069| c_reg 0.000000  | perf 0.29
+fdanti         | cost 0.193472| c_reg 0.000000  | perf 1.00
+reactanti      | cost 0.547000| c_reg 0.000000  | perf 1.00
+delayanti      | cost 1.521474| c_reg 0.000000  | perf 0.20
+delaydm1       | cost 1.242906| c_reg 0.000000  | perf 0.24
+delaydm2       | cost 1.138350| c_reg 0.000000  | perf 0.28
+contextdelaydm1| cost 1.246385| c_reg 0.000000  | perf 0.30
+contextdelaydm2| cost 1.225688| c_reg 0.000000  | perf 0.28
+multidelaydm   | cost 1.197398| c_reg 0.000000  | perf 0.29
+dmsgo          | cost 1.369742| c_reg 0.000000  | perf 0.49
+dmsnogo        | cost 1.465508| c_reg 0.000000  | perf 0.51
+dmcgo          | cost 1.426017| c_reg 0.000000  | perf 0.50
+dmcnogo        | cost 1.397305| c_reg 0.000000  | perf 0.50
+Model saved in file: data/crystals/softplus/no_noise/0/model.ckpt
+Model saved in file: data/crystals/softplus/no_noise/0/ckpts/model.ckpt-4000
+Trial  256000  | Time 1420.63 s  | Now training fdgo & reactgo & delaygo & fdanti & reactanti & delayanti & delaydm1 & delaydm2 & contextdelaydm1 & contextdelaydm2 & multidelaydm & dmsgo & dmsnogo & dmcgo & dmcnogo
+fdgo           | cost 0.405939| c_reg 0.000000  | perf 1.00
+reactgo        | cost 0.706531| c_reg 0.000000  | perf 1.00
+delaygo        | cost 1.455973| c_reg 0.000000  | perf 0.21
+fdanti         | cost 0.339264| c_reg 0.000000  | perf 1.00
+reactanti      | cost 0.695293| c_reg 0.000000  | perf 1.00
+delayanti      | cost 1.516201| c_reg 0.000000  | perf 0.20
+delaydm1       | cost 1.193743| c_reg 0.000000  | perf 0.27
+delaydm2       | cost 1.203422| c_reg 0.000000  | perf 0.27
+contextdelaydm1| cost 1.179449| c_reg 0.000000  | perf 0.34
+contextdelaydm2| cost 1.215818| c_reg 0.000000  | perf 0.23
+multidelaydm   | cost 1.154585| c_reg 0.000000  | perf 0.38
+dmsgo          | cost 1.432648| c_reg 0.000000  | perf 0.49
+dmsnogo        | cost 1.417002| c_reg 0.000000  | perf 0.51
+dmcgo          | cost 1.440350| c_reg 0.000000  | perf 0.50
+dmcnogo        | cost 1.460543| c_reg 0.000000  | perf 0.49
+Model saved in file: data/crystals/softplus/no_noise/0/model.ckpt
+Model saved in file: data/crystals/softplus/no_noise/0/ckpts/model.ckpt-5000
+Trial  320000  | Time 1774.32 s  | Now training fdgo & reactgo & delaygo & fdanti & reactanti & delayanti & delaydm1 & delaydm2 & contextdelaydm1 & contextdelaydm2 & multidelaydm & dmsgo & dmsnogo & dmcgo & dmcnogo
+fdgo           | cost 0.150456| c_reg 0.000000  | perf 1.00
+reactgo        | cost 0.422455| c_reg 0.000000  | perf 1.00
+delaygo        | cost 1.527277| c_reg 0.000000  | perf 0.29
+fdanti         | cost 0.162252| c_reg 0.000000  | perf 1.00
+reactanti      | cost 0.385277| c_reg 0.000000  | perf 1.00
+delayanti      | cost 1.454700| c_reg 0.000000  | perf 0.21
+delaydm1       | cost 0.987859| c_reg 0.000000  | perf 0.37
+delaydm2       | cost 1.036161| c_reg 0.000000  | perf 0.35
+contextdelaydm1| cost 1.144121| c_reg 0.000000  | perf 0.32
+contextdelaydm2| cost 1.100797| c_reg 0.000000  | perf 0.32
+multidelaydm   | cost 1.029359| c_reg 0.000000  | perf 0.36
+dmsgo          | cost 1.403125| c_reg 0.000000  | perf 0.46
+dmsnogo        | cost 1.455127| c_reg 0.000000  | perf 0.53
+dmcgo          | cost 1.405087| c_reg 0.000000  | perf 0.49
+dmcnogo        | cost 1.439997| c_reg 0.000000  | perf 0.51
+Model saved in file: data/crystals/softplus/no_noise/0/model.ckpt
+Model saved in file: data/crystals/softplus/no_noise/0/ckpts/model.ckpt-6000
+Trial  384000  | Time 2127.62 s  | Now training fdgo & reactgo & delaygo & fdanti & reactanti & delayanti & delaydm1 & delaydm2 & contextdelaydm1 & contextdelaydm2 & multidelaydm & dmsgo & dmsnogo & dmcgo & dmcnogo
+fdgo           | cost 0.325074| c_reg 0.000000  | perf 0.97
+reactgo        | cost 0.495445| c_reg 0.000000  | perf 1.00
+delaygo        | cost 0.995659| c_reg 0.000000  | perf 0.56
+fdanti         | cost 0.331279| c_reg 0.000000  | perf 1.00
+reactanti      | cost 0.471820| c_reg 0.000000  | perf 1.00
+delayanti      | cost 1.358974| c_reg 0.000000  | perf 0.29
+delaydm1       | cost 1.265302| c_reg 0.000000  | perf 0.42
+delaydm2       | cost 1.328441| c_reg 0.000000  | perf 0.43
+contextdelaydm1| cost 1.565737| c_reg 0.000000  | perf 0.35
+contextdelaydm2| cost 1.472107| c_reg 0.000000  | perf 0.36
+multidelaydm   | cost 1.514380| c_reg 0.000000  | perf 0.42
+dmsgo          | cost 1.383388| c_reg 0.000000  | perf 0.46
+dmsnogo        | cost 1.422608| c_reg 0.000000  | perf 0.48
+dmcgo          | cost 1.461286| c_reg 0.000000  | perf 0.49
+dmcnogo        | cost 1.384707| c_reg 0.000000  | perf 0.51
+Model saved in file: data/crystals/softplus/no_noise/0/model.ckpt
+Model saved in file: data/crystals/softplus/no_noise/0/ckpts/model.ckpt-7000
+Trial  448000  | Time 2482.15 s  | Now training fdgo & reactgo & delaygo & fdanti & reactanti & delayanti & delaydm1 & delaydm2 & contextdelaydm1 & contextdelaydm2 & multidelaydm & dmsgo & dmsnogo & dmcgo & dmcnogo
+fdgo           | cost 0.146065| c_reg 0.000000  | perf 1.00
+reactgo        | cost 0.420284| c_reg 0.000000  | perf 1.00
+delaygo        | cost 0.383448| c_reg 0.000000  | perf 0.86
+fdanti         | cost 0.134808| c_reg 0.000000  | perf 1.00
+reactanti      | cost 0.346353| c_reg 0.000000  | perf 1.00
+delayanti      | cost 1.215486| c_reg 0.000000  | perf 0.35
+delaydm1       | cost 0.687394| c_reg 0.000000  | perf 0.62
+delaydm2       | cost 0.653623| c_reg 0.000000  | perf 0.62
+contextdelaydm1| cost 0.974701| c_reg 0.000000  | perf 0.45
+contextdelaydm2| cost 0.969488| c_reg 0.000000  | perf 0.45
+multidelaydm   | cost 0.718129| c_reg 0.000000  | perf 0.61
+dmsgo          | cost 1.369950| c_reg 0.000000  | perf 0.50
+dmsnogo        | cost 1.357823| c_reg 0.000000  | perf 0.50
+dmcgo          | cost 1.368054| c_reg 0.000000  | perf 0.53
+dmcnogo        | cost 1.403867| c_reg 0.000000  | perf 0.48
+Model saved in file: data/crystals/softplus/no_noise/0/model.ckpt
+Model saved in file: data/crystals/softplus/no_noise/0/ckpts/model.ckpt-8000
+Trial  512000  | Time 2836.80 s  | Now training fdgo & reactgo & delaygo & fdanti & reactanti & delayanti & delaydm1 & delaydm2 & contextdelaydm1 & contextdelaydm2 & multidelaydm & dmsgo & dmsnogo & dmcgo & dmcnogo
+fdgo           | cost 0.143387| c_reg 0.000000  | perf 1.00
+reactgo        | cost 0.390144| c_reg 0.000000  | perf 1.00
+delaygo        | cost 0.277633| c_reg 0.000000  | perf 0.92
+fdanti         | cost 0.227161| c_reg 0.000000  | perf 1.00
+reactanti      | cost 0.398522| c_reg 0.000000  | perf 1.00
+delayanti      | cost 0.953797| c_reg 0.000000  | perf 0.42
+delaydm1       | cost 0.615280| c_reg 0.000000  | perf 0.63
+delaydm2       | cost 0.577948| c_reg 0.000000  | perf 0.62
+contextdelaydm1| cost 0.950377| c_reg 0.000000  | perf 0.45
+contextdelaydm2| cost 0.952603| c_reg 0.000000  | perf 0.45
+multidelaydm   | cost 0.664533| c_reg 0.000000  | perf 0.60
+dmsgo          | cost 1.280048| c_reg 0.000000  | perf 0.51
+dmsnogo        | cost 1.363167| c_reg 0.000000  | perf 0.49
+dmcgo          | cost 1.296092| c_reg 0.000000  | perf 0.52
+dmcnogo        | cost 1.329932| c_reg 0.000000  | perf 0.50
+Model saved in file: data/crystals/softplus/no_noise/0/model.ckpt
+Model saved in file: data/crystals/softplus/no_noise/0/ckpts/model.ckpt-9000
+Trial  576000  | Time 3191.32 s  | Now training fdgo & reactgo & delaygo & fdanti & reactanti & delayanti & delaydm1 & delaydm2 & contextdelaydm1 & contextdelaydm2 & multidelaydm & dmsgo & dmsnogo & dmcgo & dmcnogo
+fdgo           | cost 0.170104| c_reg 0.000000  | perf 1.00
+reactgo        | cost 0.355123| c_reg 0.000000  | perf 1.00
+delaygo        | cost 0.335135| c_reg 0.000000  | perf 0.84
+fdanti         | cost 0.250884| c_reg 0.000000  | perf 1.00
+reactanti      | cost 0.448319| c_reg 0.000000  | perf 1.00
+delayanti      | cost 0.948763| c_reg 0.000000  | perf 0.40
+delaydm1       | cost 0.657876| c_reg 0.000000  | perf 0.55
+delaydm2       | cost 0.647953| c_reg 0.000000  | perf 0.55
+contextdelaydm1| cost 0.953956| c_reg 0.000000  | perf 0.44
+contextdelaydm2| cost 0.907488| c_reg 0.000000  | perf 0.44
+multidelaydm   | cost 0.642199| c_reg 0.000000  | perf 0.64
+dmsgo          | cost 1.184404| c_reg 0.000000  | perf 0.55
+dmsnogo        | cost 1.382855| c_reg 0.000000  | perf 0.52
+dmcgo          | cost 1.035500| c_reg 0.000000  | perf 0.62
+dmcnogo        | cost 1.329805| c_reg 0.000000  | perf 0.52
+Model saved in file: data/crystals/softplus/no_noise/0/model.ckpt
+Model saved in file: data/crystals/softplus/no_noise/0/ckpts/model.ckpt-10000
+Trial  640000  | Time 3546.53 s  | Now training fdgo & reactgo & delaygo & fdanti & reactanti & delayanti & delaydm1 & delaydm2 & contextdelaydm1 & contextdelaydm2 & multidelaydm & dmsgo & dmsnogo & dmcgo & dmcnogo
+fdgo           | cost 0.191692| c_reg 0.000000  | perf 1.00
+reactgo        | cost 0.370062| c_reg 0.000000  | perf 1.00
+delaygo        | cost 0.125704| c_reg 0.000000  | perf 1.00
+fdanti         | cost 0.160393| c_reg 0.000000  | perf 1.00
+reactanti      | cost 0.294208| c_reg 0.000000  | perf 1.00
+delayanti      | cost 0.921593| c_reg 0.000000  | perf 0.42
+delaydm1       | cost 0.557285| c_reg 0.000000  | perf 0.66
+delaydm2       | cost 0.520128| c_reg 0.000000  | perf 0.68
+contextdelaydm1| cost 0.867529| c_reg 0.000000  | perf 0.48
+contextdelaydm2| cost 0.854120| c_reg 0.000000  | perf 0.49
+multidelaydm   | cost 0.544683| c_reg 0.000000  | perf 0.70
+dmsgo          | cost 1.091462| c_reg 0.000000  | perf 0.72
+dmsnogo        | cost 1.413688| c_reg 0.000000  | perf 0.52
+dmcgo          | cost 0.744434| c_reg 0.000000  | perf 0.88
+dmcnogo        | cost 1.417729| c_reg 0.000000  | perf 0.50
+Model saved in file: data/crystals/softplus/no_noise/0/model.ckpt
+Model saved in file: data/crystals/softplus/no_noise/0/ckpts/model.ckpt-11000
+Trial  704000  | Time 3899.31 s  | Now training fdgo & reactgo & delaygo & fdanti & reactanti & delayanti & delaydm1 & delaydm2 & contextdelaydm1 & contextdelaydm2 & multidelaydm & dmsgo & dmsnogo & dmcgo & dmcnogo
+fdgo           | cost 0.194603| c_reg 0.000000  | perf 1.00
+reactgo        | cost 0.298675| c_reg 0.000000  | perf 1.00
+delaygo        | cost 0.147428| c_reg 0.000000  | perf 0.99
+fdanti         | cost 0.139805| c_reg 0.000000  | perf 1.00
+reactanti      | cost 0.297494| c_reg 0.000000  | perf 1.00
+delayanti      | cost 0.730523| c_reg 0.000000  | perf 0.67
+delaydm1       | cost 0.535459| c_reg 0.000000  | perf 0.71
+delaydm2       | cost 0.515790| c_reg 0.000000  | perf 0.71
+contextdelaydm1| cost 0.915674| c_reg 0.000000  | perf 0.50
+contextdelaydm2| cost 0.859998| c_reg 0.000000  | perf 0.50
+multidelaydm   | cost 0.555488| c_reg 0.000000  | perf 0.71
+dmsgo          | cost 0.973856| c_reg 0.000000  | perf 0.67
+dmsnogo        | cost 1.379353| c_reg 0.000000  | perf 0.51
+dmcgo          | cost 0.655810| c_reg 0.000000  | perf 0.85
+dmcnogo        | cost 1.253018| c_reg 0.000000  | perf 0.55
+Model saved in file: data/crystals/softplus/no_noise/0/model.ckpt
+Model saved in file: data/crystals/softplus/no_noise/0/ckpts/model.ckpt-12000
+Trial  768000  | Time 4251.43 s  | Now training fdgo & reactgo & delaygo & fdanti & reactanti & delayanti & delaydm1 & delaydm2 & contextdelaydm1 & contextdelaydm2 & multidelaydm & dmsgo & dmsnogo & dmcgo & dmcnogo
+fdgo           | cost 0.122954| c_reg 0.000000  | perf 1.00
+reactgo        | cost 0.231981| c_reg 0.000000  | perf 1.00
+delaygo        | cost 0.240642| c_reg 0.000000  | perf 0.90
+fdanti         | cost 0.093515| c_reg 0.000000  | perf 1.00
+reactanti      | cost 0.273094| c_reg 0.000000  | perf 1.00
+delayanti      | cost 0.639182| c_reg 0.000000  | perf 0.67
+delaydm1       | cost 0.559868| c_reg 0.000000  | perf 0.68
+delaydm2       | cost 0.512219| c_reg 0.000000  | perf 0.69
+contextdelaydm1| cost 0.865701| c_reg 0.000000  | perf 0.51
+contextdelaydm2| cost 0.908202| c_reg 0.000000  | perf 0.52
+multidelaydm   | cost 0.535870| c_reg 0.000000  | perf 0.70
+dmsgo          | cost 0.918220| c_reg 0.000000  | perf 0.67
+dmsnogo        | cost 1.160429| c_reg 0.000000  | perf 0.61
+dmcgo          | cost 0.641207| c_reg 0.000000  | perf 0.86
+dmcnogo        | cost 1.109736| c_reg 0.000000  | perf 0.65
+Model saved in file: data/crystals/softplus/no_noise/0/model.ckpt
+Model saved in file: data/crystals/softplus/no_noise/0/ckpts/model.ckpt-13000
+Trial  832000  | Time 4605.87 s  | Now training fdgo & reactgo & delaygo & fdanti & reactanti & delayanti & delaydm1 & delaydm2 & contextdelaydm1 & contextdelaydm2 & multidelaydm & dmsgo & dmsnogo & dmcgo & dmcnogo
+fdgo           | cost 0.081695| c_reg 0.000000  | perf 1.00
+reactgo        | cost 0.265569| c_reg 0.000000  | perf 1.00
+delaygo        | cost 0.090827| c_reg 0.000000  | perf 1.00
+fdanti         | cost 0.093592| c_reg 0.000000  | perf 1.00
+reactanti      | cost 0.255904| c_reg 0.000000  | perf 1.00
+delayanti      | cost 0.269542| c_reg 0.000000  | perf 0.95
+delaydm1       | cost 0.419555| c_reg 0.000000  | perf 0.78
+delaydm2       | cost 0.404489| c_reg 0.000000  | perf 0.77
+contextdelaydm1| cost 0.804684| c_reg 0.000000  | perf 0.57
+contextdelaydm2| cost 0.770667| c_reg 0.000000  | perf 0.58
+multidelaydm   | cost 0.400797| c_reg 0.000000  | perf 0.79
+dmsgo          | cost 0.836150| c_reg 0.000000  | perf 0.78
+dmsnogo        | cost 1.117862| c_reg 0.000000  | perf 0.70
+dmcgo          | cost 0.624330| c_reg 0.000000  | perf 0.86
+dmcnogo        | cost 0.820703| c_reg 0.000000  | perf 0.86
+Model saved in file: data/crystals/softplus/no_noise/0/model.ckpt
+Model saved in file: data/crystals/softplus/no_noise/0/ckpts/model.ckpt-14000
+Trial  896000  | Time 4960.23 s  | Now training fdgo & reactgo & delaygo & fdanti & reactanti & delayanti & delaydm1 & delaydm2 & contextdelaydm1 & contextdelaydm2 & multidelaydm & dmsgo & dmsnogo & dmcgo & dmcnogo
+fdgo           | cost 0.098970| c_reg 0.000000  | perf 1.00
+reactgo        | cost 0.221582| c_reg 0.000000  | perf 1.00
+delaygo        | cost 0.088837| c_reg 0.000000  | perf 1.00
+fdanti         | cost 0.093296| c_reg 0.000000  | perf 1.00
+reactanti      | cost 0.238468| c_reg 0.000000  | perf 1.00
+delayanti      | cost 0.212221| c_reg 0.000000  | perf 0.99
+delaydm1       | cost 0.405227| c_reg 0.000000  | perf 0.79
+delaydm2       | cost 0.403160| c_reg 0.000000  | perf 0.77
+contextdelaydm1| cost 0.826476| c_reg 0.000000  | perf 0.56
+contextdelaydm2| cost 0.756716| c_reg 0.000000  | perf 0.59
+multidelaydm   | cost 0.423903| c_reg 0.000000  | perf 0.79
+dmsgo          | cost 0.798168| c_reg 0.000000  | perf 0.76
+dmsnogo        | cost 1.005824| c_reg 0.000000  | perf 0.70
+dmcgo          | cost 0.547051| c_reg 0.000000  | perf 0.92
+dmcnogo        | cost 0.633383| c_reg 0.000000  | perf 0.87
+Model saved in file: data/crystals/softplus/no_noise/0/model.ckpt
+Model saved in file: data/crystals/softplus/no_noise/0/ckpts/model.ckpt-15000
+Trial  960000  | Time 5313.07 s  | Now training fdgo & reactgo & delaygo & fdanti & reactanti & delayanti & delaydm1 & delaydm2 & contextdelaydm1 & contextdelaydm2 & multidelaydm & dmsgo & dmsnogo & dmcgo & dmcnogo
+fdgo           | cost 0.079247| c_reg 0.000000  | perf 1.00
+reactgo        | cost 0.185524| c_reg 0.000000  | perf 1.00
+delaygo        | cost 0.074154| c_reg 0.000000  | perf 1.00
+fdanti         | cost 0.084970| c_reg 0.000000  | perf 1.00
+reactanti      | cost 0.198287| c_reg 0.000000  | perf 1.00
+delayanti      | cost 0.191109| c_reg 0.000000  | perf 0.99
+delaydm1       | cost 0.336625| c_reg 0.000000  | perf 0.82
+delaydm2       | cost 0.409280| c_reg 0.000000  | perf 0.79
+contextdelaydm1| cost 0.780356| c_reg 0.000000  | perf 0.61
+contextdelaydm2| cost 0.758731| c_reg 0.000000  | perf 0.61
+multidelaydm   | cost 0.342009| c_reg 0.000000  | perf 0.84
+dmsgo          | cost 0.689948| c_reg 0.000000  | perf 0.81
+dmsnogo        | cost 1.003356| c_reg 0.000000  | perf 0.74
+dmcgo          | cost 0.475723| c_reg 0.000000  | perf 0.94
+dmcnogo        | cost 0.521738| c_reg 0.000000  | perf 0.92
+Model saved in file: data/crystals/softplus/no_noise/0/model.ckpt
+Model saved in file: data/crystals/softplus/no_noise/0/ckpts/model.ckpt-16000
+Trial 1024000  | Time 5666.79 s  | Now training fdgo & reactgo & delaygo & fdanti & reactanti & delayanti & delaydm1 & delaydm2 & contextdelaydm1 & contextdelaydm2 & multidelaydm & dmsgo & dmsnogo & dmcgo & dmcnogo
+fdgo           | cost 0.052595| c_reg 0.000000  | perf 1.00
+reactgo        | cost 0.208155| c_reg 0.000000  | perf 1.00
+delaygo        | cost 0.060198| c_reg 0.000000  | perf 1.00
+fdanti         | cost 0.090776| c_reg 0.000000  | perf 1.00
+reactanti      | cost 0.196489| c_reg 0.000000  | perf 1.00
+delayanti      | cost 0.276766| c_reg 0.000000  | perf 0.94
+delaydm1       | cost 0.355430| c_reg 0.000000  | perf 0.83
+delaydm2       | cost 0.324990| c_reg 0.000000  | perf 0.84
+contextdelaydm1| cost 0.750060| c_reg 0.000000  | perf 0.64
+contextdelaydm2| cost 0.665079| c_reg 0.000000  | perf 0.67
+multidelaydm   | cost 0.333387| c_reg 0.000000  | perf 0.86
+dmsgo          | cost 0.659316| c_reg 0.000000  | perf 0.84
+dmsnogo        | cost 0.909714| c_reg 0.000000  | perf 0.77
+dmcgo          | cost 0.394739| c_reg 0.000000  | perf 0.96
+dmcnogo        | cost 0.475917| c_reg 0.000000  | perf 0.96
+Model saved in file: data/crystals/softplus/no_noise/0/model.ckpt
+Model saved in file: data/crystals/softplus/no_noise/0/ckpts/model.ckpt-17000
+Trial 1088000  | Time 6020.49 s  | Now training fdgo & reactgo & delaygo & fdanti & reactanti & delayanti & delaydm1 & delaydm2 & contextdelaydm1 & contextdelaydm2 & multidelaydm & dmsgo & dmsnogo & dmcgo & dmcnogo
+fdgo           | cost 0.062172| c_reg 0.000000  | perf 1.00
+reactgo        | cost 0.132783| c_reg 0.000000  | perf 1.00
+delaygo        | cost 0.092390| c_reg 0.000000  | perf 1.00
+fdanti         | cost 0.073448| c_reg 0.000000  | perf 1.00
+reactanti      | cost 0.217200| c_reg 0.000000  | perf 1.00
+delayanti      | cost 0.175844| c_reg 0.000000  | perf 1.00
+delaydm1       | cost 0.339277| c_reg 0.000000  | perf 0.84
+delaydm2       | cost 0.344912| c_reg 0.000000  | perf 0.83
+contextdelaydm1| cost 0.746583| c_reg 0.000000  | perf 0.66
+contextdelaydm2| cost 0.630993| c_reg 0.000000  | perf 0.70
+multidelaydm   | cost 0.289026| c_reg 0.000000  | perf 0.87
+dmsgo          | cost 0.631846| c_reg 0.000000  | perf 0.85
+dmsnogo        | cost 0.852024| c_reg 0.000000  | perf 0.80
+dmcgo          | cost 0.436275| c_reg 0.000000  | perf 0.92
+dmcnogo        | cost 0.442767| c_reg 0.000000  | perf 0.95
+Model saved in file: data/crystals/softplus/no_noise/0/model.ckpt
+Model saved in file: data/crystals/softplus/no_noise/0/ckpts/model.ckpt-18000
+Trial 1152000  | Time 6375.62 s  | Now training fdgo & reactgo & delaygo & fdanti & reactanti & delayanti & delaydm1 & delaydm2 & contextdelaydm1 & contextdelaydm2 & multidelaydm & dmsgo & dmsnogo & dmcgo & dmcnogo
+fdgo           | cost 0.070792| c_reg 0.000000  | perf 1.00
+reactgo        | cost 0.136836| c_reg 0.000000  | perf 1.00
+delaygo        | cost 0.102097| c_reg 0.000000  | perf 1.00
+fdanti         | cost 0.064235| c_reg 0.000000  | perf 1.00
+reactanti      | cost 0.151080| c_reg 0.000000  | perf 1.00
+delayanti      | cost 0.168902| c_reg 0.000000  | perf 1.00
+delaydm1       | cost 0.310652| c_reg 0.000000  | perf 0.83
+delaydm2       | cost 0.298652| c_reg 0.000000  | perf 0.84
+contextdelaydm1| cost 0.642789| c_reg 0.000000  | perf 0.69
+contextdelaydm2| cost 0.627485| c_reg 0.000000  | perf 0.65
+multidelaydm   | cost 0.271961| c_reg 0.000000  | perf 0.87
+dmsgo          | cost 0.536778| c_reg 0.000000  | perf 0.86
+dmsnogo        | cost 0.773619| c_reg 0.000000  | perf 0.82
+dmcgo          | cost 0.365151| c_reg 0.000000  | perf 0.95
+dmcnogo        | cost 0.353731| c_reg 0.000000  | perf 0.96
+Model saved in file: data/crystals/softplus/no_noise/0/model.ckpt
+Model saved in file: data/crystals/softplus/no_noise/0/ckpts/model.ckpt-19000
+Trial 1216000  | Time 6728.55 s  | Now training fdgo & reactgo & delaygo & fdanti & reactanti & delayanti & delaydm1 & delaydm2 & contextdelaydm1 & contextdelaydm2 & multidelaydm & dmsgo & dmsnogo & dmcgo & dmcnogo
+fdgo           | cost 0.051799| c_reg 0.000000  | perf 1.00
+reactgo        | cost 0.109065| c_reg 0.000000  | perf 1.00
+delaygo        | cost 0.060234| c_reg 0.000000  | perf 0.99
+fdanti         | cost 0.059802| c_reg 0.000000  | perf 1.00
+reactanti      | cost 0.210846| c_reg 0.000000  | perf 1.00
+delayanti      | cost 0.437591| c_reg 0.000000  | perf 0.70
+delaydm1       | cost 0.297562| c_reg 0.000000  | perf 0.86
+delaydm2       | cost 0.308229| c_reg 0.000000  | perf 0.87
+contextdelaydm1| cost 0.601533| c_reg 0.000000  | perf 0.72
+contextdelaydm2| cost 0.484482| c_reg 0.000000  | perf 0.79
+multidelaydm   | cost 0.295876| c_reg 0.000000  | perf 0.88
+dmsgo          | cost 0.563633| c_reg 0.000000  | perf 0.83
+dmsnogo        | cost 0.962174| c_reg 0.000000  | perf 0.65
+dmcgo          | cost 0.323439| c_reg 0.000000  | perf 0.92
+dmcnogo        | cost 0.449968| c_reg 0.000000  | perf 0.90
+Model saved in file: data/crystals/softplus/no_noise/0/model.ckpt
+Model saved in file: data/crystals/softplus/no_noise/0/ckpts/model.ckpt-20000
+Trial 1280000  | Time 7083.67 s  | Now training fdgo & reactgo & delaygo & fdanti & reactanti & delayanti & delaydm1 & delaydm2 & contextdelaydm1 & contextdelaydm2 & multidelaydm & dmsgo & dmsnogo & dmcgo & dmcnogo
+fdgo           | cost 0.054280| c_reg 0.000000  | perf 1.00
+reactgo        | cost 0.099104| c_reg 0.000000  | perf 1.00
+delaygo        | cost 0.054377| c_reg 0.000000  | perf 1.00
+fdanti         | cost 0.108756| c_reg 0.000000  | perf 1.00
+reactanti      | cost 0.183124| c_reg 0.000000  | perf 1.00
+delayanti      | cost 0.125620| c_reg 0.000000  | perf 1.00
+delaydm1       | cost 0.258966| c_reg 0.000000  | perf 0.89
+delaydm2       | cost 0.256207| c_reg 0.000000  | perf 0.89
+contextdelaydm1| cost 0.546874| c_reg 0.000000  | perf 0.73
+contextdelaydm2| cost 0.362710| c_reg 0.000000  | perf 0.86
+multidelaydm   | cost 0.271144| c_reg 0.000000  | perf 0.89
+dmsgo          | cost 0.517097| c_reg 0.000000  | perf 0.85
+dmsnogo        | cost 0.688580| c_reg 0.000000  | perf 0.85
+dmcgo          | cost 0.317652| c_reg 0.000000  | perf 0.93
+dmcnogo        | cost 0.373042| c_reg 0.000000  | perf 0.93
+Model saved in file: data/crystals/softplus/no_noise/0/model.ckpt
+Model saved in file: data/crystals/softplus/no_noise/0/ckpts/model.ckpt-21000
+Trial 1344000  | Time 7436.89 s  | Now training fdgo & reactgo & delaygo & fdanti & reactanti & delayanti & delaydm1 & delaydm2 & contextdelaydm1 & contextdelaydm2 & multidelaydm & dmsgo & dmsnogo & dmcgo & dmcnogo
+fdgo           | cost 0.060731| c_reg 0.000000  | perf 1.00
+reactgo        | cost 0.179342| c_reg 0.000000  | perf 1.00
+delaygo        | cost 0.045570| c_reg 0.000000  | perf 1.00
+fdanti         | cost 0.090229| c_reg 0.000000  | perf 1.00
+reactanti      | cost 0.203603| c_reg 0.000000  | perf 1.00
+delayanti      | cost 0.111402| c_reg 0.000000  | perf 1.00
+delaydm1       | cost 0.227868| c_reg 0.000000  | perf 0.90
+delaydm2       | cost 0.246212| c_reg 0.000000  | perf 0.90
+contextdelaydm1| cost 0.287147| c_reg 0.000000  | perf 0.89
+contextdelaydm2| cost 0.282750| c_reg 0.000000  | perf 0.90
+multidelaydm   | cost 0.197916| c_reg 0.000000  | perf 0.92
+dmsgo          | cost 0.465988| c_reg 0.000000  | perf 0.91
+dmsnogo        | cost 0.676861| c_reg 0.000000  | perf 0.85
+dmcgo          | cost 0.374391| c_reg 0.000000  | perf 0.94
+dmcnogo        | cost 0.274391| c_reg 0.000000  | perf 0.97
+Model saved in file: data/crystals/softplus/no_noise/0/model.ckpt
+Model saved in file: data/crystals/softplus/no_noise/0/ckpts/model.ckpt-22000
+Trial 1408000  | Time 7789.79 s  | Now training fdgo & reactgo & delaygo & fdanti & reactanti & delayanti & delaydm1 & delaydm2 & contextdelaydm1 & contextdelaydm2 & multidelaydm & dmsgo & dmsnogo & dmcgo & dmcnogo
+fdgo           | cost 0.028716| c_reg 0.000000  | perf 1.00
+reactgo        | cost 0.094591| c_reg 0.000000  | perf 1.00
+delaygo        | cost 0.044959| c_reg 0.000000  | perf 1.00
+fdanti         | cost 0.033603| c_reg 0.000000  | perf 1.00
+reactanti      | cost 0.114763| c_reg 0.000000  | perf 1.00
+delayanti      | cost 0.130137| c_reg 0.000000  | perf 0.97
+delaydm1       | cost 0.219928| c_reg 0.000000  | perf 0.91
+delaydm2       | cost 0.208889| c_reg 0.000000  | perf 0.91
+contextdelaydm1| cost 0.271192| c_reg 0.000000  | perf 0.89
+contextdelaydm2| cost 0.267924| c_reg 0.000000  | perf 0.88
+multidelaydm   | cost 0.191910| c_reg 0.000000  | perf 0.93
+dmsgo          | cost 0.420740| c_reg 0.000000  | perf 0.88
+dmsnogo        | cost 0.614614| c_reg 0.000000  | perf 0.89
+dmcgo          | cost 0.247935| c_reg 0.000000  | perf 0.95
+dmcnogo        | cost 0.287288| c_reg 0.000000  | perf 0.95
+Model saved in file: data/crystals/softplus/no_noise/0/model.ckpt
+Model saved in file: data/crystals/softplus/no_noise/0/ckpts/model.ckpt-23000
+Trial 1472000  | Time 8143.14 s  | Now training fdgo & reactgo & delaygo & fdanti & reactanti & delayanti & delaydm1 & delaydm2 & contextdelaydm1 & contextdelaydm2 & multidelaydm & dmsgo & dmsnogo & dmcgo & dmcnogo
+fdgo           | cost 0.033473| c_reg 0.000000  | perf 1.00
+reactgo        | cost 0.067895| c_reg 0.000000  | perf 1.00
+delaygo        | cost 0.037522| c_reg 0.000000  | perf 1.00
+fdanti         | cost 0.043729| c_reg 0.000000  | perf 1.00
+reactanti      | cost 0.088943| c_reg 0.000000  | perf 1.00
+delayanti      | cost 0.104340| c_reg 0.000000  | perf 0.99
+delaydm1       | cost 0.201333| c_reg 0.000000  | perf 0.92
+delaydm2       | cost 0.203263| c_reg 0.000000  | perf 0.91
+contextdelaydm1| cost 0.253277| c_reg 0.000000  | perf 0.91
+contextdelaydm2| cost 0.273154| c_reg 0.000000  | perf 0.90
+multidelaydm   | cost 0.168640| c_reg 0.000000  | perf 0.94
+dmsgo          | cost 0.367810| c_reg 0.000000  | perf 0.89
+dmsnogo        | cost 0.575406| c_reg 0.000000  | perf 0.84
+dmcgo          | cost 0.215034| c_reg 0.000000  | perf 0.97
+dmcnogo        | cost 0.242490| c_reg 0.000000  | perf 0.96
+Model saved in file: data/crystals/softplus/no_noise/0/model.ckpt
+Model saved in file: data/crystals/softplus/no_noise/0/ckpts/model.ckpt-24000
+Trial 1536000  | Time 8496.59 s  | Now training fdgo & reactgo & delaygo & fdanti & reactanti & delayanti & delaydm1 & delaydm2 & contextdelaydm1 & contextdelaydm2 & multidelaydm & dmsgo & dmsnogo & dmcgo & dmcnogo
+fdgo           | cost 0.023970| c_reg 0.000000  | perf 1.00
+reactgo        | cost 0.056904| c_reg 0.000000  | perf 1.00
+delaygo        | cost 0.052159| c_reg 0.000000  | perf 1.00
+fdanti         | cost 0.019348| c_reg 0.000000  | perf 1.00
+reactanti      | cost 0.069673| c_reg 0.000000  | perf 1.00
+delayanti      | cost 0.110996| c_reg 0.000000  | perf 1.00
+delaydm1       | cost 0.192900| c_reg 0.000000  | perf 0.91
+delaydm2       | cost 0.230129| c_reg 0.000000  | perf 0.90
+contextdelaydm1| cost 0.317254| c_reg 0.000000  | perf 0.86
+contextdelaydm2| cost 0.409395| c_reg 0.000000  | perf 0.83
+multidelaydm   | cost 0.183061| c_reg 0.000000  | perf 0.92
+dmsgo          | cost 0.364493| c_reg 0.000000  | perf 0.89
+dmsnogo        | cost 0.547221| c_reg 0.000000  | perf 0.91
+dmcgo          | cost 0.193845| c_reg 0.000000  | perf 0.97
+dmcnogo        | cost 0.209371| c_reg 0.000000  | perf 0.96
+Model saved in file: data/crystals/softplus/no_noise/0/model.ckpt
+Model saved in file: data/crystals/softplus/no_noise/0/ckpts/model.ckpt-25000
+Trial 1600000  | Time 8853.65 s  | Now training fdgo & reactgo & delaygo & fdanti & reactanti & delayanti & delaydm1 & delaydm2 & contextdelaydm1 & contextdelaydm2 & multidelaydm & dmsgo & dmsnogo & dmcgo & dmcnogo
+fdgo           | cost 0.033300| c_reg 0.000000  | perf 1.00
+reactgo        | cost 0.051388| c_reg 0.000000  | perf 1.00
+delaygo        | cost 0.030597| c_reg 0.000000  | perf 1.00
+fdanti         | cost 0.027703| c_reg 0.000000  | perf 1.00
+reactanti      | cost 0.071488| c_reg 0.000000  | perf 1.00
+delayanti      | cost 0.104732| c_reg 0.000000  | perf 1.00
+delaydm1       | cost 0.245380| c_reg 0.000000  | perf 0.91
+delaydm2       | cost 0.250392| c_reg 0.000000  | perf 0.90
+contextdelaydm1| cost 0.187152| c_reg 0.000000  | perf 0.92
+contextdelaydm2| cost 0.231869| c_reg 0.000000  | perf 0.92
+multidelaydm   | cost 0.172226| c_reg 0.000000  | perf 0.94
+dmsgo          | cost 0.406356| c_reg 0.000000  | perf 0.91
+dmsnogo        | cost 0.568453| c_reg 0.000000  | perf 0.89
+dmcgo          | cost 0.279704| c_reg 0.000000  | perf 0.94
+dmcnogo        | cost 0.263496| c_reg 0.000000  | perf 0.95
+Model saved in file: data/crystals/softplus/no_noise/0/model.ckpt
+Model saved in file: data/crystals/softplus/no_noise/0/ckpts/model.ckpt-26000
+Trial 1664000  | Time 9205.76 s  | Now training fdgo & reactgo & delaygo & fdanti & reactanti & delayanti & delaydm1 & delaydm2 & contextdelaydm1 & contextdelaydm2 & multidelaydm & dmsgo & dmsnogo & dmcgo & dmcnogo
+fdgo           | cost 0.029376| c_reg 0.000000  | perf 1.00
+reactgo        | cost 0.057037| c_reg 0.000000  | perf 1.00
+delaygo        | cost 0.027925| c_reg 0.000000  | perf 1.00
+fdanti         | cost 0.017234| c_reg 0.000000  | perf 1.00
+reactanti      | cost 0.072427| c_reg 0.000000  | perf 1.00
+delayanti      | cost 0.208329| c_reg 0.000000  | perf 0.98
+delaydm1       | cost 0.164461| c_reg 0.000000  | perf 0.93
+delaydm2       | cost 0.156462| c_reg 0.000000  | perf 0.93
+contextdelaydm1| cost 0.206189| c_reg 0.000000  | perf 0.91
+contextdelaydm2| cost 0.217264| c_reg 0.000000  | perf 0.92
+multidelaydm   | cost 0.132656| c_reg 0.000000  | perf 0.95
+dmsgo          | cost 0.352308| c_reg 0.000000  | perf 0.91
+dmsnogo        | cost 0.439782| c_reg 0.000000  | perf 0.93
+dmcgo          | cost 0.191929| c_reg 0.000000  | perf 0.98
+dmcnogo        | cost 0.261556| c_reg 0.000000  | perf 0.95
+/home/users/lndrisco/multitask-nets/stepnet/task.py:143: RuntimeWarning: overflow encountered in multiply
+  self.stim_strength = 100*np.empty((len(locs),4))
+Model saved in file: data/crystals/softplus/no_noise/0/model.ckpt
+Model saved in file: data/crystals/softplus/no_noise/0/ckpts/model.ckpt-27000
+Trial 1728000  | Time 9562.65 s  | Now training fdgo & reactgo & delaygo & fdanti & reactanti & delayanti & delaydm1 & delaydm2 & contextdelaydm1 & contextdelaydm2 & multidelaydm & dmsgo & dmsnogo & dmcgo & dmcnogo
+fdgo           | cost 0.038384| c_reg 0.000000  | perf 1.00
+reactgo        | cost 0.069254| c_reg 0.000000  | perf 1.00
+delaygo        | cost 0.057083| c_reg 0.000000  | perf 1.00
+fdanti         | cost 0.024008| c_reg 0.000000  | perf 1.00
+reactanti      | cost 0.074045| c_reg 0.000000  | perf 1.00
+delayanti      | cost 0.082474| c_reg 0.000000  | perf 1.00
+delaydm1       | cost 0.164281| c_reg 0.000000  | perf 0.94
+delaydm2       | cost 0.183715| c_reg 0.000000  | perf 0.93
+contextdelaydm1| cost 0.251557| c_reg 0.000000  | perf 0.91
+contextdelaydm2| cost 0.221416| c_reg 0.000000  | perf 0.90
+multidelaydm   | cost 0.156202| c_reg 0.000000  | perf 0.95
+dmsgo          | cost 0.399572| c_reg 0.000000  | perf 0.93
+dmsnogo        | cost 0.693112| c_reg 0.000000  | perf 0.82
+dmcgo          | cost 0.262443| c_reg 0.000000  | perf 0.95
+dmcnogo        | cost 0.314565| c_reg 0.000000  | perf 0.97
+Model saved in file: data/crystals/softplus/no_noise/0/model.ckpt
+Model saved in file: data/crystals/softplus/no_noise/0/ckpts/model.ckpt-28000
+Trial 1792000  | Time 9915.95 s  | Now training fdgo & reactgo & delaygo & fdanti & reactanti & delayanti & delaydm1 & delaydm2 & contextdelaydm1 & contextdelaydm2 & multidelaydm & dmsgo & dmsnogo & dmcgo & dmcnogo
+fdgo           | cost 0.020427| c_reg 0.000000  | perf 1.00
+reactgo        | cost 0.034737| c_reg 0.000000  | perf 1.00
+delaygo        | cost 0.035200| c_reg 0.000000  | perf 1.00
+fdanti         | cost 0.020918| c_reg 0.000000  | perf 1.00
+reactanti      | cost 0.053201| c_reg 0.000000  | perf 1.00
+delayanti      | cost 0.088103| c_reg 0.000000  | perf 1.00
+delaydm1       | cost 0.147582| c_reg 0.000000  | perf 0.94
+delaydm2       | cost 0.148826| c_reg 0.000000  | perf 0.93
+contextdelaydm1| cost 0.154327| c_reg 0.000000  | perf 0.94
+contextdelaydm2| cost 0.185068| c_reg 0.000000  | perf 0.93
+multidelaydm   | cost 0.131906| c_reg 0.000000  | perf 0.95
+dmsgo          | cost 0.289977| c_reg 0.000000  | perf 0.92
+dmsnogo        | cost 0.387164| c_reg 0.000000  | perf 0.94
+dmcgo          | cost 0.171721| c_reg 0.000000  | perf 0.95
+dmcnogo        | cost 0.176556| c_reg 0.000000  | perf 0.97
+Model saved in file: data/crystals/softplus/no_noise/0/model.ckpt
+Model saved in file: data/crystals/softplus/no_noise/0/ckpts/model.ckpt-29000
+Trial 1856000  | Time 10269.15 s  | Now training fdgo & reactgo & delaygo & fdanti & reactanti & delayanti & delaydm1 & delaydm2 & contextdelaydm1 & contextdelaydm2 & multidelaydm & dmsgo & dmsnogo & dmcgo & dmcnogo
+fdgo           | cost 0.023334| c_reg 0.000000  | perf 1.00
+reactgo        | cost 0.033986| c_reg 0.000000  | perf 1.00
+delaygo        | cost 0.034323| c_reg 0.000000  | perf 1.00
+fdanti         | cost 0.014166| c_reg 0.000000  | perf 1.00
+reactanti      | cost 0.048904| c_reg 0.000000  | perf 1.00
+delayanti      | cost 0.091348| c_reg 0.000000  | perf 1.00
+delaydm1       | cost 0.156068| c_reg 0.000000  | perf 0.93
+delaydm2       | cost 0.166931| c_reg 0.000000  | perf 0.91
+contextdelaydm1| cost 0.149457| c_reg 0.000000  | perf 0.94
+contextdelaydm2| cost 0.183608| c_reg 0.000000  | perf 0.93
+multidelaydm   | cost 0.115328| c_reg 0.000000  | perf 0.95
+dmsgo          | cost 0.308625| c_reg 0.000000  | perf 0.95
+dmsnogo        | cost 0.414981| c_reg 0.000000  | perf 0.91
+dmcgo          | cost 0.202079| c_reg 0.000000  | perf 0.96
+dmcnogo        | cost 0.247193| c_reg 0.000000  | perf 0.96
+Model saved in file: data/crystals/softplus/no_noise/0/model.ckpt
+Model saved in file: data/crystals/softplus/no_noise/0/ckpts/model.ckpt-30000
+Trial 1920000  | Time 10623.92 s  | Now training fdgo & reactgo & delaygo & fdanti & reactanti & delayanti & delaydm1 & delaydm2 & contextdelaydm1 & contextdelaydm2 & multidelaydm & dmsgo & dmsnogo & dmcgo & dmcnogo
+fdgo           | cost 0.023930| c_reg 0.000000  | perf 1.00
+reactgo        | cost 0.024982| c_reg 0.000000  | perf 1.00
+delaygo        | cost 0.019927| c_reg 0.000000  | perf 1.00
+fdanti         | cost 0.026992| c_reg 0.000000  | perf 1.00
+reactanti      | cost 0.043130| c_reg 0.000000  | perf 1.00
+delayanti      | cost 0.095846| c_reg 0.000000  | perf 0.97
+delaydm1       | cost 0.148175| c_reg 0.000000  | perf 0.94
+delaydm2       | cost 0.130757| c_reg 0.000000  | perf 0.94
+contextdelaydm1| cost 0.126938| c_reg 0.000000  | perf 0.95
+contextdelaydm2| cost 0.160959| c_reg 0.000000  | perf 0.94
+multidelaydm   | cost 0.091112| c_reg 0.000000  | perf 0.97
+dmsgo          | cost 0.279533| c_reg 0.000000  | perf 0.93
+dmsnogo        | cost 0.368963| c_reg 0.000000  | perf 0.94
+dmcgo          | cost 0.195546| c_reg 0.000000  | perf 0.97
+dmcnogo        | cost 0.165859| c_reg 0.000000  | perf 0.98
+Model saved in file: data/crystals/softplus/no_noise/0/model.ckpt
+Model saved in file: data/crystals/softplus/no_noise/0/ckpts/model.ckpt-31000
+Trial 1984000  | Time 10978.79 s  | Now training fdgo & reactgo & delaygo & fdanti & reactanti & delayanti & delaydm1 & delaydm2 & contextdelaydm1 & contextdelaydm2 & multidelaydm & dmsgo & dmsnogo & dmcgo & dmcnogo
+fdgo           | cost 0.035997| c_reg 0.000000  | perf 1.00
+reactgo        | cost 0.069726| c_reg 0.000000  | perf 1.00
+delaygo        | cost 0.042196| c_reg 0.000000  | perf 1.00
+fdanti         | cost 0.013065| c_reg 0.000000  | perf 1.00
+reactanti      | cost 0.044730| c_reg 0.000000  | perf 1.00
+delayanti      | cost 0.121586| c_reg 0.000000  | perf 0.97
+delaydm1       | cost 0.142178| c_reg 0.000000  | perf 0.93
+delaydm2       | cost 0.158753| c_reg 0.000000  | perf 0.93
+contextdelaydm1| cost 0.142808| c_reg 0.000000  | perf 0.94
+contextdelaydm2| cost 0.178488| c_reg 0.000000  | perf 0.93
+multidelaydm   | cost 0.120954| c_reg 0.000000  | perf 0.95
+dmsgo          | cost 0.302679| c_reg 0.000000  | perf 0.92
+dmsnogo        | cost 0.793547| c_reg 0.000000  | perf 0.75
+dmcgo          | cost 0.208047| c_reg 0.000000  | perf 0.96
+dmcnogo        | cost 0.284406| c_reg 0.000000  | perf 0.94
+Model saved in file: data/crystals/softplus/no_noise/0/model.ckpt
+Model saved in file: data/crystals/softplus/no_noise/0/ckpts/model.ckpt-32000
+Trial 2048000  | Time 11332.01 s  | Now training fdgo & reactgo & delaygo & fdanti & reactanti & delayanti & delaydm1 & delaydm2 & contextdelaydm1 & contextdelaydm2 & multidelaydm & dmsgo & dmsnogo & dmcgo & dmcnogo
+fdgo           | cost 0.018983| c_reg 0.000000  | perf 1.00
+reactgo        | cost 0.020041| c_reg 0.000000  | perf 1.00
+delaygo        | cost 0.029902| c_reg 0.000000  | perf 1.00
+fdanti         | cost 0.012419| c_reg 0.000000  | perf 1.00
+reactanti      | cost 0.030706| c_reg 0.000000  | perf 1.00
+delayanti      | cost 0.054117| c_reg 0.000000  | perf 1.00
+delaydm1       | cost 0.170517| c_reg 0.000000  | perf 0.93
+delaydm2       | cost 0.143492| c_reg 0.000000  | perf 0.94
+contextdelaydm1| cost 0.152029| c_reg 0.000000  | perf 0.95
+contextdelaydm2| cost 0.227889| c_reg 0.000000  | perf 0.92
+multidelaydm   | cost 0.111383| c_reg 0.000000  | perf 0.96
+dmsgo          | cost 0.212557| c_reg 0.000000  | perf 0.95
+dmsnogo        | cost 0.551320| c_reg 0.000000  | perf 0.82
+dmcgo          | cost 0.175941| c_reg 0.000000  | perf 0.97
+dmcnogo        | cost 0.213534| c_reg 0.000000  | perf 0.96
+Model saved in file: data/crystals/softplus/no_noise/0/model.ckpt
+Model saved in file: data/crystals/softplus/no_noise/0/ckpts/model.ckpt-33000
+Trial 2112000  | Time 11686.05 s  | Now training fdgo & reactgo & delaygo & fdanti & reactanti & delayanti & delaydm1 & delaydm2 & contextdelaydm1 & contextdelaydm2 & multidelaydm & dmsgo & dmsnogo & dmcgo & dmcnogo
+fdgo           | cost 0.021684| c_reg 0.000000  | perf 1.00
+reactgo        | cost 0.015271| c_reg 0.000000  | perf 1.00
+delaygo        | cost 0.035787| c_reg 0.000000  | perf 1.00
+fdanti         | cost 0.023062| c_reg 0.000000  | perf 1.00
+reactanti      | cost 0.054144| c_reg 0.000000  | perf 1.00
+delayanti      | cost 0.082845| c_reg 0.000000  | perf 1.00
+delaydm1       | cost 0.141330| c_reg 0.000000  | perf 0.94
+delaydm2       | cost 0.171808| c_reg 0.000000  | perf 0.93
+contextdelaydm1| cost 0.301492| c_reg 0.000000  | perf 0.88
+contextdelaydm2| cost 0.187589| c_reg 0.000000  | perf 0.92
+multidelaydm   | cost 0.169738| c_reg 0.000000  | perf 0.94
+dmsgo          | cost 0.243350| c_reg 0.000000  | perf 0.94
+dmsnogo        | cost 0.329718| c_reg 0.000000  | perf 0.94
+dmcgo          | cost 0.163216| c_reg 0.000000  | perf 0.96
+dmcnogo        | cost 0.142721| c_reg 0.000000  | perf 0.97
+Model saved in file: data/crystals/softplus/no_noise/0/model.ckpt
+Model saved in file: data/crystals/softplus/no_noise/0/ckpts/model.ckpt-34000
+Trial 2176000  | Time 12040.08 s  | Now training fdgo & reactgo & delaygo & fdanti & reactanti & delayanti & delaydm1 & delaydm2 & contextdelaydm1 & contextdelaydm2 & multidelaydm & dmsgo & dmsnogo & dmcgo & dmcnogo
+fdgo           | cost 0.025700| c_reg 0.000000  | perf 1.00
+reactgo        | cost 0.030235| c_reg 0.000000  | perf 1.00
+delaygo        | cost 0.014330| c_reg 0.000000  | perf 1.00
+fdanti         | cost 0.013266| c_reg 0.000000  | perf 1.00
+reactanti      | cost 0.025927| c_reg 0.000000  | perf 1.00
+delayanti      | cost 0.046204| c_reg 0.000000  | perf 1.00
+delaydm1       | cost 0.109916| c_reg 0.000000  | perf 0.96
+delaydm2       | cost 0.119831| c_reg 0.000000  | perf 0.95
+contextdelaydm1| cost 0.173141| c_reg 0.000000  | perf 0.92
+contextdelaydm2| cost 0.167678| c_reg 0.000000  | perf 0.94
+multidelaydm   | cost 0.102753| c_reg 0.000000  | perf 0.96
+dmsgo          | cost 0.199424| c_reg 0.000000  | perf 0.97
+dmsnogo        | cost 0.260116| c_reg 0.000000  | perf 0.97
+dmcgo          | cost 0.258475| c_reg 0.000000  | perf 0.95
+dmcnogo        | cost 0.122294| c_reg 0.000000  | perf 0.98
+Model saved in file: data/crystals/softplus/no_noise/0/model.ckpt
+Model saved in file: data/crystals/softplus/no_noise/0/ckpts/model.ckpt-35000
+Trial 2240000  | Time 12394.08 s  | Now training fdgo & reactgo & delaygo & fdanti & reactanti & delayanti & delaydm1 & delaydm2 & contextdelaydm1 & contextdelaydm2 & multidelaydm & dmsgo & dmsnogo & dmcgo & dmcnogo
+fdgo           | cost 0.013976| c_reg 0.000000  | perf 1.00
+reactgo        | cost 0.016802| c_reg 0.000000  | perf 1.00
+delaygo        | cost 0.012954| c_reg 0.000000  | perf 1.00
+fdanti         | cost 0.009460| c_reg 0.000000  | perf 1.00
+reactanti      | cost 0.021010| c_reg 0.000000  | perf 1.00
+delayanti      | cost 0.035762| c_reg 0.000000  | perf 1.00
+delaydm1       | cost 0.104727| c_reg 0.000000  | perf 0.95
+delaydm2       | cost 0.106614| c_reg 0.000000  | perf 0.95
+contextdelaydm1| cost 0.119117| c_reg 0.000000  | perf 0.95
+contextdelaydm2| cost 0.139166| c_reg 0.000000  | perf 0.94
+multidelaydm   | cost 0.087204| c_reg 0.000000  | perf 0.96
+dmsgo          | cost 0.391955| c_reg 0.000000  | perf 0.92
+dmsnogo        | cost 0.257418| c_reg 0.000000  | perf 0.97
+dmcgo          | cost 0.129941| c_reg 0.000000  | perf 0.96
+dmcnogo        | cost 0.134180| c_reg 0.000000  | perf 0.99
+Model saved in file: data/crystals/softplus/no_noise/0/model.ckpt
+Model saved in file: data/crystals/softplus/no_noise/0/ckpts/model.ckpt-36000
+Trial 2304000  | Time 12747.83 s  | Now training fdgo & reactgo & delaygo & fdanti & reactanti & delayanti & delaydm1 & delaydm2 & contextdelaydm1 & contextdelaydm2 & multidelaydm & dmsgo & dmsnogo & dmcgo & dmcnogo
+fdgo           | cost 0.024161| c_reg 0.000000  | perf 1.00
+reactgo        | cost 0.021249| c_reg 0.000000  | perf 1.00
+delaygo        | cost 0.027302| c_reg 0.000000  | perf 1.00
+fdanti         | cost 0.006294| c_reg 0.000000  | perf 1.00
+reactanti      | cost 0.017056| c_reg 0.000000  | perf 1.00
+delayanti      | cost 0.046660| c_reg 0.000000  | perf 1.00
+delaydm1       | cost 0.098558| c_reg 0.000000  | perf 0.96
+delaydm2       | cost 0.102042| c_reg 0.000000  | perf 0.96
+contextdelaydm1| cost 0.132421| c_reg 0.000000  | perf 0.95
+contextdelaydm2| cost 0.167573| c_reg 0.000000  | perf 0.93
+multidelaydm   | cost 0.095331| c_reg 0.000000  | perf 0.96
+dmsgo          | cost 0.277762| c_reg 0.000000  | perf 0.95
+dmsnogo        | cost 0.256669| c_reg 0.000000  | perf 0.97
+dmcgo          | cost 0.134935| c_reg 0.000000  | perf 0.98
+dmcnogo        | cost 0.151333| c_reg 0.000000  | perf 0.98
+Model saved in file: data/crystals/softplus/no_noise/0/model.ckpt
+Model saved in file: data/crystals/softplus/no_noise/0/ckpts/model.ckpt-37000
+Trial 2368000  | Time 13101.62 s  | Now training fdgo & reactgo & delaygo & fdanti & reactanti & delayanti & delaydm1 & delaydm2 & contextdelaydm1 & contextdelaydm2 & multidelaydm & dmsgo & dmsnogo & dmcgo & dmcnogo
+fdgo           | cost 0.017045| c_reg 0.000000  | perf 1.00
+reactgo        | cost 0.012748| c_reg 0.000000  | perf 1.00
+delaygo        | cost 0.036349| c_reg 0.000000  | perf 1.00
+fdanti         | cost 0.015223| c_reg 0.000000  | perf 1.00
+reactanti      | cost 0.024099| c_reg 0.000000  | perf 1.00
+delayanti      | cost 0.056914| c_reg 0.000000  | perf 1.00
+delaydm1       | cost 0.163065| c_reg 0.000000  | perf 0.94
+delaydm2       | cost 0.162810| c_reg 0.000000  | perf 0.94
+contextdelaydm1| cost 0.134380| c_reg 0.000000  | perf 0.95
+contextdelaydm2| cost 0.146569| c_reg 0.000000  | perf 0.94
+multidelaydm   | cost 0.119022| c_reg 0.000000  | perf 0.96
+dmsgo          | cost 0.191483| c_reg 0.000000  | perf 0.95
+dmsnogo        | cost 0.243223| c_reg 0.000000  | perf 0.98
+dmcgo          | cost 0.145835| c_reg 0.000000  | perf 0.98
+dmcnogo        | cost 0.168109| c_reg 0.000000  | perf 0.97
+Model saved in file: data/crystals/softplus/no_noise/0/model.ckpt
+Model saved in file: data/crystals/softplus/no_noise/0/ckpts/model.ckpt-38000
+Trial 2432000  | Time 13454.79 s  | Now training fdgo & reactgo & delaygo & fdanti & reactanti & delayanti & delaydm1 & delaydm2 & contextdelaydm1 & contextdelaydm2 & multidelaydm & dmsgo & dmsnogo & dmcgo & dmcnogo
+fdgo           | cost 0.011716| c_reg 0.000000  | perf 1.00
+reactgo        | cost 0.018782| c_reg 0.000000  | perf 1.00
+delaygo        | cost 0.016661| c_reg 0.000000  | perf 1.00
+fdanti         | cost 0.020435| c_reg 0.000000  | perf 1.00
+reactanti      | cost 0.013596| c_reg 0.000000  | perf 1.00
+delayanti      | cost 0.052218| c_reg 0.000000  | perf 1.00
+delaydm1       | cost 0.093989| c_reg 0.000000  | perf 0.96
+delaydm2       | cost 0.090549| c_reg 0.000000  | perf 0.96
+contextdelaydm1| cost 0.104161| c_reg 0.000000  | perf 0.96
+contextdelaydm2| cost 0.123900| c_reg 0.000000  | perf 0.95
+multidelaydm   | cost 0.104546| c_reg 0.000000  | perf 0.96
+dmsgo          | cost 0.180385| c_reg 0.000000  | perf 0.97
+dmsnogo        | cost 0.250705| c_reg 0.000000  | perf 0.98
+dmcgo          | cost 0.136838| c_reg 0.000000  | perf 0.97
+dmcnogo        | cost 0.171787| c_reg 0.000000  | perf 0.97
+Model saved in file: data/crystals/softplus/no_noise/0/model.ckpt
+Model saved in file: data/crystals/softplus/no_noise/0/ckpts/model.ckpt-39000
+Trial 2496000  | Time 13808.15 s  | Now training fdgo & reactgo & delaygo & fdanti & reactanti & delayanti & delaydm1 & delaydm2 & contextdelaydm1 & contextdelaydm2 & multidelaydm & dmsgo & dmsnogo & dmcgo & dmcnogo
+fdgo           | cost 0.013999| c_reg 0.000000  | perf 1.00
+reactgo        | cost 0.013153| c_reg 0.000000  | perf 1.00
+delaygo        | cost 0.013876| c_reg 0.000000  | perf 1.00
+fdanti         | cost 0.015227| c_reg 0.000000  | perf 1.00
+reactanti      | cost 0.020633| c_reg 0.000000  | perf 1.00
+delayanti      | cost 0.027340| c_reg 0.000000  | perf 1.00
+delaydm1       | cost 0.091046| c_reg 0.000000  | perf 0.96
+delaydm2       | cost 0.091931| c_reg 0.000000  | perf 0.96
+contextdelaydm1| cost 0.117416| c_reg 0.000000  | perf 0.95
+contextdelaydm2| cost 0.178699| c_reg 0.000000  | perf 0.93
+multidelaydm   | cost 0.077121| c_reg 0.000000  | perf 0.97
+dmsgo          | cost 0.183556| c_reg 0.000000  | perf 0.95
+dmsnogo        | cost 0.211769| c_reg 0.000000  | perf 0.97
+dmcgo          | cost 0.130965| c_reg 0.000000  | perf 0.98
+dmcnogo        | cost 0.185597| c_reg 0.000000  | perf 0.97
+Model saved in file: data/crystals/softplus/no_noise/0/model.ckpt
+Model saved in file: data/crystals/softplus/no_noise/0/ckpts/model.ckpt-40000
+Trial 2560000  | Time 14161.36 s  | Now training fdgo & reactgo & delaygo & fdanti & reactanti & delayanti & delaydm1 & delaydm2 & contextdelaydm1 & contextdelaydm2 & multidelaydm & dmsgo & dmsnogo & dmcgo & dmcnogo
+fdgo           | cost 0.014541| c_reg 0.000000  | perf 1.00
+reactgo        | cost 0.011324| c_reg 0.000000  | perf 1.00
+delaygo        | cost 0.011612| c_reg 0.000000  | perf 1.00
+fdanti         | cost 0.008501| c_reg 0.000000  | perf 1.00
+reactanti      | cost 0.015821| c_reg 0.000000  | perf 1.00
+delayanti      | cost 0.038672| c_reg 0.000000  | perf 1.00
+delaydm1       | cost 0.092439| c_reg 0.000000  | perf 0.96
+delaydm2       | cost 0.094584| c_reg 0.000000  | perf 0.96
+contextdelaydm1| cost 0.112411| c_reg 0.000000  | perf 0.95
+contextdelaydm2| cost 0.211749| c_reg 0.000000  | perf 0.92
+multidelaydm   | cost 0.074886| c_reg 0.000000  | perf 0.97
+dmsgo          | cost 0.159764| c_reg 0.000000  | perf 0.96
+dmsnogo        | cost 0.201682| c_reg 0.000000  | perf 0.98
+dmcgo          | cost 0.113456| c_reg 0.000000  | perf 0.98
+dmcnogo        | cost 0.129598| c_reg 0.000000  | perf 0.99
+Model saved in file: data/crystals/softplus/no_noise/0/model.ckpt
+Model saved in file: data/crystals/softplus/no_noise/0/ckpts/model.ckpt-41000
+Trial 2624000  | Time 14516.83 s  | Now training fdgo & reactgo & delaygo & fdanti & reactanti & delayanti & delaydm1 & delaydm2 & contextdelaydm1 & contextdelaydm2 & multidelaydm & dmsgo & dmsnogo & dmcgo & dmcnogo
+fdgo           | cost 0.022910| c_reg 0.000000  | perf 1.00
+reactgo        | cost 0.015631| c_reg 0.000000  | perf 1.00
+delaygo        | cost 0.050495| c_reg 0.000000  | perf 1.00
+fdanti         | cost 0.008294| c_reg 0.000000  | perf 1.00
+reactanti      | cost 0.016263| c_reg 0.000000  | perf 1.00
+delayanti      | cost 0.026485| c_reg 0.000000  | perf 1.00
+delaydm1       | cost 0.236947| c_reg 0.000000  | perf 0.88
+delaydm2       | cost 0.127006| c_reg 0.000000  | perf 0.95
+contextdelaydm1| cost 0.184609| c_reg 0.000000  | perf 0.93
+contextdelaydm2| cost 0.149254| c_reg 0.000000  | perf 0.93
+multidelaydm   | cost 0.097395| c_reg 0.000000  | perf 0.96
+dmsgo          | cost 0.257123| c_reg 0.000000  | perf 0.93
+dmsnogo        | cost 0.217697| c_reg 0.000000  | perf 0.95
+dmcgo          | cost 0.122058| c_reg 0.000000  | perf 0.98
+dmcnogo        | cost 0.132615| c_reg 0.000000  | perf 0.98
+Model saved in file: data/crystals/softplus/no_noise/0/model.ckpt
+Model saved in file: data/crystals/softplus/no_noise/0/ckpts/model.ckpt-42000
+Trial 2688000  | Time 14870.02 s  | Now training fdgo & reactgo & delaygo & fdanti & reactanti & delayanti & delaydm1 & delaydm2 & contextdelaydm1 & contextdelaydm2 & multidelaydm & dmsgo & dmsnogo & dmcgo & dmcnogo
+fdgo           | cost 0.019597| c_reg 0.000000  | perf 1.00
+reactgo        | cost 0.034680| c_reg 0.000000  | perf 1.00
+delaygo        | cost 0.034462| c_reg 0.000000  | perf 1.00
+fdanti         | cost 0.028714| c_reg 0.000000  | perf 1.00
+reactanti      | cost 0.021935| c_reg 0.000000  | perf 1.00
+delayanti      | cost 0.041160| c_reg 0.000000  | perf 1.00
+delaydm1       | cost 0.101120| c_reg 0.000000  | perf 0.96
+delaydm2       | cost 0.099216| c_reg 0.000000  | perf 0.96
+contextdelaydm1| cost 0.150010| c_reg 0.000000  | perf 0.95
+contextdelaydm2| cost 0.132021| c_reg 0.000000  | perf 0.95
+multidelaydm   | cost 0.108317| c_reg 0.000000  | perf 0.96
+dmsgo          | cost 0.147858| c_reg 0.000000  | perf 0.97
+dmsnogo        | cost 0.233055| c_reg 0.000000  | perf 0.95
+dmcgo          | cost 0.130776| c_reg 0.000000  | perf 0.98
+dmcnogo        | cost 0.114059| c_reg 0.000000  | perf 0.98
+Model saved in file: data/crystals/softplus/no_noise/0/model.ckpt
+Model saved in file: data/crystals/softplus/no_noise/0/ckpts/model.ckpt-43000
+Trial 2752000  | Time 15223.97 s  | Now training fdgo & reactgo & delaygo & fdanti & reactanti & delayanti & delaydm1 & delaydm2 & contextdelaydm1 & contextdelaydm2 & multidelaydm & dmsgo & dmsnogo & dmcgo & dmcnogo
+fdgo           | cost 0.013019| c_reg 0.000000  | perf 1.00
+reactgo        | cost 0.012953| c_reg 0.000000  | perf 1.00
+delaygo        | cost 0.009074| c_reg 0.000000  | perf 1.00
+fdanti         | cost 0.010459| c_reg 0.000000  | perf 1.00
+reactanti      | cost 0.017990| c_reg 0.000000  | perf 1.00
+delayanti      | cost 0.055299| c_reg 0.000000  | perf 1.00
+delaydm1       | cost 0.082642| c_reg 0.000000  | perf 0.96
+delaydm2       | cost 0.124474| c_reg 0.000000  | perf 0.95
+contextdelaydm1| cost 0.132030| c_reg 0.000000  | perf 0.95
+contextdelaydm2| cost 0.116517| c_reg 0.000000  | perf 0.95
+multidelaydm   | cost 0.123961| c_reg 0.000000  | perf 0.95
+dmsgo          | cost 0.139616| c_reg 0.000000  | perf 0.97
+dmsnogo        | cost 0.167499| c_reg 0.000000  | perf 0.99
+dmcgo          | cost 0.107585| c_reg 0.000000  | perf 0.98
+dmcnogo        | cost 0.106517| c_reg 0.000000  | perf 0.98
+Model saved in file: data/crystals/softplus/no_noise/0/model.ckpt
+Model saved in file: data/crystals/softplus/no_noise/0/ckpts/model.ckpt-44000
+Trial 2816000  | Time 15577.23 s  | Now training fdgo & reactgo & delaygo & fdanti & reactanti & delayanti & delaydm1 & delaydm2 & contextdelaydm1 & contextdelaydm2 & multidelaydm & dmsgo & dmsnogo & dmcgo & dmcnogo
+fdgo           | cost 0.015068| c_reg 0.000000  | perf 1.00
+reactgo        | cost 0.013658| c_reg 0.000000  | perf 1.00
+delaygo        | cost 0.009200| c_reg 0.000000  | perf 1.00
+fdanti         | cost 0.005481| c_reg 0.000000  | perf 1.00
+reactanti      | cost 0.019721| c_reg 0.000000  | perf 1.00
+delayanti      | cost 0.027150| c_reg 0.000000  | perf 1.00
+delaydm1       | cost 0.099431| c_reg 0.000000  | perf 0.96
+delaydm2       | cost 0.090647| c_reg 0.000000  | perf 0.96
+contextdelaydm1| cost 0.093815| c_reg 0.000000  | perf 0.96
+contextdelaydm2| cost 0.132226| c_reg 0.000000  | perf 0.95
+multidelaydm   | cost 0.089959| c_reg 0.000000  | perf 0.96
+dmsgo          | cost 0.170999| c_reg 0.000000  | perf 0.97
+dmsnogo        | cost 0.207905| c_reg 0.000000  | perf 0.96
+dmcgo          | cost 0.124408| c_reg 0.000000  | perf 0.98
+dmcnogo        | cost 0.159573| c_reg 0.000000  | perf 0.97
+Model saved in file: data/crystals/softplus/no_noise/0/model.ckpt
+Model saved in file: data/crystals/softplus/no_noise/0/ckpts/model.ckpt-45000
+Trial 2880000  | Time 15930.91 s  | Now training fdgo & reactgo & delaygo & fdanti & reactanti & delayanti & delaydm1 & delaydm2 & contextdelaydm1 & contextdelaydm2 & multidelaydm & dmsgo & dmsnogo & dmcgo & dmcnogo
+fdgo           | cost 0.009102| c_reg 0.000000  | perf 1.00
+reactgo        | cost 0.008807| c_reg 0.000000  | perf 1.00
+delaygo        | cost 0.022428| c_reg 0.000000  | perf 1.00
+fdanti         | cost 0.005374| c_reg 0.000000  | perf 1.00
+reactanti      | cost 0.008972| c_reg 0.000000  | perf 1.00
+delayanti      | cost 0.025299| c_reg 0.000000  | perf 1.00
+delaydm1       | cost 0.081476| c_reg 0.000000  | perf 0.97
+delaydm2       | cost 0.116095| c_reg 0.000000  | perf 0.95
+contextdelaydm1| cost 0.145867| c_reg 0.000000  | perf 0.95
+contextdelaydm2| cost 0.171574| c_reg 0.000000  | perf 0.93
+multidelaydm   | cost 0.099568| c_reg 0.000000  | perf 0.96
+dmsgo          | cost 0.137514| c_reg 0.000000  | perf 0.98
+dmsnogo        | cost 0.137618| c_reg 0.000000  | perf 0.99
+dmcgo          | cost 0.110578| c_reg 0.000000  | perf 0.98
+dmcnogo        | cost 0.124058| c_reg 0.000000  | perf 0.98
+Model saved in file: data/crystals/softplus/no_noise/0/model.ckpt
+Model saved in file: data/crystals/softplus/no_noise/0/ckpts/model.ckpt-46000
+Trial 2944000  | Time 16284.80 s  | Now training fdgo & reactgo & delaygo & fdanti & reactanti & delayanti & delaydm1 & delaydm2 & contextdelaydm1 & contextdelaydm2 & multidelaydm & dmsgo & dmsnogo & dmcgo & dmcnogo
+fdgo           | cost 0.010685| c_reg 0.000000  | perf 1.00
+reactgo        | cost 0.011463| c_reg 0.000000  | perf 1.00
+delaygo        | cost 0.021814| c_reg 0.000000  | perf 1.00
+fdanti         | cost 0.006563| c_reg 0.000000  | perf 1.00
+reactanti      | cost 0.037798| c_reg 0.000000  | perf 1.00
+delayanti      | cost 0.041695| c_reg 0.000000  | perf 1.00
+delaydm1       | cost 0.093649| c_reg 0.000000  | perf 0.97
+delaydm2       | cost 0.080626| c_reg 0.000000  | perf 0.97
+contextdelaydm1| cost 0.097907| c_reg 0.000000  | perf 0.96
+contextdelaydm2| cost 0.171782| c_reg 0.000000  | perf 0.94
+multidelaydm   | cost 0.105187| c_reg 0.000000  | perf 0.96
+dmsgo          | cost 0.140229| c_reg 0.000000  | perf 0.96
+dmsnogo        | cost 0.226477| c_reg 0.000000  | perf 0.93
+dmcgo          | cost 0.098107| c_reg 0.000000  | perf 0.98
+dmcnogo        | cost 0.113168| c_reg 0.000000  | perf 0.98
+Model saved in file: data/crystals/softplus/no_noise/0/model.ckpt
+Model saved in file: data/crystals/softplus/no_noise/0/ckpts/model.ckpt-47000
+Trial 3008000  | Time 16637.37 s  | Now training fdgo & reactgo & delaygo & fdanti & reactanti & delayanti & delaydm1 & delaydm2 & contextdelaydm1 & contextdelaydm2 & multidelaydm & dmsgo & dmsnogo & dmcgo & dmcnogo
+fdgo           | cost 0.025406| c_reg 0.000000  | perf 1.00
+reactgo        | cost 0.039791| c_reg 0.000000  | perf 1.00
+delaygo        | cost 0.028177| c_reg 0.000000  | perf 1.00
+fdanti         | cost 0.008379| c_reg 0.000000  | perf 1.00
+reactanti      | cost 0.052045| c_reg 0.000000  | perf 1.00
+delayanti      | cost 0.054382| c_reg 0.000000  | perf 1.00
+delaydm1       | cost 0.082443| c_reg 0.000000  | perf 0.97
+delaydm2       | cost 0.100956| c_reg 0.000000  | perf 0.96
+contextdelaydm1| cost 0.116964| c_reg 0.000000  | perf 0.96
+contextdelaydm2| cost 0.116528| c_reg 0.000000  | perf 0.96
+multidelaydm   | cost 0.085670| c_reg 0.000000  | perf 0.97
+dmsgo          | cost 0.309293| c_reg 0.000000  | perf 0.96
+dmsnogo        | cost 0.539315| c_reg 0.000000  | perf 0.86
+dmcgo          | cost 0.127879| c_reg 0.000000  | perf 0.98
+dmcnogo        | cost 0.181875| c_reg 0.000000  | perf 0.97
+Model saved in file: data/crystals/softplus/no_noise/0/model.ckpt
+Model saved in file: data/crystals/softplus/no_noise/0/ckpts/model.ckpt-48000
+Trial 3072000  | Time 16990.03 s  | Now training fdgo & reactgo & delaygo & fdanti & reactanti & delayanti & delaydm1 & delaydm2 & contextdelaydm1 & contextdelaydm2 & multidelaydm & dmsgo & dmsnogo & dmcgo & dmcnogo
+fdgo           | cost 0.010859| c_reg 0.000000  | perf 1.00
+reactgo        | cost 0.010037| c_reg 0.000000  | perf 1.00
+delaygo        | cost 0.008486| c_reg 0.000000  | perf 1.00
+fdanti         | cost 0.008283| c_reg 0.000000  | perf 1.00
+reactanti      | cost 0.015436| c_reg 0.000000  | perf 1.00
+delayanti      | cost 0.016437| c_reg 0.000000  | perf 1.00
+delaydm1       | cost 0.068659| c_reg 0.000000  | perf 0.97
+delaydm2       | cost 0.085563| c_reg 0.000000  | perf 0.96
+contextdelaydm1| cost 0.095047| c_reg 0.000000  | perf 0.96
+contextdelaydm2| cost 0.128574| c_reg 0.000000  | perf 0.95
+multidelaydm   | cost 0.077803| c_reg 0.000000  | perf 0.97
+dmsgo          | cost 0.112872| c_reg 0.000000  | perf 0.98
+dmsnogo        | cost 0.140084| c_reg 0.000000  | perf 0.99
+dmcgo          | cost 0.085322| c_reg 0.000000  | perf 0.98
+dmcnogo        | cost 0.147896| c_reg 0.000000  | perf 0.98
+Model saved in file: data/crystals/softplus/no_noise/0/model.ckpt
+Model saved in file: data/crystals/softplus/no_noise/0/ckpts/model.ckpt-49000
+Trial 3136000  | Time 17344.51 s  | Now training fdgo & reactgo & delaygo & fdanti & reactanti & delayanti & delaydm1 & delaydm2 & contextdelaydm1 & contextdelaydm2 & multidelaydm & dmsgo & dmsnogo & dmcgo & dmcnogo
+fdgo           | cost 0.014168| c_reg 0.000000  | perf 1.00
+reactgo        | cost 0.019182| c_reg 0.000000  | perf 1.00
+delaygo        | cost 0.024586| c_reg 0.000000  | perf 1.00
+fdanti         | cost 0.024127| c_reg 0.000000  | perf 1.00
+reactanti      | cost 0.010921| c_reg 0.000000  | perf 1.00
+delayanti      | cost 0.035393| c_reg 0.000000  | perf 1.00
+delaydm1       | cost 0.106560| c_reg 0.000000  | perf 0.95
+delaydm2       | cost 0.147788| c_reg 0.000000  | perf 0.94
+contextdelaydm1| cost 0.159640| c_reg 0.000000  | perf 0.94
+contextdelaydm2| cost 0.198569| c_reg 0.000000  | perf 0.92
+multidelaydm   | cost 0.106809| c_reg 0.000000  | perf 0.96
+dmsgo          | cost 0.127877| c_reg 0.000000  | perf 0.97
+dmsnogo        | cost 0.150806| c_reg 0.000000  | perf 0.99
+dmcgo          | cost 0.161599| c_reg 0.000000  | perf 0.95
+dmcnogo        | cost 0.115358| c_reg 0.000000  | perf 0.98
+Model saved in file: data/crystals/softplus/no_noise/0/model.ckpt
+Model saved in file: data/crystals/softplus/no_noise/0/ckpts/model.ckpt-50000
+Trial 3200000  | Time 17700.34 s  | Now training fdgo & reactgo & delaygo & fdanti & reactanti & delayanti & delaydm1 & delaydm2 & contextdelaydm1 & contextdelaydm2 & multidelaydm & dmsgo & dmsnogo & dmcgo & dmcnogo
+fdgo           | cost 0.019638| c_reg 0.000000  | perf 1.00
+reactgo        | cost 0.014524| c_reg 0.000000  | perf 1.00
+delaygo        | cost 0.029031| c_reg 0.000000  | perf 1.00
+fdanti         | cost 0.029481| c_reg 0.000000  | perf 1.00
+reactanti      | cost 0.012528| c_reg 0.000000  | perf 1.00
+delayanti      | cost 0.051126| c_reg 0.000000  | perf 1.00
+delaydm1       | cost 0.149107| c_reg 0.000000  | perf 0.95
+delaydm2       | cost 0.165542| c_reg 0.000000  | perf 0.94
+contextdelaydm1| cost 0.112553| c_reg 0.000000  | perf 0.96
+contextdelaydm2| cost 0.129922| c_reg 0.000000  | perf 0.95
+multidelaydm   | cost 0.107040| c_reg 0.000000  | perf 0.96
+dmsgo          | cost 0.171650| c_reg 0.000000  | perf 0.97
+dmsnogo        | cost 0.424874| c_reg 0.000000  | perf 0.87
+dmcgo          | cost 0.146366| c_reg 0.000000  | perf 0.97
+dmcnogo        | cost 0.161026| c_reg 0.000000  | perf 0.97
+Model saved in file: data/crystals/softplus/no_noise/0/model.ckpt
+Model saved in file: data/crystals/softplus/no_noise/0/ckpts/model.ckpt-51000
+Trial 3264000  | Time 18055.07 s  | Now training fdgo & reactgo & delaygo & fdanti & reactanti & delayanti & delaydm1 & delaydm2 & contextdelaydm1 & contextdelaydm2 & multidelaydm & dmsgo & dmsnogo & dmcgo & dmcnogo
+fdgo           | cost 0.010602| c_reg 0.000000  | perf 1.00
+reactgo        | cost 0.015926| c_reg 0.000000  | perf 1.00
+delaygo        | cost 0.027004| c_reg 0.000000  | perf 1.00
+fdanti         | cost 0.005242| c_reg 0.000000  | perf 1.00
+reactanti      | cost 0.011687| c_reg 0.000000  | perf 1.00
+delayanti      | cost 0.045064| c_reg 0.000000  | perf 1.00
+delaydm1       | cost 0.062411| c_reg 0.000000  | perf 0.98
+delaydm2       | cost 0.080972| c_reg 0.000000  | perf 0.97
+contextdelaydm1| cost 0.133222| c_reg 0.000000  | perf 0.95
+contextdelaydm2| cost 0.128954| c_reg 0.000000  | perf 0.95
+multidelaydm   | cost 0.083293| c_reg 0.000000  | perf 0.97
+dmsgo          | cost 0.280074| c_reg 0.000000  | perf 0.93
+dmsnogo        | cost 0.122014| c_reg 0.000000  | perf 0.98
+dmcgo          | cost 0.100697| c_reg 0.000000  | perf 0.98
+dmcnogo        | cost 0.097907| c_reg 0.000000  | perf 0.98
+Model saved in file: data/crystals/softplus/no_noise/0/model.ckpt
+Model saved in file: data/crystals/softplus/no_noise/0/ckpts/model.ckpt-52000
+Trial 3328000  | Time 18409.77 s  | Now training fdgo & reactgo & delaygo & fdanti & reactanti & delayanti & delaydm1 & delaydm2 & contextdelaydm1 & contextdelaydm2 & multidelaydm & dmsgo & dmsnogo & dmcgo & dmcnogo
+fdgo           | cost 0.018294| c_reg 0.000000  | perf 1.00
+reactgo        | cost 0.014953| c_reg 0.000000  | perf 1.00
+delaygo        | cost 0.073227| c_reg 0.000000  | perf 1.00
+fdanti         | cost 0.033160| c_reg 0.000000  | perf 1.00
+reactanti      | cost 0.041722| c_reg 0.000000  | perf 1.00
+delayanti      | cost 0.074469| c_reg 0.000000  | perf 1.00
+delaydm1       | cost 0.128971| c_reg 0.000000  | perf 0.96
+delaydm2       | cost 0.111313| c_reg 0.000000  | perf 0.97
+contextdelaydm1| cost 0.109728| c_reg 0.000000  | perf 0.96
+contextdelaydm2| cost 0.113550| c_reg 0.000000  | perf 0.96
+multidelaydm   | cost 0.110600| c_reg 0.000000  | perf 0.97
+dmsgo          | cost 0.176642| c_reg 0.000000  | perf 0.97
+dmsnogo        | cost 0.153565| c_reg 0.000000  | perf 0.99
+dmcgo          | cost 0.091754| c_reg 0.000000  | perf 0.98
+dmcnogo        | cost 0.086983| c_reg 0.000000  | perf 0.98
+Model saved in file: data/crystals/softplus/no_noise/0/model.ckpt
+Model saved in file: data/crystals/softplus/no_noise/0/ckpts/model.ckpt-53000
+Trial 3392000  | Time 18766.03 s  | Now training fdgo & reactgo & delaygo & fdanti & reactanti & delayanti & delaydm1 & delaydm2 & contextdelaydm1 & contextdelaydm2 & multidelaydm & dmsgo & dmsnogo & dmcgo & dmcnogo
+fdgo           | cost 0.009494| c_reg 0.000000  | perf 1.00
+reactgo        | cost 0.009851| c_reg 0.000000  | perf 1.00
+delaygo        | cost 0.016791| c_reg 0.000000  | perf 1.00
+fdanti         | cost 0.032017| c_reg 0.000000  | perf 1.00
+reactanti      | cost 0.025592| c_reg 0.000000  | perf 1.00
+delayanti      | cost 0.018799| c_reg 0.000000  | perf 1.00
+delaydm1       | cost 0.103368| c_reg 0.000000  | perf 0.96
+delaydm2       | cost 0.062139| c_reg 0.000000  | perf 0.98
+contextdelaydm1| cost 0.119576| c_reg 0.000000  | perf 0.95
+contextdelaydm2| cost 0.087676| c_reg 0.000000  | perf 0.97
+multidelaydm   | cost 0.068927| c_reg 0.000000  | perf 0.98
+dmsgo          | cost 0.145971| c_reg 0.000000  | perf 0.97
+dmsnogo        | cost 0.131163| c_reg 0.000000  | perf 0.99
+dmcgo          | cost 0.097911| c_reg 0.000000  | perf 0.98
+dmcnogo        | cost 0.098728| c_reg 0.000000  | perf 0.98
+Model saved in file: data/crystals/softplus/no_noise/0/model.ckpt
+Model saved in file: data/crystals/softplus/no_noise/0/ckpts/model.ckpt-54000
+Trial 3456000  | Time 19121.76 s  | Now training fdgo & reactgo & delaygo & fdanti & reactanti & delayanti & delaydm1 & delaydm2 & contextdelaydm1 & contextdelaydm2 & multidelaydm & dmsgo & dmsnogo & dmcgo & dmcnogo
+fdgo           | cost 0.009131| c_reg 0.000000  | perf 1.00
+reactgo        | cost 0.011805| c_reg 0.000000  | perf 1.00
+delaygo        | cost 0.009898| c_reg 0.000000  | perf 1.00
+fdanti         | cost 0.004661| c_reg 0.000000  | perf 1.00
+reactanti      | cost 0.006161| c_reg 0.000000  | perf 1.00
+delayanti      | cost 0.020055| c_reg 0.000000  | perf 1.00
+delaydm1       | cost 0.089942| c_reg 0.000000  | perf 0.96
+delaydm2       | cost 0.063729| c_reg 0.000000  | perf 0.98
+contextdelaydm1| cost 0.117965| c_reg 0.000000  | perf 0.95
+contextdelaydm2| cost 0.094817| c_reg 0.000000  | perf 0.96
+multidelaydm   | cost 0.057763| c_reg 0.000000  | perf 0.98
+dmsgo          | cost 0.139660| c_reg 0.000000  | perf 0.97
+dmsnogo        | cost 0.164141| c_reg 0.000000  | perf 0.98
+dmcgo          | cost 0.108784| c_reg 0.000000  | perf 0.97
+dmcnogo        | cost 0.112449| c_reg 0.000000  | perf 0.98
+Model saved in file: data/crystals/softplus/no_noise/0/model.ckpt
+Model saved in file: data/crystals/softplus/no_noise/0/ckpts/model.ckpt-55000
+Trial 3520000  | Time 19475.63 s  | Now training fdgo & reactgo & delaygo & fdanti & reactanti & delayanti & delaydm1 & delaydm2 & contextdelaydm1 & contextdelaydm2 & multidelaydm & dmsgo & dmsnogo & dmcgo & dmcnogo
+fdgo           | cost 0.012876| c_reg 0.000000  | perf 1.00
+reactgo        | cost 0.022065| c_reg 0.000000  | perf 1.00
+delaygo        | cost 0.009207| c_reg 0.000000  | perf 1.00
+fdanti         | cost 0.004933| c_reg 0.000000  | perf 1.00
+reactanti      | cost 0.011649| c_reg 0.000000  | perf 1.00
+delayanti      | cost 0.021168| c_reg 0.000000  | perf 1.00
+delaydm1       | cost 0.061508| c_reg 0.000000  | perf 0.97
+delaydm2       | cost 0.096528| c_reg 0.000000  | perf 0.97
+contextdelaydm1| cost 0.081538| c_reg 0.000000  | perf 0.97
+contextdelaydm2| cost 0.190339| c_reg 0.000000  | perf 0.93
+multidelaydm   | cost 0.096363| c_reg 0.000000  | perf 0.97
+dmsgo          | cost 0.091304| c_reg 0.000000  | perf 0.99
+dmsnogo        | cost 0.144699| c_reg 0.000000  | perf 0.99
+dmcgo          | cost 0.120393| c_reg 0.000000  | perf 0.98
+dmcnogo        | cost 0.146574| c_reg 0.000000  | perf 0.98
+Model saved in file: data/crystals/softplus/no_noise/0/model.ckpt
+Model saved in file: data/crystals/softplus/no_noise/0/ckpts/model.ckpt-56000
+Trial 3584000  | Time 19830.12 s  | Now training fdgo & reactgo & delaygo & fdanti & reactanti & delayanti & delaydm1 & delaydm2 & contextdelaydm1 & contextdelaydm2 & multidelaydm & dmsgo & dmsnogo & dmcgo & dmcnogo
+fdgo           | cost 0.008020| c_reg 0.000000  | perf 1.00
+reactgo        | cost 0.022531| c_reg 0.000000  | perf 1.00
+delaygo        | cost 0.011790| c_reg 0.000000  | perf 1.00
+fdanti         | cost 0.006435| c_reg 0.000000  | perf 1.00
+reactanti      | cost 0.010202| c_reg 0.000000  | perf 1.00
+delayanti      | cost 0.043599| c_reg 0.000000  | perf 1.00
+delaydm1       | cost 0.054535| c_reg 0.000000  | perf 0.98
+delaydm2       | cost 0.094332| c_reg 0.000000  | perf 0.96
+contextdelaydm1| cost 0.105574| c_reg 0.000000  | perf 0.96
+contextdelaydm2| cost 0.195883| c_reg 0.000000  | perf 0.92
+multidelaydm   | cost 0.083054| c_reg 0.000000  | perf 0.97
+dmsgo          | cost 0.085892| c_reg 0.000000  | perf 0.99
+dmsnogo        | cost 0.145964| c_reg 0.000000  | perf 0.96
+dmcgo          | cost 0.211514| c_reg 0.000000  | perf 0.95
+dmcnogo        | cost 0.146642| c_reg 0.000000  | perf 0.97
+Model saved in file: data/crystals/softplus/no_noise/0/model.ckpt
+Model saved in file: data/crystals/softplus/no_noise/0/ckpts/model.ckpt-57000
+Trial 3648000  | Time 20185.40 s  | Now training fdgo & reactgo & delaygo & fdanti & reactanti & delayanti & delaydm1 & delaydm2 & contextdelaydm1 & contextdelaydm2 & multidelaydm & dmsgo & dmsnogo & dmcgo & dmcnogo
+fdgo           | cost 0.007860| c_reg 0.000000  | perf 1.00
+reactgo        | cost 0.004873| c_reg 0.000000  | perf 1.00
+delaygo        | cost 0.007661| c_reg 0.000000  | perf 1.00
+fdanti         | cost 0.015130| c_reg 0.000000  | perf 1.00
+reactanti      | cost 0.017655| c_reg 0.000000  | perf 1.00
+delayanti      | cost 0.039505| c_reg 0.000000  | perf 1.00
+delaydm1       | cost 0.100826| c_reg 0.000000  | perf 0.96
+delaydm2       | cost 0.067359| c_reg 0.000000  | perf 0.97
+contextdelaydm1| cost 0.076538| c_reg 0.000000  | perf 0.97
+contextdelaydm2| cost 0.089564| c_reg 0.000000  | perf 0.97
+multidelaydm   | cost 0.082974| c_reg 0.000000  | perf 0.97
+dmsgo          | cost 0.086856| c_reg 0.000000  | perf 0.99
+dmsnogo        | cost 0.108742| c_reg 0.000000  | perf 0.99
+dmcgo          | cost 0.097257| c_reg 0.000000  | perf 0.98
+dmcnogo        | cost 0.082538| c_reg 0.000000  | perf 0.98
+Model saved in file: data/crystals/softplus/no_noise/0/model.ckpt
+Model saved in file: data/crystals/softplus/no_noise/0/ckpts/model.ckpt-58000
+Trial 3712000  | Time 20540.09 s  | Now training fdgo & reactgo & delaygo & fdanti & reactanti & delayanti & delaydm1 & delaydm2 & contextdelaydm1 & contextdelaydm2 & multidelaydm & dmsgo & dmsnogo & dmcgo & dmcnogo
+fdgo           | cost 0.005898| c_reg 0.000000  | perf 1.00
+reactgo        | cost 0.008287| c_reg 0.000000  | perf 1.00
+delaygo        | cost 0.006306| c_reg 0.000000  | perf 1.00
+fdanti         | cost 0.008001| c_reg 0.000000  | perf 1.00
+reactanti      | cost 0.006250| c_reg 0.000000  | perf 1.00
+delayanti      | cost 0.048264| c_reg 0.000000  | perf 0.99
+delaydm1       | cost 0.089541| c_reg 0.000000  | perf 0.96
+delaydm2       | cost 0.059872| c_reg 0.000000  | perf 0.98
+contextdelaydm1| cost 0.079441| c_reg 0.000000  | perf 0.97
+contextdelaydm2| cost 0.120819| c_reg 0.000000  | perf 0.95
+multidelaydm   | cost 0.063987| c_reg 0.000000  | perf 0.98
+dmsgo          | cost 0.096231| c_reg 0.000000  | perf 0.98
+dmsnogo        | cost 0.112262| c_reg 0.000000  | perf 0.99
+dmcgo          | cost 0.107187| c_reg 0.000000  | perf 0.97
+dmcnogo        | cost 0.099363| c_reg 0.000000  | perf 0.98
+Model saved in file: data/crystals/softplus/no_noise/0/model.ckpt
+Model saved in file: data/crystals/softplus/no_noise/0/ckpts/model.ckpt-59000
+Trial 3776000  | Time 20895.51 s  | Now training fdgo & reactgo & delaygo & fdanti & reactanti & delayanti & delaydm1 & delaydm2 & contextdelaydm1 & contextdelaydm2 & multidelaydm & dmsgo & dmsnogo & dmcgo & dmcnogo
+fdgo           | cost 0.006059| c_reg 0.000000  | perf 1.00
+reactgo        | cost 0.006308| c_reg 0.000000  | perf 1.00
+delaygo        | cost 0.016499| c_reg 0.000000  | perf 1.00
+fdanti         | cost 0.003452| c_reg 0.000000  | perf 1.00
+reactanti      | cost 0.007878| c_reg 0.000000  | perf 1.00
+delayanti      | cost 0.020074| c_reg 0.000000  | perf 1.00
+delaydm1       | cost 0.075497| c_reg 0.000000  | perf 0.97
+delaydm2       | cost 0.075711| c_reg 0.000000  | perf 0.97
+contextdelaydm1| cost 0.085698| c_reg 0.000000  | perf 0.97
+contextdelaydm2| cost 0.087548| c_reg 0.000000  | perf 0.97
+multidelaydm   | cost 0.061034| c_reg 0.000000  | perf 0.98
+dmsgo          | cost 0.093642| c_reg 0.000000  | perf 0.99
+dmsnogo        | cost 0.150969| c_reg 0.000000  | perf 0.97
+dmcgo          | cost 0.083145| c_reg 0.000000  | perf 0.98
+dmcnogo        | cost 0.107906| c_reg 0.000000  | perf 0.98
+Model saved in file: data/crystals/softplus/no_noise/0/model.ckpt
+Model saved in file: data/crystals/softplus/no_noise/0/ckpts/model.ckpt-60000
+Trial 3840000  | Time 21250.08 s  | Now training fdgo & reactgo & delaygo & fdanti & reactanti & delayanti & delaydm1 & delaydm2 & contextdelaydm1 & contextdelaydm2 & multidelaydm & dmsgo & dmsnogo & dmcgo & dmcnogo
+fdgo           | cost 0.005147| c_reg 0.000000  | perf 1.00
+reactgo        | cost 0.009823| c_reg 0.000000  | perf 1.00
+delaygo        | cost 0.008983| c_reg 0.000000  | perf 1.00
+fdanti         | cost 0.003147| c_reg 0.000000  | perf 1.00
+reactanti      | cost 0.005832| c_reg 0.000000  | perf 1.00
+delayanti      | cost 0.013685| c_reg 0.000000  | perf 1.00
+delaydm1       | cost 0.075300| c_reg 0.000000  | perf 0.97
+delaydm2       | cost 0.098299| c_reg 0.000000  | perf 0.96
+contextdelaydm1| cost 0.091651| c_reg 0.000000  | perf 0.96
+contextdelaydm2| cost 0.236061| c_reg 0.000000  | perf 0.89
+multidelaydm   | cost 0.090097| c_reg 0.000000  | perf 0.97
+dmsgo          | cost 0.127017| c_reg 0.000000  | perf 0.99
+dmsnogo        | cost 0.097367| c_reg 0.000000  | perf 0.99
+dmcgo          | cost 0.079707| c_reg 0.000000  | perf 0.98
+dmcnogo        | cost 0.083742| c_reg 0.000000  | perf 0.98
+Model saved in file: data/crystals/softplus/no_noise/0/model.ckpt
+Model saved in file: data/crystals/softplus/no_noise/0/ckpts/model.ckpt-61000
+Trial 3904000  | Time 21603.65 s  | Now training fdgo & reactgo & delaygo & fdanti & reactanti & delayanti & delaydm1 & delaydm2 & contextdelaydm1 & contextdelaydm2 & multidelaydm & dmsgo & dmsnogo & dmcgo & dmcnogo
+fdgo           | cost 0.012951| c_reg 0.000000  | perf 1.00
+reactgo        | cost 0.017779| c_reg 0.000000  | perf 1.00
+delaygo        | cost 0.007865| c_reg 0.000000  | perf 1.00
+fdanti         | cost 0.003665| c_reg 0.000000  | perf 1.00
+reactanti      | cost 0.008434| c_reg 0.000000  | perf 1.00
+delayanti      | cost 0.069708| c_reg 0.000000  | perf 0.99
+delaydm1       | cost 0.068431| c_reg 0.000000  | perf 0.97
+delaydm2       | cost 0.059512| c_reg 0.000000  | perf 0.98
+contextdelaydm1| cost 0.086023| c_reg 0.000000  | perf 0.97
+contextdelaydm2| cost 0.101762| c_reg 0.000000  | perf 0.96
+multidelaydm   | cost 0.059513| c_reg 0.000000  | perf 0.98
+dmsgo          | cost 0.083414| c_reg 0.000000  | perf 0.99
+dmsnogo        | cost 0.188898| c_reg 0.000000  | perf 0.97
+dmcgo          | cost 0.153972| c_reg 0.000000  | perf 0.96
+dmcnogo        | cost 0.236157| c_reg 0.000000  | perf 0.95
+Model saved in file: data/crystals/softplus/no_noise/0/model.ckpt
+Model saved in file: data/crystals/softplus/no_noise/0/ckpts/model.ckpt-62000
+Trial 3968000  | Time 21957.26 s  | Now training fdgo & reactgo & delaygo & fdanti & reactanti & delayanti & delaydm1 & delaydm2 & contextdelaydm1 & contextdelaydm2 & multidelaydm & dmsgo & dmsnogo & dmcgo & dmcnogo
+fdgo           | cost 0.008692| c_reg 0.000000  | perf 1.00
+reactgo        | cost 0.008219| c_reg 0.000000  | perf 1.00
+delaygo        | cost 0.015648| c_reg 0.000000  | perf 1.00
+fdanti         | cost 0.006772| c_reg 0.000000  | perf 1.00
+reactanti      | cost 0.008169| c_reg 0.000000  | perf 1.00
+delayanti      | cost 0.031080| c_reg 0.000000  | perf 1.00
+delaydm1       | cost 0.065358| c_reg 0.000000  | perf 0.98
+delaydm2       | cost 0.076120| c_reg 0.000000  | perf 0.97
+contextdelaydm1| cost 0.113220| c_reg 0.000000  | perf 0.95
+contextdelaydm2| cost 0.081295| c_reg 0.000000  | perf 0.97
+multidelaydm   | cost 0.057412| c_reg 0.000000  | perf 0.98
+dmsgo          | cost 0.096879| c_reg 0.000000  | perf 0.98
+dmsnogo        | cost 0.145531| c_reg 0.000000  | perf 0.99
+dmcgo          | cost 0.089160| c_reg 0.000000  | perf 0.98
+dmcnogo        | cost 0.097053| c_reg 0.000000  | perf 0.98
+Model saved in file: data/crystals/softplus/no_noise/0/model.ckpt
+Model saved in file: data/crystals/softplus/no_noise/0/ckpts/model.ckpt-63000
+Trial 4032000  | Time 22312.21 s  | Now training fdgo & reactgo & delaygo & fdanti & reactanti & delayanti & delaydm1 & delaydm2 & contextdelaydm1 & contextdelaydm2 & multidelaydm & dmsgo & dmsnogo & dmcgo & dmcnogo
+fdgo           | cost 0.005165| c_reg 0.000000  | perf 1.00
+reactgo        | cost 0.007937| c_reg 0.000000  | perf 1.00
+delaygo        | cost 0.007966| c_reg 0.000000  | perf 1.00
+fdanti         | cost 0.003261| c_reg 0.000000  | perf 1.00
+reactanti      | cost 0.009705| c_reg 0.000000  | perf 1.00
+delayanti      | cost 0.012817| c_reg 0.000000  | perf 1.00
+delaydm1       | cost 0.057072| c_reg 0.000000  | perf 0.97
+delaydm2       | cost 0.064524| c_reg 0.000000  | perf 0.97
+contextdelaydm1| cost 0.067595| c_reg 0.000000  | perf 0.97
+contextdelaydm2| cost 0.115068| c_reg 0.000000  | perf 0.95
+multidelaydm   | cost 0.071853| c_reg 0.000000  | perf 0.97
+dmsgo          | cost 0.275169| c_reg 0.000000  | perf 0.93
+dmsnogo        | cost 0.103943| c_reg 0.000000  | perf 0.99
+dmcgo          | cost 0.109663| c_reg 0.000000  | perf 0.96
+dmcnogo        | cost 0.090137| c_reg 0.000000  | perf 0.99
+Model saved in file: data/crystals/softplus/no_noise/0/model.ckpt
+Model saved in file: data/crystals/softplus/no_noise/0/ckpts/model.ckpt-64000
+Trial 4096000  | Time 22667.15 s  | Now training fdgo & reactgo & delaygo & fdanti & reactanti & delayanti & delaydm1 & delaydm2 & contextdelaydm1 & contextdelaydm2 & multidelaydm & dmsgo & dmsnogo & dmcgo & dmcnogo
+fdgo           | cost 0.003964| c_reg 0.000000  | perf 1.00
+reactgo        | cost 0.004019| c_reg 0.000000  | perf 1.00
+delaygo        | cost 0.003771| c_reg 0.000000  | perf 1.00
+fdanti         | cost 0.002093| c_reg 0.000000  | perf 1.00
+reactanti      | cost 0.003814| c_reg 0.000000  | perf 1.00
+delayanti      | cost 0.010714| c_reg 0.000000  | perf 1.00
+delaydm1       | cost 0.045131| c_reg 0.000000  | perf 0.98
+delaydm2       | cost 0.041794| c_reg 0.000000  | perf 0.98
+contextdelaydm1| cost 0.060557| c_reg 0.000000  | perf 0.98
+contextdelaydm2| cost 0.060480| c_reg 0.000000  | perf 0.97
+multidelaydm   | cost 0.044564| c_reg 0.000000  | perf 0.98
+dmsgo          | cost 0.078708| c_reg 0.000000  | perf 0.98
+dmsnogo        | cost 0.125735| c_reg 0.000000  | perf 0.98
+dmcgo          | cost 0.088674| c_reg 0.000000  | perf 0.98
+dmcnogo        | cost 0.076239| c_reg 0.000000  | perf 0.99
+Model saved in file: data/crystals/softplus/no_noise/0/model.ckpt
+Model saved in file: data/crystals/softplus/no_noise/0/ckpts/model.ckpt-65000
+Trial 4160000  | Time 23020.72 s  | Now training fdgo & reactgo & delaygo & fdanti & reactanti & delayanti & delaydm1 & delaydm2 & contextdelaydm1 & contextdelaydm2 & multidelaydm & dmsgo & dmsnogo & dmcgo & dmcnogo
+fdgo           | cost 0.004946| c_reg 0.000000  | perf 1.00
+reactgo        | cost 0.003718| c_reg 0.000000  | perf 1.00
+delaygo        | cost 0.010336| c_reg 0.000000  | perf 1.00
+fdanti         | cost 0.004748| c_reg 0.000000  | perf 1.00
+reactanti      | cost 0.004661| c_reg 0.000000  | perf 1.00
+delayanti      | cost 0.017737| c_reg 0.000000  | perf 1.00
+delaydm1       | cost 0.050835| c_reg 0.000000  | perf 0.98
+delaydm2       | cost 0.083748| c_reg 0.000000  | perf 0.97
+contextdelaydm1| cost 0.079551| c_reg 0.000000  | perf 0.97
+contextdelaydm2| cost 0.100750| c_reg 0.000000  | perf 0.96
+multidelaydm   | cost 0.063874| c_reg 0.000000  | perf 0.97
+dmsgo          | cost 0.071562| c_reg 0.000000  | perf 0.99
+dmsnogo        | cost 0.088764| c_reg 0.000000  | perf 0.99
+dmcgo          | cost 0.059419| c_reg 0.000000  | perf 0.99
+dmcnogo        | cost 0.069948| c_reg 0.000000  | perf 0.99
+Model saved in file: data/crystals/softplus/no_noise/0/model.ckpt
+Model saved in file: data/crystals/softplus/no_noise/0/ckpts/model.ckpt-66000
+Trial 4224000  | Time 23375.23 s  | Now training fdgo & reactgo & delaygo & fdanti & reactanti & delayanti & delaydm1 & delaydm2 & contextdelaydm1 & contextdelaydm2 & multidelaydm & dmsgo & dmsnogo & dmcgo & dmcnogo
+fdgo           | cost 0.006369| c_reg 0.000000  | perf 1.00
+reactgo        | cost 0.006079| c_reg 0.000000  | perf 1.00
+delaygo        | cost 0.008494| c_reg 0.000000  | perf 1.00
+fdanti         | cost 0.004686| c_reg 0.000000  | perf 1.00
+reactanti      | cost 0.010579| c_reg 0.000000  | perf 1.00
+delayanti      | cost 0.043923| c_reg 0.000000  | perf 1.00
+delaydm1       | cost 0.061880| c_reg 0.000000  | perf 0.97
+delaydm2       | cost 0.089099| c_reg 0.000000  | perf 0.97
+contextdelaydm1| cost 0.084227| c_reg 0.000000  | perf 0.97
+contextdelaydm2| cost 0.101307| c_reg 0.000000  | perf 0.96
+multidelaydm   | cost 0.073099| c_reg 0.000000  | perf 0.97
+dmsgo          | cost 0.059480| c_reg 0.000000  | perf 0.99
+dmsnogo        | cost 0.107178| c_reg 0.000000  | perf 0.99
+dmcgo          | cost 0.105621| c_reg 0.000000  | perf 0.98
+dmcnogo        | cost 0.102692| c_reg 0.000000  | perf 0.98
+Model saved in file: data/crystals/softplus/no_noise/0/model.ckpt
+Model saved in file: data/crystals/softplus/no_noise/0/ckpts/model.ckpt-67000
+Trial 4288000  | Time 23730.98 s  | Now training fdgo & reactgo & delaygo & fdanti & reactanti & delayanti & delaydm1 & delaydm2 & contextdelaydm1 & contextdelaydm2 & multidelaydm & dmsgo & dmsnogo & dmcgo & dmcnogo
+fdgo           | cost 0.012122| c_reg 0.000000  | perf 1.00
+reactgo        | cost 0.017395| c_reg 0.000000  | perf 1.00
+delaygo        | cost 0.015867| c_reg 0.000000  | perf 1.00
+fdanti         | cost 0.004303| c_reg 0.000000  | perf 1.00
+reactanti      | cost 0.009740| c_reg 0.000000  | perf 1.00
+delayanti      | cost 0.155262| c_reg 0.000000  | perf 0.88
+delaydm1       | cost 0.084231| c_reg 0.000000  | perf 0.97
+delaydm2       | cost 0.141957| c_reg 0.000000  | perf 0.95
+contextdelaydm1| cost 0.138537| c_reg 0.000000  | perf 0.95
+contextdelaydm2| cost 0.095563| c_reg 0.000000  | perf 0.96
+multidelaydm   | cost 0.076902| c_reg 0.000000  | perf 0.97
+dmsgo          | cost 0.133682| c_reg 0.000000  | perf 0.97
+dmsnogo        | cost 0.645964| c_reg 0.000000  | perf 0.78
+dmcgo          | cost 0.119888| c_reg 0.000000  | perf 0.97
+dmcnogo        | cost 0.098547| c_reg 0.000000  | perf 0.99
+Model saved in file: data/crystals/softplus/no_noise/0/model.ckpt
+Model saved in file: data/crystals/softplus/no_noise/0/ckpts/model.ckpt-68000
+Trial 4352000  | Time 24085.52 s  | Now training fdgo & reactgo & delaygo & fdanti & reactanti & delayanti & delaydm1 & delaydm2 & contextdelaydm1 & contextdelaydm2 & multidelaydm & dmsgo & dmsnogo & dmcgo & dmcnogo
+fdgo           | cost 0.007503| c_reg 0.000000  | perf 1.00
+reactgo        | cost 0.007877| c_reg 0.000000  | perf 1.00
+delaygo        | cost 0.018443| c_reg 0.000000  | perf 1.00
+fdanti         | cost 0.003655| c_reg 0.000000  | perf 1.00
+reactanti      | cost 0.010081| c_reg 0.000000  | perf 1.00
+delayanti      | cost 0.019100| c_reg 0.000000  | perf 1.00
+delaydm1       | cost 0.068506| c_reg 0.000000  | perf 0.97
+delaydm2       | cost 0.071783| c_reg 0.000000  | perf 0.97
+contextdelaydm1| cost 0.066953| c_reg 0.000000  | perf 0.97
+contextdelaydm2| cost 0.078778| c_reg 0.000000  | perf 0.97
+multidelaydm   | cost 0.055442| c_reg 0.000000  | perf 0.98
+dmsgo          | cost 0.105084| c_reg 0.000000  | perf 0.98
+dmsnogo        | cost 0.098725| c_reg 0.000000  | perf 0.98
+dmcgo          | cost 0.088589| c_reg 0.000000  | perf 0.98
+dmcnogo        | cost 0.084639| c_reg 0.000000  | perf 0.99
+Model saved in file: data/crystals/softplus/no_noise/0/model.ckpt
+Model saved in file: data/crystals/softplus/no_noise/0/ckpts/model.ckpt-69000
+Trial 4416000  | Time 24438.15 s  | Now training fdgo & reactgo & delaygo & fdanti & reactanti & delayanti & delaydm1 & delaydm2 & contextdelaydm1 & contextdelaydm2 & multidelaydm & dmsgo & dmsnogo & dmcgo & dmcnogo
+fdgo           | cost 0.008844| c_reg 0.000000  | perf 1.00
+reactgo        | cost 0.006097| c_reg 0.000000  | perf 1.00
+delaygo        | cost 0.018583| c_reg 0.000000  | perf 1.00
+fdanti         | cost 0.003185| c_reg 0.000000  | perf 1.00
+reactanti      | cost 0.005945| c_reg 0.000000  | perf 1.00
+delayanti      | cost 0.016621| c_reg 0.000000  | perf 1.00
+delaydm1       | cost 0.079103| c_reg 0.000000  | perf 0.97
+delaydm2       | cost 0.070925| c_reg 0.000000  | perf 0.97
+contextdelaydm1| cost 0.080828| c_reg 0.000000  | perf 0.97
+contextdelaydm2| cost 0.072219| c_reg 0.000000  | perf 0.97
+multidelaydm   | cost 0.074035| c_reg 0.000000  | perf 0.97
+dmsgo          | cost 0.079927| c_reg 0.000000  | perf 0.99
+dmsnogo        | cost 0.083951| c_reg 0.000000  | perf 0.99
+dmcgo          | cost 0.085427| c_reg 0.000000  | perf 0.98
+dmcnogo        | cost 0.059439| c_reg 0.000000  | perf 0.99
+Model saved in file: data/crystals/softplus/no_noise/0/model.ckpt
+Model saved in file: data/crystals/softplus/no_noise/0/ckpts/model.ckpt-70000
+Trial 4480000  | Time 24792.88 s  | Now training fdgo & reactgo & delaygo & fdanti & reactanti & delayanti & delaydm1 & delaydm2 & contextdelaydm1 & contextdelaydm2 & multidelaydm & dmsgo & dmsnogo & dmcgo & dmcnogo
+fdgo           | cost 0.004453| c_reg 0.000000  | perf 1.00
+reactgo        | cost 0.005091| c_reg 0.000000  | perf 1.00
+delaygo        | cost 0.009354| c_reg 0.000000  | perf 1.00
+fdanti         | cost 0.002868| c_reg 0.000000  | perf 1.00
+reactanti      | cost 0.006325| c_reg 0.000000  | perf 1.00
+delayanti      | cost 0.026206| c_reg 0.000000  | perf 1.00
+delaydm1       | cost 0.067911| c_reg 0.000000  | perf 0.97
+delaydm2       | cost 0.099297| c_reg 0.000000  | perf 0.96
+contextdelaydm1| cost 0.135748| c_reg 0.000000  | perf 0.95
+contextdelaydm2| cost 0.092353| c_reg 0.000000  | perf 0.96
+multidelaydm   | cost 0.078938| c_reg 0.000000  | perf 0.97
+dmsgo          | cost 0.068995| c_reg 0.000000  | perf 0.99
+dmsnogo        | cost 0.081985| c_reg 0.000000  | perf 1.00
+dmcgo          | cost 0.083560| c_reg 0.000000  | perf 0.98
+dmcnogo        | cost 0.080213| c_reg 0.000000  | perf 0.99
+Model saved in file: data/crystals/softplus/no_noise/0/model.ckpt
+Model saved in file: data/crystals/softplus/no_noise/0/ckpts/model.ckpt-71000
+Trial 4544000  | Time 25146.59 s  | Now training fdgo & reactgo & delaygo & fdanti & reactanti & delayanti & delaydm1 & delaydm2 & contextdelaydm1 & contextdelaydm2 & multidelaydm & dmsgo & dmsnogo & dmcgo & dmcnogo
+fdgo           | cost 0.009208| c_reg 0.000000  | perf 1.00
+reactgo        | cost 0.003236| c_reg 0.000000  | perf 1.00
+delaygo        | cost 0.024521| c_reg 0.000000  | perf 1.00
+fdanti         | cost 0.009210| c_reg 0.000000  | perf 1.00
+reactanti      | cost 0.014038| c_reg 0.000000  | perf 1.00
+delayanti      | cost 0.014789| c_reg 0.000000  | perf 1.00
+delaydm1       | cost 0.091888| c_reg 0.000000  | perf 0.96
+delaydm2       | cost 0.064947| c_reg 0.000000  | perf 0.97
+contextdelaydm1| cost 0.108753| c_reg 0.000000  | perf 0.96
+contextdelaydm2| cost 0.098478| c_reg 0.000000  | perf 0.96
+multidelaydm   | cost 0.082588| c_reg 0.000000  | perf 0.97
+dmsgo          | cost 0.132918| c_reg 0.000000  | perf 0.96
+dmsnogo        | cost 0.126465| c_reg 0.000000  | perf 0.97
+dmcgo          | cost 0.087818| c_reg 0.000000  | perf 0.96
+dmcnogo        | cost 0.076206| c_reg 0.000000  | perf 0.98
+Model saved in file: data/crystals/softplus/no_noise/0/model.ckpt
+Model saved in file: data/crystals/softplus/no_noise/0/ckpts/model.ckpt-72000
+Trial 4608000  | Time 25500.54 s  | Now training fdgo & reactgo & delaygo & fdanti & reactanti & delayanti & delaydm1 & delaydm2 & contextdelaydm1 & contextdelaydm2 & multidelaydm & dmsgo & dmsnogo & dmcgo & dmcnogo
+fdgo           | cost 0.004641| c_reg 0.000000  | perf 1.00
+reactgo        | cost 0.003778| c_reg 0.000000  | perf 1.00
+delaygo        | cost 0.005490| c_reg 0.000000  | perf 1.00
+fdanti         | cost 0.003365| c_reg 0.000000  | perf 1.00
+reactanti      | cost 0.005303| c_reg 0.000000  | perf 1.00
+delayanti      | cost 0.012211| c_reg 0.000000  | perf 1.00
+delaydm1       | cost 0.039886| c_reg 0.000000  | perf 0.98
+delaydm2       | cost 0.057399| c_reg 0.000000  | perf 0.98
+contextdelaydm1| cost 0.064890| c_reg 0.000000  | perf 0.97
+contextdelaydm2| cost 0.067478| c_reg 0.000000  | perf 0.97
+multidelaydm   | cost 0.053724| c_reg 0.000000  | perf 0.98
+dmsgo          | cost 0.071462| c_reg 0.000000  | perf 0.99
+dmsnogo        | cost 0.071697| c_reg 0.000000  | perf 1.00
+dmcgo          | cost 0.093635| c_reg 0.000000  | perf 0.98
+dmcnogo        | cost 0.080449| c_reg 0.000000  | perf 0.99
+Model saved in file: data/crystals/softplus/no_noise/0/model.ckpt
+Model saved in file: data/crystals/softplus/no_noise/0/ckpts/model.ckpt-73000
+Trial 4672000  | Time 25854.55 s  | Now training fdgo & reactgo & delaygo & fdanti & reactanti & delayanti & delaydm1 & delaydm2 & contextdelaydm1 & contextdelaydm2 & multidelaydm & dmsgo & dmsnogo & dmcgo & dmcnogo
+fdgo           | cost 0.005409| c_reg 0.000000  | perf 1.00
+reactgo        | cost 0.003640| c_reg 0.000000  | perf 1.00
+delaygo        | cost 0.007012| c_reg 0.000000  | perf 1.00
+fdanti         | cost 0.004124| c_reg 0.000000  | perf 1.00
+reactanti      | cost 0.006500| c_reg 0.000000  | perf 1.00
+delayanti      | cost 0.016794| c_reg 0.000000  | perf 1.00
+delaydm1       | cost 0.073138| c_reg 0.000000  | perf 0.97
+delaydm2       | cost 0.071218| c_reg 0.000000  | perf 0.97
+contextdelaydm1| cost 0.091553| c_reg 0.000000  | perf 0.96
+contextdelaydm2| cost 0.091190| c_reg 0.000000  | perf 0.97
+multidelaydm   | cost 0.058866| c_reg 0.000000  | perf 0.98
+dmsgo          | cost 0.157128| c_reg 0.000000  | perf 0.98
+dmsnogo        | cost 0.101661| c_reg 0.000000  | perf 0.99
+dmcgo          | cost 0.066981| c_reg 0.000000  | perf 0.99
+dmcnogo        | cost 0.077533| c_reg 0.000000  | perf 0.99
+Model saved in file: data/crystals/softplus/no_noise/0/model.ckpt
+Model saved in file: data/crystals/softplus/no_noise/0/ckpts/model.ckpt-74000
+Trial 4736000  | Time 26207.93 s  | Now training fdgo & reactgo & delaygo & fdanti & reactanti & delayanti & delaydm1 & delaydm2 & contextdelaydm1 & contextdelaydm2 & multidelaydm & dmsgo & dmsnogo & dmcgo & dmcnogo
+fdgo           | cost 0.003742| c_reg 0.000000  | perf 1.00
+reactgo        | cost 0.003515| c_reg 0.000000  | perf 1.00
+delaygo        | cost 0.003165| c_reg 0.000000  | perf 1.00
+fdanti         | cost 0.003064| c_reg 0.000000  | perf 1.00
+reactanti      | cost 0.002735| c_reg 0.000000  | perf 1.00
+delayanti      | cost 0.020350| c_reg 0.000000  | perf 1.00
+delaydm1       | cost 0.048000| c_reg 0.000000  | perf 0.98
+delaydm2       | cost 0.045799| c_reg 0.000000  | perf 0.98
+contextdelaydm1| cost 0.064824| c_reg 0.000000  | perf 0.97
+contextdelaydm2| cost 0.098715| c_reg 0.000000  | perf 0.96
+multidelaydm   | cost 0.048404| c_reg 0.000000  | perf 0.98
+dmsgo          | cost 0.045555| c_reg 0.000000  | perf 1.00
+dmsnogo        | cost 0.070331| c_reg 0.000000  | perf 1.00
+dmcgo          | cost 0.068237| c_reg 0.000000  | perf 0.99
+dmcnogo        | cost 0.080959| c_reg 0.000000  | perf 0.98
+Model saved in file: data/crystals/softplus/no_noise/0/model.ckpt
+Model saved in file: data/crystals/softplus/no_noise/0/ckpts/model.ckpt-75000
+Trial 4800000  | Time 26563.10 s  | Now training fdgo & reactgo & delaygo & fdanti & reactanti & delayanti & delaydm1 & delaydm2 & contextdelaydm1 & contextdelaydm2 & multidelaydm & dmsgo & dmsnogo & dmcgo & dmcnogo
+fdgo           | cost 0.004624| c_reg 0.000000  | perf 1.00
+reactgo        | cost 0.007515| c_reg 0.000000  | perf 1.00
+delaygo        | cost 0.016417| c_reg 0.000000  | perf 1.00
+fdanti         | cost 0.005548| c_reg 0.000000  | perf 1.00
+reactanti      | cost 0.012406| c_reg 0.000000  | perf 1.00
+delayanti      | cost 0.042100| c_reg 0.000000  | perf 1.00
+delaydm1       | cost 0.103360| c_reg 0.000000  | perf 0.95
+delaydm2       | cost 0.081931| c_reg 0.000000  | perf 0.96
+contextdelaydm1| cost 0.142085| c_reg 0.000000  | perf 0.94
+contextdelaydm2| cost 0.096581| c_reg 0.000000  | perf 0.96
+multidelaydm   | cost 0.099059| c_reg 0.000000  | perf 0.96
+dmsgo          | cost 0.138034| c_reg 0.000000  | perf 0.98
+dmsnogo        | cost 0.131952| c_reg 0.000000  | perf 0.98
+dmcgo          | cost 0.125731| c_reg 0.000000  | perf 0.97
+dmcnogo        | cost 0.083856| c_reg 0.000000  | perf 0.98
+Model saved in file: data/crystals/softplus/no_noise/0/model.ckpt
+Model saved in file: data/crystals/softplus/no_noise/0/ckpts/model.ckpt-76000
+Trial 4864000  | Time 26918.01 s  | Now training fdgo & reactgo & delaygo & fdanti & reactanti & delayanti & delaydm1 & delaydm2 & contextdelaydm1 & contextdelaydm2 & multidelaydm & dmsgo & dmsnogo & dmcgo & dmcnogo
+fdgo           | cost 0.004973| c_reg 0.000000  | perf 1.00
+reactgo        | cost 0.002784| c_reg 0.000000  | perf 1.00
+delaygo        | cost 0.014134| c_reg 0.000000  | perf 1.00
+fdanti         | cost 0.004856| c_reg 0.000000  | perf 1.00
+reactanti      | cost 0.014030| c_reg 0.000000  | perf 1.00
+delayanti      | cost 0.040073| c_reg 0.000000  | perf 1.00
+delaydm1       | cost 0.078231| c_reg 0.000000  | perf 0.97
+delaydm2       | cost 0.055071| c_reg 0.000000  | perf 0.98
+contextdelaydm1| cost 0.095892| c_reg 0.000000  | perf 0.96
+contextdelaydm2| cost 0.066451| c_reg 0.000000  | perf 0.98
+multidelaydm   | cost 0.067884| c_reg 0.000000  | perf 0.97
+dmsgo          | cost 0.062843| c_reg 0.000000  | perf 0.99
+dmsnogo        | cost 0.116769| c_reg 0.000000  | perf 0.98
+dmcgo          | cost 0.055775| c_reg 0.000000  | perf 0.99
+dmcnogo        | cost 0.058414| c_reg 0.000000  | perf 0.99
+Model saved in file: data/crystals/softplus/no_noise/0/model.ckpt
+Model saved in file: data/crystals/softplus/no_noise/0/ckpts/model.ckpt-77000
+Trial 4928000  | Time 27272.29 s  | Now training fdgo & reactgo & delaygo & fdanti & reactanti & delayanti & delaydm1 & delaydm2 & contextdelaydm1 & contextdelaydm2 & multidelaydm & dmsgo & dmsnogo & dmcgo & dmcnogo
+fdgo           | cost 0.003551| c_reg 0.000000  | perf 1.00
+reactgo        | cost 0.006031| c_reg 0.000000  | perf 1.00
+delaygo        | cost 0.004604| c_reg 0.000000  | perf 1.00
+fdanti         | cost 0.002444| c_reg 0.000000  | perf 1.00
+reactanti      | cost 0.007360| c_reg 0.000000  | perf 1.00
+delayanti      | cost 0.010184| c_reg 0.000000  | perf 1.00
+delaydm1       | cost 0.048037| c_reg 0.000000  | perf 0.98
+delaydm2       | cost 0.041120| c_reg 0.000000  | perf 0.98
+contextdelaydm1| cost 0.067543| c_reg 0.000000  | perf 0.97
+contextdelaydm2| cost 0.054441| c_reg 0.000000  | perf 0.97
+multidelaydm   | cost 0.047954| c_reg 0.000000  | perf 0.98
+dmsgo          | cost 0.068999| c_reg 0.000000  | perf 0.99
+dmsnogo        | cost 0.062736| c_reg 0.000000  | perf 1.00
+dmcgo          | cost 0.085009| c_reg 0.000000  | perf 0.98
+dmcnogo        | cost 0.088087| c_reg 0.000000  | perf 0.98
+Model saved in file: data/crystals/softplus/no_noise/0/model.ckpt
+Model saved in file: data/crystals/softplus/no_noise/0/ckpts/model.ckpt-78000
+Trial 4992000  | Time 27623.88 s  | Now training fdgo & reactgo & delaygo & fdanti & reactanti & delayanti & delaydm1 & delaydm2 & contextdelaydm1 & contextdelaydm2 & multidelaydm & dmsgo & dmsnogo & dmcgo & dmcnogo
+fdgo           | cost 0.004317| c_reg 0.000000  | perf 1.00
+reactgo        | cost 0.006919| c_reg 0.000000  | perf 1.00
+delaygo        | cost 0.005922| c_reg 0.000000  | perf 1.00
+fdanti         | cost 0.009740| c_reg 0.000000  | perf 1.00
+reactanti      | cost 0.009491| c_reg 0.000000  | perf 1.00
+delayanti      | cost 0.022162| c_reg 0.000000  | perf 1.00
+delaydm1       | cost 0.049679| c_reg 0.000000  | perf 0.98
+delaydm2       | cost 0.050257| c_reg 0.000000  | perf 0.98
+contextdelaydm1| cost 0.091859| c_reg 0.000000  | perf 0.96
+contextdelaydm2| cost 0.062725| c_reg 0.000000  | perf 0.98
+multidelaydm   | cost 0.054175| c_reg 0.000000  | perf 0.98
+dmsgo          | cost 0.051693| c_reg 0.000000  | perf 1.00
+dmsnogo        | cost 0.101103| c_reg 0.000000  | perf 0.97
+dmcgo          | cost 0.076487| c_reg 0.000000  | perf 0.99
+dmcnogo        | cost 0.131843| c_reg 0.000000  | perf 0.98
+Model saved in file: data/crystals/softplus/no_noise/0/model.ckpt
+Model saved in file: data/crystals/softplus/no_noise/0/ckpts/model.ckpt-79000
+Trial 5056000  | Time 27977.75 s  | Now training fdgo & reactgo & delaygo & fdanti & reactanti & delayanti & delaydm1 & delaydm2 & contextdelaydm1 & contextdelaydm2 & multidelaydm & dmsgo & dmsnogo & dmcgo & dmcnogo
+fdgo           | cost 0.003019| c_reg 0.000000  | perf 1.00
+reactgo        | cost 0.003431| c_reg 0.000000  | perf 1.00
+delaygo        | cost 0.003959| c_reg 0.000000  | perf 1.00
+fdanti         | cost 0.009648| c_reg 0.000000  | perf 1.00
+reactanti      | cost 0.017825| c_reg 0.000000  | perf 1.00
+delayanti      | cost 0.019150| c_reg 0.000000  | perf 1.00
+delaydm1       | cost 0.049836| c_reg 0.000000  | perf 0.98
+delaydm2       | cost 0.048139| c_reg 0.000000  | perf 0.98
+contextdelaydm1| cost 0.065127| c_reg 0.000000  | perf 0.97
+contextdelaydm2| cost 0.081344| c_reg 0.000000  | perf 0.97
+multidelaydm   | cost 0.051902| c_reg 0.000000  | perf 0.98
+dmsgo          | cost 0.050134| c_reg 0.000000  | perf 1.00
+dmsnogo        | cost 0.078899| c_reg 0.000000  | perf 0.99
+dmcgo          | cost 0.121095| c_reg 0.000000  | perf 0.97
+dmcnogo        | cost 0.082598| c_reg 0.000000  | perf 0.98
+Model saved in file: data/crystals/softplus/no_noise/0/model.ckpt
+Model saved in file: data/crystals/softplus/no_noise/0/ckpts/model.ckpt-80000
+Trial 5120000  | Time 28333.27 s  | Now training fdgo & reactgo & delaygo & fdanti & reactanti & delayanti & delaydm1 & delaydm2 & contextdelaydm1 & contextdelaydm2 & multidelaydm & dmsgo & dmsnogo & dmcgo & dmcnogo
+fdgo           | cost 0.007065| c_reg 0.000000  | perf 1.00
+reactgo        | cost 0.005536| c_reg 0.000000  | perf 1.00
+delaygo        | cost 0.020124| c_reg 0.000000  | perf 1.00
+fdanti         | cost 0.004636| c_reg 0.000000  | perf 1.00
+reactanti      | cost 0.005068| c_reg 0.000000  | perf 1.00
+delayanti      | cost 0.020915| c_reg 0.000000  | perf 1.00
+delaydm1       | cost 0.074276| c_reg 0.000000  | perf 0.97
+delaydm2       | cost 0.071663| c_reg 0.000000  | perf 0.97
+contextdelaydm1| cost 0.076380| c_reg 0.000000  | perf 0.97
+contextdelaydm2| cost 0.080346| c_reg 0.000000  | perf 0.97
+multidelaydm   | cost 0.055209| c_reg 0.000000  | perf 0.98
+dmsgo          | cost 0.287336| c_reg 0.000000  | perf 0.92
+dmsnogo        | cost 0.106682| c_reg 0.000000  | perf 0.96
+dmcgo          | cost 0.135548| c_reg 0.000000  | perf 0.97
+dmcnogo        | cost 0.078685| c_reg 0.000000  | perf 0.98
+Model saved in file: data/crystals/softplus/no_noise/0/model.ckpt
+Model saved in file: data/crystals/softplus/no_noise/0/ckpts/model.ckpt-81000
+Trial 5184000  | Time 28685.36 s  | Now training fdgo & reactgo & delaygo & fdanti & reactanti & delayanti & delaydm1 & delaydm2 & contextdelaydm1 & contextdelaydm2 & multidelaydm & dmsgo & dmsnogo & dmcgo & dmcnogo
+fdgo           | cost 0.007454| c_reg 0.000000  | perf 1.00
+reactgo        | cost 0.005939| c_reg 0.000000  | perf 1.00
+delaygo        | cost 0.009429| c_reg 0.000000  | perf 1.00
+fdanti         | cost 0.004826| c_reg 0.000000  | perf 1.00
+reactanti      | cost 0.010182| c_reg 0.000000  | perf 1.00
+delayanti      | cost 0.006519| c_reg 0.000000  | perf 1.00
+delaydm1       | cost 0.074334| c_reg 0.000000  | perf 0.97
+delaydm2       | cost 0.065890| c_reg 0.000000  | perf 0.97
+contextdelaydm1| cost 0.136489| c_reg 0.000000  | perf 0.95
+contextdelaydm2| cost 0.111062| c_reg 0.000000  | perf 0.96
+multidelaydm   | cost 0.097811| c_reg 0.000000  | perf 0.97
+dmsgo          | cost 0.113256| c_reg 0.000000  | perf 0.97
+dmsnogo        | cost 0.196700| c_reg 0.000000  | perf 0.94
+dmcgo          | cost 0.078971| c_reg 0.000000  | perf 0.98
+dmcnogo        | cost 0.067553| c_reg 0.000000  | perf 0.99
+Model saved in file: data/crystals/softplus/no_noise/0/model.ckpt
+Model saved in file: data/crystals/softplus/no_noise/0/ckpts/model.ckpt-82000
+Trial 5248000  | Time 29038.64 s  | Now training fdgo & reactgo & delaygo & fdanti & reactanti & delayanti & delaydm1 & delaydm2 & contextdelaydm1 & contextdelaydm2 & multidelaydm & dmsgo & dmsnogo & dmcgo & dmcnogo
+fdgo           | cost 0.006338| c_reg 0.000000  | perf 1.00
+reactgo        | cost 0.009715| c_reg 0.000000  | perf 1.00
+delaygo        | cost 0.010084| c_reg 0.000000  | perf 1.00
+fdanti         | cost 0.002884| c_reg 0.000000  | perf 1.00
+reactanti      | cost 0.005330| c_reg 0.000000  | perf 1.00
+delayanti      | cost 0.015817| c_reg 0.000000  | perf 1.00
+delaydm1       | cost 0.075170| c_reg 0.000000  | perf 0.97
+delaydm2       | cost 0.051251| c_reg 0.000000  | perf 0.98
+contextdelaydm1| cost 0.107783| c_reg 0.000000  | perf 0.96
+contextdelaydm2| cost 0.088838| c_reg 0.000000  | perf 0.97
+multidelaydm   | cost 0.067109| c_reg 0.000000  | perf 0.98
+dmsgo          | cost 0.112989| c_reg 0.000000  | perf 0.98
+dmsnogo        | cost 0.099996| c_reg 0.000000  | perf 0.99
+dmcgo          | cost 0.073433| c_reg 0.000000  | perf 0.99
+dmcnogo        | cost 0.069311| c_reg 0.000000  | perf 0.99
+Model saved in file: data/crystals/softplus/no_noise/0/model.ckpt
+Model saved in file: data/crystals/softplus/no_noise/0/ckpts/model.ckpt-83000
+Trial 5312000  | Time 29392.39 s  | Now training fdgo & reactgo & delaygo & fdanti & reactanti & delayanti & delaydm1 & delaydm2 & contextdelaydm1 & contextdelaydm2 & multidelaydm & dmsgo & dmsnogo & dmcgo & dmcnogo
+fdgo           | cost 0.004555| c_reg 0.000000  | perf 1.00
+reactgo        | cost 0.004739| c_reg 0.000000  | perf 1.00
+delaygo        | cost 0.009368| c_reg 0.000000  | perf 1.00
+fdanti         | cost 0.004139| c_reg 0.000000  | perf 1.00
+reactanti      | cost 0.014327| c_reg 0.000000  | perf 1.00
+delayanti      | cost 0.016205| c_reg 0.000000  | perf 1.00
+delaydm1       | cost 0.062929| c_reg 0.000000  | perf 0.97
+delaydm2       | cost 0.052482| c_reg 0.000000  | perf 0.98
+contextdelaydm1| cost 0.070021| c_reg 0.000000  | perf 0.97
+contextdelaydm2| cost 0.060396| c_reg 0.000000  | perf 0.98
+multidelaydm   | cost 0.063817| c_reg 0.000000  | perf 0.98
+dmsgo          | cost 0.082366| c_reg 0.000000  | perf 0.99
+dmsnogo        | cost 0.068177| c_reg 0.000000  | perf 0.99
+dmcgo          | cost 0.075443| c_reg 0.000000  | perf 0.98
+dmcnogo        | cost 0.062805| c_reg 0.000000  | perf 0.99
+Model saved in file: data/crystals/softplus/no_noise/0/model.ckpt
+Model saved in file: data/crystals/softplus/no_noise/0/ckpts/model.ckpt-84000
+Trial 5376000  | Time 29748.20 s  | Now training fdgo & reactgo & delaygo & fdanti & reactanti & delayanti & delaydm1 & delaydm2 & contextdelaydm1 & contextdelaydm2 & multidelaydm & dmsgo & dmsnogo & dmcgo & dmcnogo
+fdgo           | cost 0.003876| c_reg 0.000000  | perf 1.00
+reactgo        | cost 0.004229| c_reg 0.000000  | perf 1.00
+delaygo        | cost 0.006204| c_reg 0.000000  | perf 1.00
+fdanti         | cost 0.003410| c_reg 0.000000  | perf 1.00
+reactanti      | cost 0.002751| c_reg 0.000000  | perf 1.00
+delayanti      | cost 0.010741| c_reg 0.000000  | perf 1.00
+delaydm1       | cost 0.078610| c_reg 0.000000  | perf 0.97
+delaydm2       | cost 0.048483| c_reg 0.000000  | perf 0.97
+contextdelaydm1| cost 0.132259| c_reg 0.000000  | perf 0.95
+contextdelaydm2| cost 0.067495| c_reg 0.000000  | perf 0.97
+multidelaydm   | cost 0.060279| c_reg 0.000000  | perf 0.97
+dmsgo          | cost 0.050187| c_reg 0.000000  | perf 0.99
+dmsnogo        | cost 0.069763| c_reg 0.000000  | perf 1.00
+dmcgo          | cost 0.068892| c_reg 0.000000  | perf 0.99
+dmcnogo        | cost 0.056640| c_reg 0.000000  | perf 0.99
+Model saved in file: data/crystals/softplus/no_noise/0/model.ckpt
+Model saved in file: data/crystals/softplus/no_noise/0/ckpts/model.ckpt-85000
+Trial 5440000  | Time 30104.61 s  | Now training fdgo & reactgo & delaygo & fdanti & reactanti & delayanti & delaydm1 & delaydm2 & contextdelaydm1 & contextdelaydm2 & multidelaydm & dmsgo & dmsnogo & dmcgo & dmcnogo
+fdgo           | cost 0.007270| c_reg 0.000000  | perf 1.00
+reactgo        | cost 0.007062| c_reg 0.000000  | perf 1.00
+delaygo        | cost 0.007167| c_reg 0.000000  | perf 1.00
+fdanti         | cost 0.006110| c_reg 0.000000  | perf 1.00
+reactanti      | cost 0.010541| c_reg 0.000000  | perf 1.00
+delayanti      | cost 0.014834| c_reg 0.000000  | perf 1.00
+delaydm1       | cost 0.064291| c_reg 0.000000  | perf 0.97
+delaydm2       | cost 0.100539| c_reg 0.000000  | perf 0.96
+contextdelaydm1| cost 0.094370| c_reg 0.000000  | perf 0.96
+contextdelaydm2| cost 0.056950| c_reg 0.000000  | perf 0.98
+multidelaydm   | cost 0.072843| c_reg 0.000000  | perf 0.97
+dmsgo          | cost 0.060023| c_reg 0.000000  | perf 0.99
+dmsnogo        | cost 0.092696| c_reg 0.000000  | perf 0.99
+dmcgo          | cost 0.069507| c_reg 0.000000  | perf 0.99
+dmcnogo        | cost 0.092871| c_reg 0.000000  | perf 0.98
+Model saved in file: data/crystals/softplus/no_noise/0/model.ckpt
+Model saved in file: data/crystals/softplus/no_noise/0/ckpts/model.ckpt-86000
+Trial 5504000  | Time 30458.11 s  | Now training fdgo & reactgo & delaygo & fdanti & reactanti & delayanti & delaydm1 & delaydm2 & contextdelaydm1 & contextdelaydm2 & multidelaydm & dmsgo & dmsnogo & dmcgo & dmcnogo
+fdgo           | cost 0.005764| c_reg 0.000000  | perf 1.00
+reactgo        | cost 0.005510| c_reg 0.000000  | perf 1.00
+delaygo        | cost 0.007212| c_reg 0.000000  | perf 1.00
+fdanti         | cost 0.002478| c_reg 0.000000  | perf 1.00
+reactanti      | cost 0.002761| c_reg 0.000000  | perf 1.00
+delayanti      | cost 0.011152| c_reg 0.000000  | perf 1.00
+delaydm1       | cost 0.052899| c_reg 0.000000  | perf 0.97
+delaydm2       | cost 0.065454| c_reg 0.000000  | perf 0.97
+contextdelaydm1| cost 0.092949| c_reg 0.000000  | perf 0.96
+contextdelaydm2| cost 0.119244| c_reg 0.000000  | perf 0.96
+multidelaydm   | cost 0.058744| c_reg 0.000000  | perf 0.98
+dmsgo          | cost 0.147641| c_reg 0.000000  | perf 0.96
+dmsnogo        | cost 0.106412| c_reg 0.000000  | perf 0.98
+dmcgo          | cost 0.056656| c_reg 0.000000  | perf 0.99
+dmcnogo        | cost 0.053531| c_reg 0.000000  | perf 0.99
+Model saved in file: data/crystals/softplus/no_noise/0/model.ckpt
+Model saved in file: data/crystals/softplus/no_noise/0/ckpts/model.ckpt-87000
+Trial 5568000  | Time 30812.76 s  | Now training fdgo & reactgo & delaygo & fdanti & reactanti & delayanti & delaydm1 & delaydm2 & contextdelaydm1 & contextdelaydm2 & multidelaydm & dmsgo & dmsnogo & dmcgo & dmcnogo
+fdgo           | cost 0.004400| c_reg 0.000000  | perf 1.00
+reactgo        | cost 0.007077| c_reg 0.000000  | perf 1.00
+delaygo        | cost 0.008506| c_reg 0.000000  | perf 1.00
+fdanti         | cost 0.009235| c_reg 0.000000  | perf 1.00
+reactanti      | cost 0.018323| c_reg 0.000000  | perf 1.00
+delayanti      | cost 0.023754| c_reg 0.000000  | perf 1.00
+delaydm1       | cost 0.055715| c_reg 0.000000  | perf 0.98
+delaydm2       | cost 0.073460| c_reg 0.000000  | perf 0.97
+contextdelaydm1| cost 0.087779| c_reg 0.000000  | perf 0.97
+contextdelaydm2| cost 0.072915| c_reg 0.000000  | perf 0.97
+multidelaydm   | cost 0.062704| c_reg 0.000000  | perf 0.97
+dmsgo          | cost 0.083090| c_reg 0.000000  | perf 0.99
+dmsnogo        | cost 0.072748| c_reg 0.000000  | perf 0.99
+dmcgo          | cost 0.087393| c_reg 0.000000  | perf 0.98
+dmcnogo        | cost 0.072752| c_reg 0.000000  | perf 0.99
+Model saved in file: data/crystals/softplus/no_noise/0/model.ckpt
+Model saved in file: data/crystals/softplus/no_noise/0/ckpts/model.ckpt-88000
+Trial 5632000  | Time 31168.54 s  | Now training fdgo & reactgo & delaygo & fdanti & reactanti & delayanti & delaydm1 & delaydm2 & contextdelaydm1 & contextdelaydm2 & multidelaydm & dmsgo & dmsnogo & dmcgo & dmcnogo
+fdgo           | cost 0.003855| c_reg 0.000000  | perf 1.00
+reactgo        | cost 0.004050| c_reg 0.000000  | perf 1.00
+delaygo        | cost 0.011756| c_reg 0.000000  | perf 1.00
+fdanti         | cost 0.002784| c_reg 0.000000  | perf 1.00
+reactanti      | cost 0.004552| c_reg 0.000000  | perf 1.00
+delayanti      | cost 0.012664| c_reg 0.000000  | perf 1.00
+delaydm1       | cost 0.053502| c_reg 0.000000  | perf 0.98
+delaydm2       | cost 0.059026| c_reg 0.000000  | perf 0.97
+contextdelaydm1| cost 0.080214| c_reg 0.000000  | perf 0.97
+contextdelaydm2| cost 0.076955| c_reg 0.000000  | perf 0.97
+multidelaydm   | cost 0.058682| c_reg 0.000000  | perf 0.98
+dmsgo          | cost 0.043170| c_reg 0.000000  | perf 0.99
+dmsnogo        | cost 0.058078| c_reg 0.000000  | perf 1.00
+dmcgo          | cost 0.055127| c_reg 0.000000  | perf 0.99
+dmcnogo        | cost 0.053429| c_reg 0.000000  | perf 0.99
+Model saved in file: data/crystals/softplus/no_noise/0/model.ckpt
+Model saved in file: data/crystals/softplus/no_noise/0/ckpts/model.ckpt-89000
+Trial 5696000  | Time 31520.65 s  | Now training fdgo & reactgo & delaygo & fdanti & reactanti & delayanti & delaydm1 & delaydm2 & contextdelaydm1 & contextdelaydm2 & multidelaydm & dmsgo & dmsnogo & dmcgo & dmcnogo
+fdgo           | cost 0.003767| c_reg 0.000000  | perf 1.00
+reactgo        | cost 0.002227| c_reg 0.000000  | perf 1.00
+delaygo        | cost 0.014304| c_reg 0.000000  | perf 1.00
+fdanti         | cost 0.004142| c_reg 0.000000  | perf 1.00
+reactanti      | cost 0.008296| c_reg 0.000000  | perf 1.00
+delayanti      | cost 0.032219| c_reg 0.000000  | perf 1.00
+delaydm1       | cost 0.073067| c_reg 0.000000  | perf 0.98
+delaydm2       | cost 0.056085| c_reg 0.000000  | perf 0.97
+contextdelaydm1| cost 0.076770| c_reg 0.000000  | perf 0.97
+contextdelaydm2| cost 0.079459| c_reg 0.000000  | perf 0.97
+multidelaydm   | cost 0.064290| c_reg 0.000000  | perf 0.98
+dmsgo          | cost 0.056417| c_reg 0.000000  | perf 1.00
+dmsnogo        | cost 0.066027| c_reg 0.000000  | perf 0.99
+dmcgo          | cost 0.062788| c_reg 0.000000  | perf 0.98
+dmcnogo        | cost 0.053473| c_reg 0.000000  | perf 0.99
+Model saved in file: data/crystals/softplus/no_noise/0/model.ckpt
+Model saved in file: data/crystals/softplus/no_noise/0/ckpts/model.ckpt-90000
+Trial 5760000  | Time 31876.15 s  | Now training fdgo & reactgo & delaygo & fdanti & reactanti & delayanti & delaydm1 & delaydm2 & contextdelaydm1 & contextdelaydm2 & multidelaydm & dmsgo & dmsnogo & dmcgo & dmcnogo
+fdgo           | cost 0.005942| c_reg 0.000000  | perf 1.00
+reactgo        | cost 0.006700| c_reg 0.000000  | perf 1.00
+delaygo        | cost 0.006714| c_reg 0.000000  | perf 1.00
+fdanti         | cost 0.006864| c_reg 0.000000  | perf 1.00
+reactanti      | cost 0.005536| c_reg 0.000000  | perf 1.00
+delayanti      | cost 0.017741| c_reg 0.000000  | perf 1.00
+delaydm1       | cost 0.083399| c_reg 0.000000  | perf 0.97
+delaydm2       | cost 0.079130| c_reg 0.000000  | perf 0.97
+contextdelaydm1| cost 0.087759| c_reg 0.000000  | perf 0.97
+contextdelaydm2| cost 0.073833| c_reg 0.000000  | perf 0.97
+multidelaydm   | cost 0.081483| c_reg 0.000000  | perf 0.97
+dmsgo          | cost 0.138849| c_reg 0.000000  | perf 0.97
+dmsnogo        | cost 0.076805| c_reg 0.000000  | perf 1.00
+dmcgo          | cost 0.074514| c_reg 0.000000  | perf 0.98
+dmcnogo        | cost 0.084193| c_reg 0.000000  | perf 0.98
+Model saved in file: data/crystals/softplus/no_noise/0/model.ckpt
+Model saved in file: data/crystals/softplus/no_noise/0/ckpts/model.ckpt-91000
+Trial 5824000  | Time 32231.86 s  | Now training fdgo & reactgo & delaygo & fdanti & reactanti & delayanti & delaydm1 & delaydm2 & contextdelaydm1 & contextdelaydm2 & multidelaydm & dmsgo & dmsnogo & dmcgo & dmcnogo
+fdgo           | cost 0.008780| c_reg 0.000000  | perf 1.00
+reactgo        | cost 0.010239| c_reg 0.000000  | perf 1.00
+delaygo        | cost 0.039923| c_reg 0.000000  | perf 1.00
+fdanti         | cost 0.006041| c_reg 0.000000  | perf 1.00
+reactanti      | cost 0.018445| c_reg 0.000000  | perf 1.00
+delayanti      | cost 0.019404| c_reg 0.000000  | perf 1.00
+delaydm1       | cost 0.089079| c_reg 0.000000  | perf 0.97
+delaydm2       | cost 0.100240| c_reg 0.000000  | perf 0.96
+contextdelaydm1| cost 0.093186| c_reg 0.000000  | perf 0.97
+contextdelaydm2| cost 0.110265| c_reg 0.000000  | perf 0.96
+multidelaydm   | cost 0.086076| c_reg 0.000000  | perf 0.97
+dmsgo          | cost 0.359837| c_reg 0.000000  | perf 0.91
+dmsnogo        | cost 0.175857| c_reg 0.000000  | perf 0.94
+dmcgo          | cost 0.057199| c_reg 0.000000  | perf 0.99
+dmcnogo        | cost 0.051425| c_reg 0.000000  | perf 0.99
+Model saved in file: data/crystals/softplus/no_noise/0/model.ckpt
+Model saved in file: data/crystals/softplus/no_noise/0/ckpts/model.ckpt-92000
+Trial 5888000  | Time 32584.45 s  | Now training fdgo & reactgo & delaygo & fdanti & reactanti & delayanti & delaydm1 & delaydm2 & contextdelaydm1 & contextdelaydm2 & multidelaydm & dmsgo & dmsnogo & dmcgo & dmcnogo
+fdgo           | cost 0.004736| c_reg 0.000000  | perf 1.00
+reactgo        | cost 0.003990| c_reg 0.000000  | perf 1.00
+delaygo        | cost 0.006084| c_reg 0.000000  | perf 1.00
+fdanti         | cost 0.004985| c_reg 0.000000  | perf 1.00
+reactanti      | cost 0.004931| c_reg 0.000000  | perf 1.00
+delayanti      | cost 0.012882| c_reg 0.000000  | perf 1.00
+delaydm1       | cost 0.036530| c_reg 0.000000  | perf 0.99
+delaydm2       | cost 0.043786| c_reg 0.000000  | perf 0.98
+contextdelaydm1| cost 0.100674| c_reg 0.000000  | perf 0.96
+contextdelaydm2| cost 0.051844| c_reg 0.000000  | perf 0.98
+multidelaydm   | cost 0.046652| c_reg 0.000000  | perf 0.98
+dmsgo          | cost 0.040828| c_reg 0.000000  | perf 1.00
+dmsnogo        | cost 0.062249| c_reg 0.000000  | perf 0.99
+dmcgo          | cost 0.081354| c_reg 0.000000  | perf 0.98
+dmcnogo        | cost 0.061483| c_reg 0.000000  | perf 0.99
+Model saved in file: data/crystals/softplus/no_noise/0/model.ckpt
+Model saved in file: data/crystals/softplus/no_noise/0/ckpts/model.ckpt-93000
+Trial 5952000  | Time 32938.51 s  | Now training fdgo & reactgo & delaygo & fdanti & reactanti & delayanti & delaydm1 & delaydm2 & contextdelaydm1 & contextdelaydm2 & multidelaydm & dmsgo & dmsnogo & dmcgo & dmcnogo
+fdgo           | cost 0.008130| c_reg 0.000000  | perf 1.00
+reactgo        | cost 0.002950| c_reg 0.000000  | perf 1.00
+delaygo        | cost 0.013951| c_reg 0.000000  | perf 1.00
+fdanti         | cost 0.004690| c_reg 0.000000  | perf 1.00
+reactanti      | cost 0.022955| c_reg 0.000000  | perf 1.00
+delayanti      | cost 0.011815| c_reg 0.000000  | perf 1.00
+delaydm1       | cost 0.072994| c_reg 0.000000  | perf 0.98
+delaydm2       | cost 0.041827| c_reg 0.000000  | perf 0.98
+contextdelaydm1| cost 0.070519| c_reg 0.000000  | perf 0.97
+contextdelaydm2| cost 0.088480| c_reg 0.000000  | perf 0.97
+multidelaydm   | cost 0.063543| c_reg 0.000000  | perf 0.98
+dmsgo          | cost 0.052417| c_reg 0.000000  | perf 0.99
+dmsnogo        | cost 0.068295| c_reg 0.000000  | perf 0.99
+dmcgo          | cost 0.078741| c_reg 0.000000  | perf 0.98
+dmcnogo        | cost 0.079954| c_reg 0.000000  | perf 0.98
+Model saved in file: data/crystals/softplus/no_noise/0/model.ckpt
+Model saved in file: data/crystals/softplus/no_noise/0/ckpts/model.ckpt-94000
+Trial 6016000  | Time 33291.92 s  | Now training fdgo & reactgo & delaygo & fdanti & reactanti & delayanti & delaydm1 & delaydm2 & contextdelaydm1 & contextdelaydm2 & multidelaydm & dmsgo & dmsnogo & dmcgo & dmcnogo
+fdgo           | cost 0.003278| c_reg 0.000000  | perf 1.00
+reactgo        | cost 0.002155| c_reg 0.000000  | perf 1.00
+delaygo        | cost 0.015248| c_reg 0.000000  | perf 1.00
+fdanti         | cost 0.004592| c_reg 0.000000  | perf 1.00
+reactanti      | cost 0.011904| c_reg 0.000000  | perf 1.00
+delayanti      | cost 0.017353| c_reg 0.000000  | perf 1.00
+delaydm1       | cost 0.072027| c_reg 0.000000  | perf 0.97
+delaydm2       | cost 0.062109| c_reg 0.000000  | perf 0.98
+contextdelaydm1| cost 0.081120| c_reg 0.000000  | perf 0.97
+contextdelaydm2| cost 0.072016| c_reg 0.000000  | perf 0.97
+multidelaydm   | cost 0.055739| c_reg 0.000000  | perf 0.98
+dmsgo          | cost 0.407062| c_reg 0.000000  | perf 0.88
+dmsnogo        | cost 0.189595| c_reg 0.000000  | perf 0.92
+dmcgo          | cost 0.056870| c_reg 0.000000  | perf 0.98
+dmcnogo        | cost 0.059837| c_reg 0.000000  | perf 0.99
+Model saved in file: data/crystals/softplus/no_noise/0/model.ckpt
+Model saved in file: data/crystals/softplus/no_noise/0/ckpts/model.ckpt-95000
+Trial 6080000  | Time 33646.59 s  | Now training fdgo & reactgo & delaygo & fdanti & reactanti & delayanti & delaydm1 & delaydm2 & contextdelaydm1 & contextdelaydm2 & multidelaydm & dmsgo & dmsnogo & dmcgo & dmcnogo
+fdgo           | cost 0.004766| c_reg 0.000000  | perf 1.00
+reactgo        | cost 0.010212| c_reg 0.000000  | perf 1.00
+delaygo        | cost 0.006142| c_reg 0.000000  | perf 1.00
+fdanti         | cost 0.007161| c_reg 0.000000  | perf 1.00
+reactanti      | cost 0.015279| c_reg 0.000000  | perf 1.00
+delayanti      | cost 0.042738| c_reg 0.000000  | perf 1.00
+delaydm1       | cost 0.046895| c_reg 0.000000  | perf 0.98
+delaydm2       | cost 0.034574| c_reg 0.000000  | perf 0.99
+contextdelaydm1| cost 0.103553| c_reg 0.000000  | perf 0.96
+contextdelaydm2| cost 0.051881| c_reg 0.000000  | perf 0.98
+multidelaydm   | cost 0.039323| c_reg 0.000000  | perf 0.99
+dmsgo          | cost 0.051769| c_reg 0.000000  | perf 0.99
+dmsnogo        | cost 0.051395| c_reg 0.000000  | perf 1.00
+dmcgo          | cost 0.077063| c_reg 0.000000  | perf 0.98
+dmcnogo        | cost 0.075698| c_reg 0.000000  | perf 0.98
+Model saved in file: data/crystals/softplus/no_noise/0/model.ckpt
+Model saved in file: data/crystals/softplus/no_noise/0/ckpts/model.ckpt-96000
+Trial 6144000  | Time 34002.17 s  | Now training fdgo & reactgo & delaygo & fdanti & reactanti & delayanti & delaydm1 & delaydm2 & contextdelaydm1 & contextdelaydm2 & multidelaydm & dmsgo & dmsnogo & dmcgo & dmcnogo
+fdgo           | cost 0.003849| c_reg 0.000000  | perf 1.00
+reactgo        | cost 0.004589| c_reg 0.000000  | perf 1.00
+delaygo        | cost 0.012082| c_reg 0.000000  | perf 1.00
+fdanti         | cost 0.002506| c_reg 0.000000  | perf 1.00
+reactanti      | cost 0.006917| c_reg 0.000000  | perf 1.00
+delayanti      | cost 0.011808| c_reg 0.000000  | perf 1.00
+delaydm1       | cost 0.066768| c_reg 0.000000  | perf 0.97
+delaydm2       | cost 0.056911| c_reg 0.000000  | perf 0.97
+contextdelaydm1| cost 0.073607| c_reg 0.000000  | perf 0.97
+contextdelaydm2| cost 0.074075| c_reg 0.000000  | perf 0.97
+multidelaydm   | cost 0.085266| c_reg 0.000000  | perf 0.97
+dmsgo          | cost 0.086000| c_reg 0.000000  | perf 0.98
+dmsnogo        | cost 0.078691| c_reg 0.000000  | perf 0.99
+dmcgo          | cost 0.052862| c_reg 0.000000  | perf 0.99
+dmcnogo        | cost 0.048235| c_reg 0.000000  | perf 0.99
+Model saved in file: data/crystals/softplus/no_noise/0/model.ckpt
+Model saved in file: data/crystals/softplus/no_noise/0/ckpts/model.ckpt-97000
+Trial 6208000  | Time 34358.90 s  | Now training fdgo & reactgo & delaygo & fdanti & reactanti & delayanti & delaydm1 & delaydm2 & contextdelaydm1 & contextdelaydm2 & multidelaydm & dmsgo & dmsnogo & dmcgo & dmcnogo
+fdgo           | cost 0.003455| c_reg 0.000000  | perf 1.00
+reactgo        | cost 0.002865| c_reg 0.000000  | perf 1.00
+delaygo        | cost 0.004571| c_reg 0.000000  | perf 1.00
+fdanti         | cost 0.002184| c_reg 0.000000  | perf 1.00
+reactanti      | cost 0.007670| c_reg 0.000000  | perf 1.00
+delayanti      | cost 0.010341| c_reg 0.000000  | perf 1.00
+delaydm1       | cost 0.050145| c_reg 0.000000  | perf 0.98
+delaydm2       | cost 0.051221| c_reg 0.000000  | perf 0.98
+contextdelaydm1| cost 0.062535| c_reg 0.000000  | perf 0.98
+contextdelaydm2| cost 0.082217| c_reg 0.000000  | perf 0.97
+multidelaydm   | cost 0.060273| c_reg 0.000000  | perf 0.98
+dmsgo          | cost 0.044717| c_reg 0.000000  | perf 0.99
+dmsnogo        | cost 0.045961| c_reg 0.000000  | perf 1.00
+dmcgo          | cost 0.042961| c_reg 0.000000  | perf 0.99
+dmcnogo        | cost 0.044102| c_reg 0.000000  | perf 0.99
+Model saved in file: data/crystals/softplus/no_noise/0/model.ckpt
+Model saved in file: data/crystals/softplus/no_noise/0/ckpts/model.ckpt-98000
+Trial 6272000  | Time 34712.58 s  | Now training fdgo & reactgo & delaygo & fdanti & reactanti & delayanti & delaydm1 & delaydm2 & contextdelaydm1 & contextdelaydm2 & multidelaydm & dmsgo & dmsnogo & dmcgo & dmcnogo
+fdgo           | cost 0.013298| c_reg 0.000000  | perf 1.00
+reactgo        | cost 0.014557| c_reg 0.000000  | perf 1.00
+delaygo        | cost 0.020977| c_reg 0.000000  | perf 1.00
+fdanti         | cost 0.012211| c_reg 0.000000  | perf 1.00
+reactanti      | cost 0.015327| c_reg 0.000000  | perf 1.00
+delayanti      | cost 0.065402| c_reg 0.000000  | perf 1.00
+delaydm1       | cost 0.087620| c_reg 0.000000  | perf 0.96
+delaydm2       | cost 0.093205| c_reg 0.000000  | perf 0.96
+contextdelaydm1| cost 0.097296| c_reg 0.000000  | perf 0.96
+contextdelaydm2| cost 0.160933| c_reg 0.000000  | perf 0.94
+multidelaydm   | cost 0.096900| c_reg 0.000000  | perf 0.97
+dmsgo          | cost 0.166008| c_reg 0.000000  | perf 0.96
+dmsnogo        | cost 0.220511| c_reg 0.000000  | perf 0.96
+dmcgo          | cost 0.064017| c_reg 0.000000  | perf 0.99
+dmcnogo        | cost 0.074944| c_reg 0.000000  | perf 0.99
+Model saved in file: data/crystals/softplus/no_noise/0/model.ckpt
+Model saved in file: data/crystals/softplus/no_noise/0/ckpts/model.ckpt-99000
+Trial 6336000  | Time 35067.29 s  | Now training fdgo & reactgo & delaygo & fdanti & reactanti & delayanti & delaydm1 & delaydm2 & contextdelaydm1 & contextdelaydm2 & multidelaydm & dmsgo & dmsnogo & dmcgo & dmcnogo
+fdgo           | cost 0.006257| c_reg 0.000000  | perf 1.00
+reactgo        | cost 0.006055| c_reg 0.000000  | perf 1.00
+delaygo        | cost 0.036439| c_reg 0.000000  | perf 1.00
+fdanti         | cost 0.009486| c_reg 0.000000  | perf 1.00
+reactanti      | cost 0.038993| c_reg 0.000000  | perf 1.00
+delayanti      | cost 0.032444| c_reg 0.000000  | perf 1.00
+delaydm1       | cost 0.084625| c_reg 0.000000  | perf 0.97
+delaydm2       | cost 0.082550| c_reg 0.000000  | perf 0.97
+contextdelaydm1| cost 0.093353| c_reg 0.000000  | perf 0.97
+contextdelaydm2| cost 0.083101| c_reg 0.000000  | perf 0.98
+multidelaydm   | cost 0.080860| c_reg 0.000000  | perf 0.98
+dmsgo          | cost 0.185268| c_reg 0.000000  | perf 0.96
+dmsnogo        | cost 0.324075| c_reg 0.000000  | perf 0.88
+dmcgo          | cost 0.337676| c_reg 0.000000  | perf 0.84
+dmcnogo        | cost 0.082679| c_reg 0.000000  | perf 0.98
+Model saved in file: data/crystals/softplus/no_noise/0/model.ckpt
+Model saved in file: data/crystals/softplus/no_noise/0/ckpts/model.ckpt-100000
+Trial 6400000  | Time 35421.59 s  | Now training fdgo & reactgo & delaygo & fdanti & reactanti & delayanti & delaydm1 & delaydm2 & contextdelaydm1 & contextdelaydm2 & multidelaydm & dmsgo & dmsnogo & dmcgo & dmcnogo
+fdgo           | cost 0.012825| c_reg 0.000000  | perf 1.00
+reactgo        | cost 0.015895| c_reg 0.000000  | perf 1.00
+delaygo        | cost 0.017741| c_reg 0.000000  | perf 1.00
+fdanti         | cost 0.014467| c_reg 0.000000  | perf 1.00
+reactanti      | cost 0.006583| c_reg 0.000000  | perf 1.00
+delayanti      | cost 0.075433| c_reg 0.000000  | perf 0.97
+delaydm1       | cost 0.055915| c_reg 0.000000  | perf 0.98
+delaydm2       | cost 0.065635| c_reg 0.000000  | perf 0.97
+contextdelaydm1| cost 0.071044| c_reg 0.000000  | perf 0.98
+contextdelaydm2| cost 0.062627| c_reg 0.000000  | perf 0.98
+multidelaydm   | cost 0.068875| c_reg 0.000000  | perf 0.98
+dmsgo          | cost 0.105345| c_reg 0.000000  | perf 0.99
+dmsnogo        | cost 0.294904| c_reg 0.000000  | perf 0.92
+dmcgo          | cost 0.074980| c_reg 0.000000  | perf 0.99
+dmcnogo        | cost 0.068241| c_reg 0.000000  | perf 0.99
+Model saved in file: data/crystals/softplus/no_noise/0/model.ckpt
+Model saved in file: data/crystals/softplus/no_noise/0/ckpts/model.ckpt-101000
+Trial 6464000  | Time 35775.50 s  | Now training fdgo & reactgo & delaygo & fdanti & reactanti & delayanti & delaydm1 & delaydm2 & contextdelaydm1 & contextdelaydm2 & multidelaydm & dmsgo & dmsnogo & dmcgo & dmcnogo
+fdgo           | cost 0.002838| c_reg 0.000000  | perf 1.00
+reactgo        | cost 0.002963| c_reg 0.000000  | perf 1.00
+delaygo        | cost 0.004566| c_reg 0.000000  | perf 1.00
+fdanti         | cost 0.001516| c_reg 0.000000  | perf 1.00
+reactanti      | cost 0.001803| c_reg 0.000000  | perf 1.00
+delayanti      | cost 0.005119| c_reg 0.000000  | perf 1.00
+delaydm1       | cost 0.049501| c_reg 0.000000  | perf 0.98
+delaydm2       | cost 0.059447| c_reg 0.000000  | perf 0.98
+contextdelaydm1| cost 0.076547| c_reg 0.000000  | perf 0.96
+contextdelaydm2| cost 0.108650| c_reg 0.000000  | perf 0.96
+multidelaydm   | cost 0.051090| c_reg 0.000000  | perf 0.98
+dmsgo          | cost 0.040564| c_reg 0.000000  | perf 0.99
+slurmstepd: error: *** STEP 55135065.0 ON sh-112-05 CANCELLED AT 2019-11-22T19:00:43 DUE TO TIME LIMIT ***
+slurmstepd: error: *** JOB 55135065 ON sh-112-05 CANCELLED AT 2019-11-22T19:00:43 DUE TO TIME LIMIT ***
