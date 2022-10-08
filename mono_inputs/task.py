@@ -139,6 +139,12 @@ class Trial(object):
         """Add input noise."""
         self.x += self.config['rng'].randn(*self.x.shape)*self._sigma_x
 
+    def smooth_input(self,window_range = 30):
+        """Change inputs to graded"""
+        from scipy import ndimage as ndi
+        window = np.random.randint(10, window_range)
+        self.x  = ndi.uniform_filter1d(self.x,size = window,axis = 0,mode = 'nearest')
+
     def add_c_mask(self, pre_offs, post_ons):
         """Add a cost mask.
 
@@ -191,14 +197,14 @@ class Trial(object):
         """Input activity given location."""
         dist = get_dist(x_loc-self.pref)  # periodic boundary
         dist /= np.pi/(self.n_eachring-1)
-        x = 0.8*dist#np.exp(-dist**2/2)
+        x = dist#np.exp(-dist**2/2)
         return x
 
     def add_y_loc(self, y_loc):
         """Target response given location."""
         dist = get_dist(y_loc-self.pref)  # periodic boundary
         dist /= np.pi/(self.n_eachring-1)
-        y = 0.8*dist#*np.exp(-dist**2/2)
+        y = dist#*np.exp(-dist**2/2)
         return y
 
 def test_init(config, mode, **kwargs):
@@ -1607,7 +1613,7 @@ rule_name    = {'reactgo': 'RT Go',
                 }
 
 
-def generate_trials(rule, hp, mode, noise_on=True, **kwargs):
+def generate_trials(rule, hp, mode, noise_on=True, smooth_on = True, **kwargs):
     """Generate one batch of data.
 
     Args:
@@ -1658,12 +1664,15 @@ def generate_trials(rule, hp, mode, noise_on=True, **kwargs):
     for r, s in zip(rule, rule_strength):
         trial.add_rule(r, on=rule_on, off=rule_off, strength=s)
 
+    if smooth_on:
+        trial.smooth_input()
+
     if noise_on:
         trial.add_x_noise()
 
     return trial
 
-def generate_datasetTensors(rule, hp, mode, noise_on=True, **kwargs):
+def generate_datasetTensors(rule, hp, mode, noise_on=True, smooth_on = True, **kwargs):
     """Generate one batch of data.
 
     Args:
@@ -1715,6 +1724,9 @@ def generate_datasetTensors(rule, hp, mode, noise_on=True, **kwargs):
 
     for r, s in zip(rule, rule_strength):
         trial.add_rule(r, on=rule_on, off=rule_off, strength=s)
+
+    if smooth_on:
+        trial.smooth_input()
 
     if noise_on:
         trial.add_x_noise()
