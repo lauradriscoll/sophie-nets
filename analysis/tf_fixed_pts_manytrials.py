@@ -20,11 +20,11 @@ elif ui == 'lauradriscoll':
 elif ui == 'lndrisco':
     p = '/home/users/lndrisco'
 
-net = 'stepnet'
-PATH_YANGNET = os.path.join(p,'code/multitask-nets',net)
+net = 'binary_inputs'
+PATH_YANGNET = os.path.join(p,'code/sophie-nets',net) 
 
 sys.path.insert(0, PATH_YANGNET)
-from task import generate_trials, rule_name, rule_index_map,rules_dict
+from task import generate_trials, rule_name, rule_index_map, rules_dict
 from network import FixedPoint_Model
 import tools
 
@@ -56,41 +56,34 @@ N_INITS = 1000 # The number of initial states to provide
 #Find right model dir
 ##################################################################
 
-rule_trains = ['fdgo', 'reactgo', 'delaygo', 'fdanti', 'reactanti', 'delayanti',
-          'delaydm1', 'delaydm2', 'contextdelaydm1', 'contextdelaydm2', 'multidelaydm',
-          'dmsgo', 'dmsnogo', 'dmcgo', 'dmcnogo']
+# rule_trains = ['fdgo', 'reactgo', 'delaygo', 'fdanti', 'reactanti', 'delayanti',
+#           'delaydm1', 'delaydm2', 'contextdelaydm1', 'contextdelaydm2', 'multidelaydm',
+#           'dmsgo', 'dmsnogo', 'dmcgo', 'dmcnogo']
 
-# parse input arguments as:
 rnn_type = 'LeakyRNN'
 activation = 'softplus'
-w_init = 'diag'
-ruleset = 'all'
-n_tasks = str(len(rule_trains))
+w_init = 'randgauss'
+ruleset = 'basic'
 n_rnn = str(256)
-l2w = float(-6)
-l2h = float(-6)
-l1w = float(0)
-l1h = float(0)
-lr = float(-6)
-data_folder = 'data/rnn/multitask/stepnet/final'
-
-task_list = ['delaygo',]#rule_trains
-rule_trains_str = '_'.join(task_list)
-
-seed = 1
+l2w = -7.0
+l2h = -7.0
+l1w = 0
+l1h = 0
+lr = -7.0
+seed = str(0)
+rule_trains = [rules_dict['basic'][1],rules_dict['basic'][3]]
+rule_trains_str = '_'.join(rule_trains)
 sigma_rec = 1/20
 sigma_x = 2/20
-w_rec_coeff  = 8/10
+w_rec_coeff = .9
 
 net_name = 'lr'+"{:.1f}".format(-lr)+'l2_w'+"{:.1f}".format(-l2w)+'_h'+"{:.1f}".format(-l2h)
-
 net_name2 = '_sig_rec'+str(sigma_rec)+'_sig_x'+str(sigma_x)+'_w_rec_coeff'+"{:.1f}".format(w_rec_coeff)+'_'+rule_trains_str
 
-m = os.path.join(p,data_folder,ruleset,
-    rnn_type,activation,w_init,str(len(rule_trains))+'_tasks',
-    str(n_rnn)+'_n_rnn',net_name+net_name2,str(seed))
+dir_specific_all = os.path.join(ruleset,rnn_type,activation,
+    w_init,str(len(rule_trains))+'_tasks',str(n_rnn)+'_n_rnn',net_name+net_name2)
 
-m = '/Users/lauradriscoll/Documents/data/rnn/multitask/stepnet/final/all/LeakyRNN/softplus/diag/1_tasks/256_n_rnn/lr7.0l2_w6.0_h6.0_delaygo/0'
+m = os.path.join(p,'data','sophie-nets',net,'data',dir_specific_all,str(seed))
 
 ##################################################################
 def project2d(x,axes):
@@ -121,7 +114,7 @@ def get_filename(trial, epoch,t):
 
     return filename, ind_stim_loc
 
-for rule in ['delaygo',]:
+for rule in ['delaygo','delayanti']:
 
     model = FixedPoint_Model(m)
 
@@ -153,17 +146,19 @@ for rule in ['delaygo',]:
         alr_dict = ({'decrease_factor' : .95, 'initial_rate' : 1})
 
         n_epochs = len(trial.epochs)
-        for epoch in [1,]:#range(n_epochs):
+        for epoch in range(n_epochs):
             e_start = max([0, trial.epochs.values()[epoch][0]])
             end_set = [n_steps, trial.epochs.values()[epoch][1]]
             e_end = min(x for x in end_set if x is not None)
+            e_diff = e_end - e_start
+            e_ind = int(e_diff/2)
 
             n_inputs = 0
             input_set = {str(n_inputs) : np.zeros((1,n_input_dim))}
 
-            for t in range(int(n_trials/8),int(n_trials),int(n_trials/8)):#[int(n_trials/2),]:#:2,n_trials,int(n_trials/4)
+            for t in [0,]:#range(int(n_trials/8),int(n_trials),int(n_trials/8)):#[int(n_trials/2),]:#:2,n_trials,int(n_trials/4)
 
-                inputs = np.squeeze(trial.x[e_start,t,:])
+                inputs = np.squeeze(trial.x[e_start+e_ind,t,:])
                 inputs = inputs[np.newaxis,:]
                 inputs_big = inputs[np.newaxis,:]
 

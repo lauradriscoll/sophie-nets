@@ -21,8 +21,8 @@ elif ui == 'lauradriscoll':
 elif ui == 'lndrisco':
     p = '/home/users/lndrisco'
 
-net = 'stepnet'
-PATH_YANGNET = os.path.join(p,'code/multitask-nets',net)
+net = 'binary_inputs'
+PATH_YANGNET = os.path.join(p,'code/sophie-nets',net)
 
 sys.path.insert(0, PATH_YANGNET)
 from task import generate_trials, rule_name, rule_index_map
@@ -42,8 +42,7 @@ from FixedPointFinder import FixedPointFinder
 #Find right model dir
 ##################################################################
 
-# all_dir = 'data/rnn/multitask/stepnet/crystals/softplus/l2w0001/'
-all_dir = 'data/rnn/multitask/stepnet/crystals/softplus/two_tasks/l2w0001_delaygo_fdgo/'
+all_dir = 'data/sophie-nets/binary_inputs/data/basic/LeakyRNN/softplus/randgauss/2_tasks/256_n_rnn/lr7.0l2_w7.0_h7.0_sig_rec0.05_sig_x0.1_w_rec_coeff0.9_delaygo_delayanti'
 NOISE_SCALE = 0.01 #0.5 # Standard deviation of noise added to initial states
 N_INITS = 1000 # The number of initial states to provide
 
@@ -52,7 +51,7 @@ task_list = ['fdgo', 'reactgo', 'delaygo', 'fdanti', 'reactanti', 'delayanti',
               'delaydm1', 'delaydm2', 'contextdelaydm1', 'contextdelaydm2', 'multidelaydm',
               'dmsgo', 'dmsnogo', 'dmcgo', 'dmcnogo']
 
-task_list = ['delaygo','fdgo']
+task_list = ['delaygo','delayanti']
 
 ##################################################################
 def project2d(x,axes):
@@ -123,7 +122,7 @@ for n_number in [0,]:
                     n_inputs = 0
                     input_set = {str(n_inputs) : np.zeros((1,n_input_dim))}
 
-                    for t in range(0,n_trials,int(n_trials/10)):#[int(n_trials/2),]:#:
+                    for t in range(0,n_trials):#[int(n_trials/2),]:#:
 
                         inputs = np.squeeze(trial.x[e_start,t,:])
                         inputs = inputs[np.newaxis,:]

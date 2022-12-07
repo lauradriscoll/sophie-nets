@@ -20,8 +20,8 @@ elif ui == 'lauradriscoll':
 elif ui == 'lndrisco':
     p = '/home/users/lndrisco'
 
-net = 'stepnet'
-PATH_YANGNET = os.path.join(p,'code/multitask-nets',net)
+net = 'binary_inputs'
+PATH_YANGNET = os.path.join(p,'code/sophie-nets',net) 
 
 sys.path.insert(0, PATH_YANGNET)
 from task import generate_trials, rule_name, rule_index_map, rules_dict
@@ -49,8 +49,8 @@ def get_filename(trial1,trial2,epoch_list,t_set):
     n_stim_per_ring = int(np.shape(trial1.y)[2]-1)
     stim_size = int(2*n_stim_per_ring+1)
 
-    rule1 = rules_dict['all'][np.argmax(trial1.x[0,0,stim_size:])]
-    rule2 = rules_dict['all'][np.argmax(trial2.x[0,0,stim_size:])]
+    rule1 = rules_dict[ruleset][np.argmax(trial1.x[0,0,stim_size:])]
+    rule2 = rules_dict[ruleset][np.argmax(trial2.x[0,0,stim_size:])]
     ind_stim_loc1  = 180*trial1.y_loc[-1,t_set[0]]/np.pi
     ind_stim_loc2  = 180*trial2.y_loc[-1,t_set[1]]/np.pi
     filename = rule1+'_'+rule2+'_'+'_'.join(epoch_list)+'_x'+str(round(ind_stim_loc1,2))+'_x'+str(round(ind_stim_loc2,2))
@@ -68,24 +68,33 @@ rule_trains_str = '_'.join(rule_trains)
 
 rnn_type = 'LeakyRNN'
 activation = 'softplus'
-w_init = 'diag'
-n_tasks = str(len(rule_trains))
+w_init = 'randgauss'
+ruleset = 'basic'
 n_rnn = str(256)
-l2w = -6
-l2h = -6
+l2w = -7.0
+l2h = -7.0
 l1w = 0
 l1h = 0
-seed = str(1)
-lr = -7
-net_name = 'lr'+"{:.1f}".format(-lr)+'l2_w'+"{:.1f}".format(-l2w)+'_h'+"{:.1f}".format(-l2h)+'_'+rule_trains_str
-data_folder = 'data/rnn/multitask/stepnet/lr'
+lr = -7.0
+seed = str(0)
+rule_trains = [rules_dict[ruleset][1],]
+rule_trains_str = '_'.join(rule_trains)
+sigma_rec = 1/20
+sigma_x = 2/20
+w_rec_coeff = .9
 
-model_dir_all = os.path.join(p,data_folder,rnn_type,activation,w_init,n_tasks+'_tasks',n_rnn+'_n_rnn',net_name,seed)
-task_list = rules_dict['all']
+net_name = 'lr'+"{:.1f}".format(-lr)+'l2_w'+"{:.1f}".format(-l2w)+'_h'+"{:.1f}".format(-l2h)
+net_name2 = '_sig_rec'+str(sigma_rec)+'_sig_x'+str(sigma_x)+'_w_rec_coeff'+"{:.1f}".format(w_rec_coeff)+'_'+rule_trains_str
 
-epoch_list = ['delay1','go1']
-r1 = 2
-r2 = 2
+dir_specific_all = os.path.join(ruleset,rnn_type,activation,
+    w_init,str(len(rule_trains))+'_tasks',str(n_rnn)+'_n_rnn',net_name+net_name2)
+
+model_dir_all = os.path.join(p,'data','sophie-nets',net,'data',dir_specific_all,str(seed))
+
+task_list = rules_dict['basic']
+epoch_list = ['stim1','delay1']
+r1 = 1
+r2 = 1
 
 rule1 = task_list[r1]
 rule2 = task_list[r2]
@@ -156,6 +165,8 @@ with tf.Session() as sess:
         end_set = [np.shape(trial.x)[0], trial.epochs[epoch][1]]
         e_end = min(x for x in end_set if x is not None)
         e_lims[1,ti] = int(e_end)
+        e_diff = e_end - e_start
+        e_ind = int(e_diff/2)
 
     n_inputs = 0
     input_set = {str(n_inputs) : np.zeros((1,n_input_dim))}
@@ -164,8 +175,8 @@ with tf.Session() as sess:
 
     fp_predictions = []
 
-    inputs_1 = trial1.x[int(e_lims[0,0]+1),t_set[0],:]
-    inputs_2 = trial2.x[int(e_lims[0,1]+1),t_set[1],:]
+    inputs_1 = trial1.x[int(e_lims[0,0]+e_ind),t_set[0],:]
+    inputs_2 = trial2.x[int(e_lims[0,1]+e_ind),t_set[1],:]
     del_inputs = inputs_2 - inputs_1
 
     for step_i in range(n_interp):

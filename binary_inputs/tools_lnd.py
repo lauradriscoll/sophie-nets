@@ -37,26 +37,29 @@ from analysis import clustering, standard_analysis, variance
 from mpl_toolkits.mplot3d import Axes3D
 from sklearn import metrics
 
-rule_set_names = ['DelayPro', 'ReactPro', 'MemoryPro', 'DelayAnti', 'ReactAnti', 'MemoryAnti',
+rule_set_names = {}
+rule_set_names['all'] = ['DelayPro', 'ReactPro', 'MemoryPro', 'DelayAnti', 'ReactAnti', 'MemoryAnti',
               'IntegrationModality1', 'IntegrationModality2', 'ContextIntModality1', 'ContextIntModality2', 'IntegrationMultimodal',
               'ReactMatch2Sample', 'ReactNonMatch2Sample', 'ReactCategoryPro', 'ReactCategoryAnti']
 
+rule_set_names['basic'] = ['DelayPro','MemoryPro', 'DelayAnti','MemoryAnti']
+
 task_name_dict = {}
-task_name_dict['Dly Anti'] = rule_set_names[5]
-task_name_dict['RT Go'] = rule_set_names[1]
-task_name_dict['Dly Go'] = rule_set_names[2]
-task_name_dict['RT Anti'] = rule_set_names[4]
-task_name_dict['Anti'] = rule_set_names[3]
-task_name_dict['Go'] = rule_set_names[0]
-task_name_dict['DNMS'] = rule_set_names[12]
-task_name_dict['DMS'] = rule_set_names[11]
-task_name_dict['DMC'] = rule_set_names[13]
-task_name_dict['DNMC'] = rule_set_names[14]
-task_name_dict['Dly DM 2'] = rule_set_names[7]
-task_name_dict['Dly DM 1'] = rule_set_names[6]
-task_name_dict['Ctx Dly DM 2'] = rule_set_names[9]
-task_name_dict['Ctx Dly DM 1'] = rule_set_names[8]
-task_name_dict['MultSen Dly DM'] = rule_set_names[10]
+task_name_dict['Dly Anti'] = rule_set_names['all'][5]
+task_name_dict['RT Go'] = rule_set_names['all'][1]
+task_name_dict['Dly Go'] = rule_set_names['all'][2]
+task_name_dict['RT Anti'] = rule_set_names['all'][4]
+task_name_dict['Anti'] = rule_set_names['all'][3]
+task_name_dict['Go'] = rule_set_names['all'][0]
+task_name_dict['DNMS'] = rule_set_names['all'][12]
+task_name_dict['DMS'] = rule_set_names['all'][11]
+task_name_dict['DMC'] = rule_set_names['all'][13]
+task_name_dict['DNMC'] = rule_set_names['all'][14]
+task_name_dict['Dly DM 2'] = rule_set_names['all'][7]
+task_name_dict['Dly DM 1'] = rule_set_names['all'][6]
+task_name_dict['Ctx Dly DM 2'] = rule_set_names['all'][9]
+task_name_dict['Ctx Dly DM 1'] = rule_set_names['all'][8]
+task_name_dict['MultSen Dly DM'] = rule_set_names['all'][10]
 
 def gen_trials_from_model_dir(model_dir,rule,mode='test',noise_on = True,batch_size = 500):
     model = Model(model_dir)
@@ -346,8 +349,6 @@ def plot_N(X, D, clist, linewidth = 1, alpha = .5, linestyle = '-', cmap_c = 'hs
 
     cmap=plt.get_cmap(cmap_c)
     S = np.shape(X)[0]
-    
-    print(len(clist))
     
     for s in range(S):
 
@@ -1407,9 +1408,9 @@ def make_cat_h_rules(model_dir_all,mode = 'random',noise_on = False, task_set = 
 def get_fp_filename(trial, epoch,t):
     ind_stim_loc  = str(int(180*trial.y_loc[-1,t]/np.pi))
     nonzero_stim = trial.stim_locs[t,:]<100
-    stim_names = '_'.join(str(round(180*x/np.pi,1)) for x in trial.stim_locs[t,nonzero_stim])
-    # filename = epoch+'_trial'+str(t)+'_x'+stim_names+'_y'+ind_stim_loc
-    filename = epoch+'_'+stim_names
+    stim_names = '_'.join(str(int(180*x/np.pi)) for x in trial.stim_locs[t,nonzero_stim])
+    filename = epoch+'_trial'+str(t)+'_x'+stim_names+'_y'+ind_stim_loc
+    # filename = epoch+'_'+stim_names
 
     return filename, ind_stim_loc
 
@@ -1502,7 +1503,6 @@ def make_fp_tdr_fig(m,fp_file,rule1,rule2,epoch,ind_stim_loc,tit,trial_set = ran
         if (epoch=='delay1') or (epoch=='go1'):
             plt.plot(fp_tdr[:,0],fp_tdr[:,1],'o',c = 'orangered',markersize = ms)
         else:
-            print(epoch)
             plt.plot(fp_tdr[:,0],fp_tdr[:,1],'o',c = cmap(ind_stim_loc/360),markerfacecolor = 'w',markersize = ms)
         
     ax = plt.subplot(nr,nc,1)
@@ -1546,7 +1546,6 @@ def plot_epoch_dynamics(m,fp_file,epoch,h,trial,rule,D_use,
     h_tdr = np.empty((len(T_inds),np.shape(h[rule])[1]))
     for t in range(0,np.shape(h[rule])[1],2):
         h_tdr_temp = np.dot(h[rule][T_inds,t,:],D_use)
-#         print(stim1_locs[t])
         if stim1_locs[t]==stim_loc_fp:
             plt.plot(h_tdr_temp[:,0],h_tdr_temp[:,1],c = cmap(stim1_locs[t]/(2*np.pi)),alpha = 1,linewidth = 3)
             plt.plot(h_tdr_temp[0,0],h_tdr_temp[0,1],'x',c = cmap(stim1_locs[t]/(2*np.pi)),alpha = 1,
@@ -2102,7 +2101,7 @@ def take_names(epoch,rule,epoch_axes = [],h_epoch = []):
     epoch_name = epoch_names[ei[0]]
 
     ri = [i for i,e in enumerate(rules_dict['basic']) if e==rule]
-    rule_name = rule_set_names[ri[0]]
+    rule_name = rule_set_names['basic'][ri[0]]
     
     if len(epoch_axes)<1:
         epoch_axes_name = epoch_names[ei[0]]
@@ -2657,6 +2656,7 @@ def interp3d(m,D_use,rule_set,epoch_set,t_set,script_name = 'interp_tasks_small_
 
             fp_dir = os.path.join(m,script_name,rule_str[0]+'_'+rule_str[1],'tol_q_e_'+str(-np.log10(tol_q)),
                                   filename_interp+'_step_'+str(step_i)+'.npz')
+            print(fp_dir)
             fp_struct = np.load(fp_dir)
             step_fps = fp_struct['xstar']
             fp_inds = np.where(fp_struct['qstar']<q_thresh)[0]  
@@ -2783,7 +2783,7 @@ def get_interp_filename(trial1,trial2,epoch_list,t_set):
     #     epoch_list = ['delay1','delay1']
 
     n_stim_per_ring = int(np.shape(trial1.y)[2]-1)
-    stim_size = int(2*n_stim_per_ring+1)
+    stim_size = int(n_stim_per_ring+1)
 
     rule1 = rules_dict['basic'][np.argmax(trial1.x[0,0,stim_size:])]
     rule2 = rules_dict['basic'][np.argmax(trial2.x[0,0,stim_size:])]
@@ -2942,8 +2942,6 @@ def interp_h_tasks_w_context(m, ri_set,trial_set,epoch_list,D_use = [],n_trials 
                     is_unstable[fp_ind] = 1
 
             fp_inds = fp_inds[is_unstable==1]
-
-        print(fp_inds)
 
         fp_project_diff = np.dot(step_fps[fp_inds,:],D_diff)
         fp_project_end = np.dot(step_fps[fp_inds,:],D_end)
@@ -3236,7 +3234,7 @@ def plot_bifurc_ends(m,D_use,rule_set,epoch_set,script_name,tol_q = 1e-6,t_set =
             c = cmap_state(c_set[s]/(2*np.pi))
 
         lw = 10
-        plot_N(x_epoch[trial_inds,:,:], D_use.T, c_set[trial_inds], linewidth = fig_size*2, alpha = .2)
+        plot_N(x_epoch[trial_inds,:,:], D_use.T, c_set[trial_inds], linewidth = 2*fig_size, alpha = .2)
         plot_N(x_epoch[[s,],:,:], D_use.T, c, linewidth = lw, alpha = .8 ,markersize = 16)
         plot_N(x_epoch[[s,],:,:], D_use.T, c_master, linewidth = lw/3, alpha = 1 ,markersize = 16)
 
@@ -3309,38 +3307,38 @@ def plot_bifurc(ax,x_traj,threeD,linestyle = '-',c = 'r',cd = 'k',lw = 6,alpha =
                        linewidth = lw/4, 
                        alpha = alpha)
     else:
+    #         plt.plot(x_traj[:,0],x_traj[:,1],
+    #                  linestyle,
+    #                  c = c, 
+    #                  linewidth = lw, 
+    #                  alpha = alpha, 
+    #                  markersize = ms)
             plt.plot(x_traj[:,0],x_traj[:,1],
                      linestyle,
                      c = c, 
-                     linewidth = lw, 
-                     alpha = alpha, 
-                     markersize = ms)
-            plt.plot(x_traj[:,0],x_traj[:,1],
-                     linestyle,
-                     c = cd, 
                      linewidth = lw/2, 
                      alpha = alpha, 
                      markersize = ms)
             
             ax.scatter(x_traj[-1,0],x_traj[-1,1],
-                       s = 300,
+                       s = 100,
                        marker = '^',
-                       facecolors = cd, 
+                       facecolors = c, 
                        edgecolors = c,
                        linewidth = lw/2, 
                        alpha = alpha)
             ax.scatter(x_traj[0,0],x_traj[0,1],
-                       s = 300,
+                       s = 100,
                        marker = 'x',
                        facecolors = c,
                        linewidth = lw/2, 
                        alpha = alpha)
-            ax.scatter(x_traj[0,0],x_traj[0,1],
-                       s = 200,
-                       marker = 'x',
-                       facecolors = cd, 
-                       linewidth = lw/4, 
-                       alpha = alpha)
+            # ax.scatter(x_traj[0,0],x_traj[0,1],
+            #            s = 80,
+            #            marker = 'x',
+            #            facecolors = c, 
+            #            linewidth = lw/4, 
+            #            alpha = alpha)
 
 def axis_label_bifurc(ax,ax_labels,rule_name_ax,epoch_name_ax,bifurc,threeD,fontsize):
 
@@ -3519,7 +3517,7 @@ def bifurc(m,D_use,rule_set,epoch_set,t_set = [0,0],script_name = 'interp_tasks_
             x_traj[:,0] = ri*np.ones(len(T_inds))
             
     #plot fps
-    for step_i in range(0,n_interp,n_skip_interps):
+    for step_i in range(0,n_interp+1,n_skip_interps):
         c = cmap_grad(step_i/n_interp)
 
         fp_dir = os.path.join(m,script_name,rule_str[0]+'_'+rule_str[1],'tol_q_e_'+str(-np.log10(tol_q)),
