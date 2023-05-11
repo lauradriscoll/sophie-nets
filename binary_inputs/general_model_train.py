@@ -14,13 +14,19 @@ from network import Model, get_perf
 import tools
 import train
 
+# delay match to category = dmcgo
+# delay match to category anti = dmcnogo
+
 all_rules = ['fdgo', 'reactgo', 'delaygo', 'fdanti', 'reactanti', 'delayanti',
               'delaydm1', 'delaydm2', 'contextdelaydm1', 'contextdelaydm2', 'multidelaydm',
               'dmsgo', 'dmsnogo', 'dmcgo', 'dmcnogo']
 
 
+
 ###### EDIT THESE PARAMETERS #ca#######
-rule_trains = ['delaygo','delayanti']
+rule_trains = ['delaygo']  # pick what rules to train
+
+# select hyperparameters (leave fixed)
 l2w = -7
 l2h = -7
 l1w = 0

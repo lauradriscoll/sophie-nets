@@ -19,6 +19,8 @@ elif ui == 'lauradriscoll':
     p = '/Users/lauradriscoll/Documents'
 elif ui == 'lndrisco':
     p = '/home/users/lndrisco'
+elif ui == 'slibkind':
+    p = '/Users/slibkind/Documents/'
 
 net = 'binary_inputs'
 PATH_YANGNET = os.path.join(p,'code/sophie-nets',net) 
@@ -39,7 +41,7 @@ from FixedPointFinder import FixedPointFinder
 
 def add_unique_to_inputs_list(dict_list, key, value):
     for d in range(len(dict_list)):
-        if (dict_list.values()[d]==value).all():
+        if (list(dict_list.values())[d]==value).all():
             return False, dict_list
 
     dict_list.update({key : value})
@@ -52,9 +54,10 @@ def get_interp_filename(trial1,trial2,epoch_list,t_set):
 
     rule1 = rules_dict[ruleset][np.argmax(trial1.x[0,0,stim_size:])]
     rule2 = rules_dict[ruleset][np.argmax(trial2.x[0,0,stim_size:])]
-    ind_stim_loc1  = 180*trial1.y_loc[-1,t_set[0]]/np.pi
-    ind_stim_loc2  = 180*trial2.y_loc[-1,t_set[1]]/np.pi
-    filename = rule1+'_'+rule2+'_'+'_'.join(epoch_list)+'_x'+str(round(ind_stim_loc1,2))+'_x'+str(round(ind_stim_loc2,2))
+    # ind_stim_loc1  = 180*trial1.y_loc[-1,t_set[0]]/np.pi
+    # ind_stim_loc2  = 180*trial2.y_loc[-1,t_set[1]]/np.pi
+    # filename = rule1+'_'+rule2+'_'+'_'.join(epoch_list)+'_x'+str(round(ind_stim_loc1,2))+'_x'+str(round(ind_stim_loc2,2))
+    filename = rule1+'_'+rule2+'_'+'_'.join(epoch_list)+'_x'+str(t_set[0])+'_x'+str(t_set[1])
 
     return filename
 ##################################################################
@@ -77,7 +80,7 @@ l1w = 0
 l1h = 0
 lr = -7.0
 seed = str(0)
-rule_trains = [rules_dict['basic'][1],rules_dict['basic'][3]]
+rule_trains = ['delaygo'] # delaygo_delayanti
 rule_trains_str = '_'.join(rule_trains)
 sigma_rec = 1/20
 sigma_x = 2/20
@@ -91,16 +94,21 @@ dir_specific_all = os.path.join(ruleset,rnn_type,activation,
 
 model_dir_all = os.path.join(p,'data','sophie-nets',net,'data',dir_specific_all,str(seed))
 
-epoch_list = ['stim1','delay1'] #
+# EDIT THIS AND THEN RUN THE SCRIPT
 
-r1 = 1
-r2 = 1
+epoch_list = ['fix1','stim1']
+
+# rules_dict['basic'] = ['fdgo','delaygo','fdanti','delayanti']
+r1 = 0 
+r2 = 0
+
+t_set = [0,0]
+
 
 rule1 = rules_dict[ruleset][r1]
 rule2 = rules_dict[ruleset][r2]
 
 
-t_set = [0,0]
 h_cat = make_cat_h_rules(model_dir_all,task_set = [rule1,rule2]).T
 
 ##################################################################
@@ -159,14 +167,16 @@ with tf.Session() as sess:
     for ti in range(len(trial_set)):
         trial = trial_set[ti]
         epoch = epoch_list[ti]
-        e_start = max([0, trial.epochs[epoch][0]])
+        if trial.epochs[epoch][0] == None:
+            e_start = 0
+        else:
+          e_start = max([0, trial.epochs[epoch][0]])
         e_lims[0,ti] = int(e_start)
         end_set = [np.shape(trial.x)[0], trial.epochs[epoch][1]]
         e_end = min(x for x in end_set if x is not None)
         e_lims[1,ti] = int(e_end)
         e_diff = e_end - e_start
         e_ind = int(e_diff/2)
-
     n_inputs = 0
     input_set = {str(n_inputs) : np.zeros((1,n_input_dim))}
 
@@ -174,11 +184,16 @@ with tf.Session() as sess:
 
     fp_predictions = []
 
-    inputs_1 = trial1.x[int(e_lims[0,0]+e_ind),t_set[0],:]
-    inputs_2 = trial2.x[int(e_lims[0,1]+e_ind),t_set[1],:]
+    inputs_1 = trial1.x[int((e_lims[0,0]+e_lims[1,0])/2),t_set[0],:]
+    inputs_2 = trial2.x[int((e_lims[0,1]+e_lims[1,1])/2),t_set[1],:]
     del_inputs = inputs_2 - inputs_1
 
-    for step_i in range(n_interp,n_interp+1):
+    print("Input 1:", inputs_1)
+    print("Input 2:", inputs_2)
+
+    for step_i in range(0,n_interp+1):
+        
+        print(step_i)
 
         step_inputs = inputs_1[np.newaxis,:]+del_inputs[np.newaxis,:]*(step_i/n_interp)
         inputs = step_inputs
@@ -208,6 +223,7 @@ with tf.Session() as sess:
             script_name = os.path.basename(sys.argv[0])[:-3]
             save_dir = os.path.join(model_dir_all,script_name,rule1+'_'+rule2,'tol_q_e_'+str(-np.log10(fpf_hps['tol_q'])))
             filename = get_interp_filename(trial1,trial2,epoch_list,t_set)
+            print(filename)
 
             all_fps = {}
             all_fps = {'xstar':unique_fps.xstar,

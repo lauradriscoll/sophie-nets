@@ -69,7 +69,7 @@ def gen_trials_from_model_dir(model_dir,rule,mode='test',noise_on = True,batch_s
         # get all connection weights and biases as tensorflow variables
         var_list = model.var_list
         # evaluate the parameters after training
-#         params = [sess.run(var) for var in var_list]
+        # params = [sess.run(var) for var in var_list]
         # get hparams
         hparams = model.hp
         # create a trial

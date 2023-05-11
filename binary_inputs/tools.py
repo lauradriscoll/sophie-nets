@@ -102,7 +102,8 @@ def load_hp(model_dir):
 
 def save_hp(hp, model_dir):
     """Save the hyper-parameter file of model save_name"""
-    hp_copy = hp.copy()
+    # hp_copy = hp.copy()
+    hp_copy = {k: int(v) if isinstance(v, np.int64) else v for k, v in hp.items()}
     hp_copy.pop('rng')  # rng can not be serialized
     with open(os.path.join(model_dir, 'hp.json'), 'w') as f:
         json.dump(hp_copy, f)
