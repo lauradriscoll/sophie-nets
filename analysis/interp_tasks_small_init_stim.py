@@ -47,19 +47,11 @@ def add_unique_to_inputs_list(dict_list, key, value):
     dict_list.update({key : value})
     return True, dict_list
 
-def get_interp_filename(trial1,trial2,epoch_list,t_set):
+def get_interp_filename(ri_set, epoch_list, t_set, ruleset):
+  rule1, rule2 = np.array(rules_dict[ruleset])[ri_set]
+  filename = rule1+'_'+rule2+'_'+'_'.join(epoch_list)+'_x'+str(t_set[0])+'_x'+str(t_set[1])
+  return filename
 
-    n_stim_per_ring = int(np.shape(trial1.y)[2]-1)
-    stim_size = int(n_stim_per_ring+1)
-
-    rule1 = rules_dict[ruleset][np.argmax(trial1.x[0,0,stim_size:])]
-    rule2 = rules_dict[ruleset][np.argmax(trial2.x[0,0,stim_size:])]
-    # ind_stim_loc1  = 180*trial1.y_loc[-1,t_set[0]]/np.pi
-    # ind_stim_loc2  = 180*trial2.y_loc[-1,t_set[1]]/np.pi
-    # filename = rule1+'_'+rule2+'_'+'_'.join(epoch_list)+'_x'+str(round(ind_stim_loc1,2))+'_x'+str(round(ind_stim_loc2,2))
-    filename = rule1+'_'+rule2+'_'+'_'.join(epoch_list)+'_x'+str(t_set[0])+'_x'+str(t_set[1])
-
-    return filename
 ##################################################################
 #Find right model dir
 ##################################################################
@@ -80,7 +72,7 @@ l1w = 0
 l1h = 0
 lr = -7.0
 seed = str(0)
-rule_trains = ['delaygo'] # delaygo_delayanti
+rule_trains = ['delaygo', 'delayanti'] # delaygo_delayanti
 rule_trains_str = '_'.join(rule_trains)
 sigma_rec = 1/20
 sigma_x = 2/20
@@ -96,13 +88,13 @@ model_dir_all = os.path.join(p,'data','sophie-nets',net,'data',dir_specific_all,
 
 # EDIT THIS AND THEN RUN THE SCRIPT
 
-epoch_list = ['fix1','stim1']
+epoch_list = ['delay1','stim1']
 
 # rules_dict['basic'] = ['fdgo','delaygo','fdanti','delayanti']
-r1 = 0 
-r2 = 0
+ri_set = [1,1]
+r1, r2 = ri_set
 
-t_set = [0,0]
+t_set = [0,1]
 
 
 rule1 = rules_dict[ruleset][r1]
@@ -222,7 +214,7 @@ with tf.Session() as sess:
 
             script_name = os.path.basename(sys.argv[0])[:-3]
             save_dir = os.path.join(model_dir_all,script_name,rule1+'_'+rule2,'tol_q_e_'+str(-np.log10(fpf_hps['tol_q'])))
-            filename = get_interp_filename(trial1,trial2,epoch_list,t_set)
+            filename = get_interp_filename([r1,r2],epoch_list,t_set,ruleset)
             print(filename)
 
             all_fps = {}
@@ -233,8 +225,9 @@ with tf.Session() as sess:
                 'epoch_inds':range(e_start,e_end),
                 'noise_var':NOISE_SCALE,
                 'trial_num':t_set,
-                'state_traj':example_predictions['state']}
+                # 'state_traj':example_predictions['state']
+                }
 
             if not os.path.exists(save_dir):
                 os.makedirs(save_dir)
-            np.savez(os.path.join(save_dir,filename+'_step_'+str(step_i)+'.npz'),**all_fps)
+            np.savez_compressed(os.path.join(save_dir,filename+'_step_'+str(step_i)+'.npz'),**all_fps)

@@ -127,10 +127,10 @@ def plot_interp_pca(ri_set, epoch_list, trial_num, ruleset, m, q_tol_name, q_thr
 
 def plot_interp_pca1D(ri_set, epoch_list, trial_num, ruleset, m, q_tol_name, q_thresh = 1e-6, n_interp = 20):
   
-  pca = get_pca(ri_set, epoch_list, trial_num, ruleset, m, q_tol_name,  n_components = 1, n_interp = 20, q_thresh = q_thresh)
+  pca = get_pca(ri_set, epoch_list, trial_num, ruleset, m, q_tol_name, n_components = 1, n_interp = 20, q_thresh = q_thresh)
 
-  fig_width = 10
-  fig_height = 10
+  fig_width = 12 
+  fig_height = 8
   fig = plt.figure(figsize=(fig_width,fig_height))
   ax = fig.add_subplot(111)
 
@@ -138,7 +138,7 @@ def plot_interp_pca1D(ri_set, epoch_list, trial_num, ruleset, m, q_tol_name, q_t
   s = 200
 
   for ti in range(len(ri_set)-1):
-    for step_i in range(n_interp + 1):
+    for step_i in range(n_interp):
       step_i_frac = step_i/n_interp
       c = cmap_grad((step_i/n_interp + ti)/(len(ri_set)-1))
       
@@ -146,7 +146,7 @@ def plot_interp_pca1D(ri_set, epoch_list, trial_num, ruleset, m, q_tol_name, q_t
       transformed_data = pca.transform(get_xstar(ri_set[ti:ti+2], epoch_list[ti:ti+2], trial_num[ti:ti+2], step_i, ruleset, m, q_tol_name, q_thresh = q_thresh))
 
       for i in range(len(transformed_data)):
-        if np.abs(np.max(eigs[i])) > .99:
+        if np.abs(np.max(eigs[i])) > .999:
           facecolors = 'w'
         else:
           facecolors = c
